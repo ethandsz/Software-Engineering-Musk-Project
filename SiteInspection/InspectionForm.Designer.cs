@@ -46,6 +46,7 @@
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.txtWrk_Area = new System.Windows.Forms.TextBox();
             this.btn_Save = new System.Windows.Forms.Button();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -257,12 +258,21 @@
             this.btn_Save.UseVisualStyleBackColor = false;
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(509, 168);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 18;
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
+            // 
             // InspectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(92)))), ((int)(((byte)(231)))));
             this.ClientSize = new System.Drawing.Size(795, 653);
+            this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.btn_Save);
             this.Controls.Add(this.txtWrk_Area);
             this.Controls.Add(this.txtDesc);
@@ -311,5 +321,6 @@
         private System.Windows.Forms.TextBox txtDesc;
         private System.Windows.Forms.TextBox txtWrk_Area;
         private System.Windows.Forms.Button btn_Save;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
     }
 }
