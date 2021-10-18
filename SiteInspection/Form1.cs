@@ -40,7 +40,7 @@ namespace SiteInspection
             if (form == "Site Inspection")
             {
                 insp_frm.Show();
-               // Hide();
+                Hide();
             }
             else
             {

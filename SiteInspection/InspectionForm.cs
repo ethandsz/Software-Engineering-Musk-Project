@@ -80,9 +80,11 @@ namespace SiteInspection
             
         }
 
-        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
-            //Hi
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Close();
         }
     }
 }

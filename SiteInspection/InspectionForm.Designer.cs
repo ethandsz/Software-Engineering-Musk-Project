@@ -46,7 +46,7 @@
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.txtWrk_Area = new System.Windows.Forms.TextBox();
             this.btn_Save = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -258,13 +258,19 @@
             this.btn_Save.UseVisualStyleBackColor = false;
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
-            // dateTimePicker2
+            // button1
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(509, 168);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 18;
-            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(122)))));
+            this.button1.Font = new System.Drawing.Font("Bahnschrift Condensed", 19.8F);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(121)))), ((int)(((byte)(63)))));
+            this.button1.Location = new System.Drawing.Point(264, 600);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(232, 42);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Exit";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // InspectionForm
             // 
@@ -272,7 +278,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(92)))), ((int)(((byte)(231)))));
             this.ClientSize = new System.Drawing.Size(795, 653);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_Save);
             this.Controls.Add(this.txtWrk_Area);
             this.Controls.Add(this.txtDesc);
@@ -321,6 +327,6 @@
         private System.Windows.Forms.TextBox txtDesc;
         private System.Windows.Forms.TextBox txtWrk_Area;
         private System.Windows.Forms.Button btn_Save;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Button button1;
     }
 }
