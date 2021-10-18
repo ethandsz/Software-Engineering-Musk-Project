@@ -16,7 +16,7 @@ namespace SiteInspection
     {
         FillingForm fil_form = new FillingForm();
         //Path to connect to the database
-        string path = @"Data Source=DESKTOP-0ONOATC\SQLEXPRESS;Initial Catalog=SiteInspection;Integrated Security=True";//Change data source = (Your data source from your computer) and Initial Catalog = (Your created database, unless you used the same name)
+        string path = @"Data Source=DESKTOP-NQL9UQO;Initial Catalog=siteinspection;Integrated Security=True";//Change data source = (Your data source from your computer) and Initial Catalog = (Your created database, unless you used the same name)
         
         //Creating the connection and command objs
         SqlConnection con;
@@ -27,7 +27,7 @@ namespace SiteInspection
         public InspectionForm()
         {
             InitializeComponent();
-            con = new SqlConnection(path); //Setting the connecting object and passing the path to it
+            con = new SqlConnection(path); //Setting the connecting object and passing the path to it            
         }
 
         private void InspectionForm_Load(object sender, EventArgs e)
@@ -37,6 +37,8 @@ namespace SiteInspection
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
+            date = dateTimePicker1.Text;
+
             if (txtCmpltd.Text == "" || txtDesc.Text == "" || txtInspc.Text == "" || txtSite.Text == "" || txtSupr.Text == "" || txtType.Text == "" || txtWrk_Area.Text == "")
             {
                 MessageBox.Show("Please fill in all boxes");
@@ -59,6 +61,7 @@ namespace SiteInspection
                     MessageBox.Show(er.Message);
                 }
             }
+
         }
         //Method to clear textboxes after user has saved data
         public void clear()
@@ -74,7 +77,7 @@ namespace SiteInspection
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            date = dateTimePicker1.Text; //Converts the date to string type
+            
         }
     }
 }
