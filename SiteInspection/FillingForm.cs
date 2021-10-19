@@ -38,5 +38,10 @@ namespace SiteInspection
         {
 
         }
+
+        private void FillingForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
