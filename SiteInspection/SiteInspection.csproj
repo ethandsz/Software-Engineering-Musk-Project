@@ -213,10 +213,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DBTest.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="DBTest_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>DBTest.mdf</DependentUpon>
     </Content>
   </ItemGroup>

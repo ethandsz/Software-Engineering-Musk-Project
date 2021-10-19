@@ -16,24 +16,19 @@ namespace SiteInspection
     
     public partial class InspectionForm : Form
     {
-        //Path to connect to the database
-        //Change data source = (Your data source from your computer) and Initial Catalog = (Your created database, unless you used the same name)
-        //string path = @"Data Source=DESKTOP-NQL9UQO;Initial Catalog=siteinspection;Integrated Security=True";
-        string testConStr = Properties.Settings.Default.TestConnectStr;
-        
-        //Creating the connection and command objs
-        //SqlConnection con;
-        SqlConnection testCon = null;
-        SqlCommand cmd;
-       
-        //Variables
-        string date;
+        string connStr = Properties.Settings.Default.TestConnectStr;
         public InspectionForm()
         {
             InitializeComponent();
-            //Setting the connecting object and passing the path to it
-            //con = new SqlConnection(path);
-            testCon = new SqlConnection(testConStr);
+            using (SqlConnection con = new SqlConnection(connStr))
+            {
+                DataSet ds = new DataSet();
+                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Information", connStr);
+                da.Fill(ds, "Information");
+                con.Close();
+                dataGridView1.DataSource = ds;
+                dataGridView1.DataMember = "Information";
+            }
         }
 
         private void InspectionForm_Load(object sender, EventArgs e)
@@ -43,53 +38,41 @@ namespace SiteInspection
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
-            date = dateTimePicker1.Text;
+            using(SqlConnection con = new SqlConnection(connStr))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("INSERT INTO Information (Site_Location, Date_Created, Completed_By, Supervisor, Inspector, " +
+                    "Job_Description, Type_of_Job, Work_Area) VALUES (@Site_Location, @Date_Created, @Completed_By, @Supervisor, @Inspector," +
+                    " @Job_Description, @Type_of_Job, @Work_Area)", con);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("Site_Location", txtSite.Text));
+                cmd.Parameters.Add(new SqlParameter("Date_Created", dateTimePicker1.Text));
+                cmd.Parameters.Add(new SqlParameter("Completed_By", txtCmpltd.Text));
+                cmd.Parameters.Add(new SqlParameter("Supervisor", txtSupr.Text));
+                cmd.Parameters.Add(new SqlParameter("Inspector", txtInspc.Text));
+                cmd.Parameters.Add(new SqlParameter("Job_Description", txtDesc.Text));
+                cmd.Parameters.Add(new SqlParameter("Type_of_Job", txtType.Text));
+                cmd.Parameters.Add(new SqlParameter("Work_Area", txtWrk_Area.Text));
 
-            //if (txtCmpltd.Text == "" || txtDesc.Text == "" || txtInspc.Text == "" || txtSite.Text == "" || txtSupr.Text == "" || txtType.Text == "" || txtWrk_Area.Text == "")
-            //{
-            //    MessageBox.Show("Please fill in all boxes");
-            //}
-            //else
-            //{
-                try
-                {
-                    /*
-                    //Opening the connection to the database
-                    con.Open();
-                    //Saves the data from the textbox to the command object and gets it ready to send to the database. (Change 'Information'
-                    //to your created table in the database unless you also used 'Information')
-                    cmd = new SqlCommand("insert into Information (Site_Location,Date_Created,Completed_By,Supervisor,Inspector,Job_Description,Type_of_Job,Work_Area)" +
-                        " values('" + txtSite.Text + "','" + date + "','" + txtCmpltd.Text + "','" + txtSupr.Text + "','" + txtInspc.Text + "','" + txtDesc.Text + "','"
-                        + txtType.Text + "','" + txtWrk_Area.Text + "')", con);
-                    //Executes the exchange of information from the form to the database
-                    cmd.ExecuteNonQuery();
-                    //Closes the connection to the database
-                    con.Close();
-                    MessageBox.Show("Your data has been saved into the database");
-                    clear();
-                    fil_form.Show();
-                    */
+                cmd.ExecuteNonQuery();
 
-                    testCon.Open();
-                    cmd = new SqlCommand("insert into Information (Site_Location,Date_Created,Completed_By,Supervisor,Inspector,Job_Description,Type_of_Job,Work_Area)" +
-                        " values('" + txtSite.Text + "','" + date + "','" + txtCmpltd.Text + "','" + txtSupr.Text + "','" + txtInspc.Text + "','" + txtDesc.Text + "','"
-                        + txtType.Text + "','" + txtWrk_Area.Text + "')", testCon);
-                    cmd.ExecuteNonQuery();
-                    testCon.Close();
-                    MessageBox.Show("Your data has been saved into the database");
-                    clear();
-                    FillingForm fil_form = new FillingForm();
-                    fil_form.Show();
+                con.Close();
+            }
 
-                }
-                catch (Exception er)
-                {
-                    MessageBox.Show(er.Message);
-                }
-            //}
+            clear();
 
+            using (SqlConnection con = new SqlConnection(connStr))
+            {
+                DataSet ds = new DataSet();
+                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Information", connStr);
+                da.Fill(ds, "Information");
+                con.Close();
+                dataGridView1.DataSource = ds;
+                dataGridView1.DataMember = "Information";
+            }
         }
         //Method to clear textboxes after user has saved data
+
         public void clear()
         {
             txtCmpltd.Text = "";
