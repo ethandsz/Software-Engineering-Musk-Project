@@ -16,6 +16,7 @@ namespace SiteInspection
         InspectionForm insp_frm = new InspectionForm();
         //Selcted Form
         string form;
+        public static int form_type_id_var;
         public Form1()
         {
             InitializeComponent();
@@ -35,8 +36,11 @@ namespace SiteInspection
 
         private void btn_CreateForm_Click(object sender, EventArgs e)
         {
+            
+            
             if (form == "Site Inspection")
             {
+                form_type_id_var = 1;
                 insp_frm.Show();
                // Hide();
             }
@@ -55,8 +59,13 @@ namespace SiteInspection
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet("SELECT data_type_name AS 'Section name' FROM form_data_type WHERE section_id = 1");
+            DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet("SELECT data_type_name FROM form_data_type WHERE section_id = 1");
             dgvForm_type.DataSource = ds.Tables[0];
+        }
+
+        private void dgvForm_type_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
