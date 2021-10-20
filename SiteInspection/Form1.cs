@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +12,10 @@ namespace SiteInspection
 {
     public partial class Form1 : Form
     {
-        //Creating InspectionForm as an Object
-        InspectionForm insp_frm = new InspectionForm();
+        
         //Selcted Form
         string form;
+        //Form type variable, change it in the switch statement depending on which form is selected
         public static int form_type_id_var;
         public Form1()
         {
@@ -36,17 +36,22 @@ namespace SiteInspection
 
         private void btn_CreateForm_Click(object sender, EventArgs e)
         {
-            
-            
-            if (form == "Site Inspection")
-            {
-                form_type_id_var = 1;
-                insp_frm.Show();
-               // Hide();
-            }
-            else
-            {
 
+            switch (cmbBox_Form.Text)
+            {
+                //The other cases are just examples, the combobox doesn't even have them as options
+                case "Site Inspection":
+                    this.Hide();
+                    form_type_id_var = 1;
+                    InspectionForm insp_frm = new InspectionForm();
+                    insp_frm.Show();
+                    break;
+
+                case "Hot Works":
+                    break;
+
+                case "Confined Space":
+                    break;
             }
             
         }
