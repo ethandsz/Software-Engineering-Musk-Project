@@ -52,5 +52,11 @@ namespace SiteInspection
             //Sets form equal to selected combo box item
             form = cmbBox_Form.SelectedItem.ToString();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet("SELECT data_type_name FROM form_data_type WHERE section_id = 1");
+            dgvForm_type.DataSource = ds.Tables[0];
+        }
     }
 }

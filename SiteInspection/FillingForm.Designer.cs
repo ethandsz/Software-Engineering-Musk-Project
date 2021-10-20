@@ -30,9 +30,6 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -40,8 +37,10 @@
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.dgvWrkstan = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWrkstan)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -62,9 +61,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.dgvWrkstan);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -72,33 +69,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Working Standards";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(319, 78);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lucida Sans Unicode", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 110);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 34);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "2.";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Sans Unicode", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(285, 28);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "A. Working Standards";
             // 
             // tabPage2
             // 
@@ -171,6 +141,16 @@
             this.tabPage8.Text = "Total Interventions";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
+            // dgvWrkstan
+            // 
+            this.dgvWrkstan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvWrkstan.Location = new System.Drawing.Point(6, 16);
+            this.dgvWrkstan.Name = "dgvWrkstan";
+            this.dgvWrkstan.RowHeadersWidth = 51;
+            this.dgvWrkstan.RowTemplate.Height = 24;
+            this.dgvWrkstan.Size = new System.Drawing.Size(1016, 150);
+            this.dgvWrkstan.TabIndex = 0;
+            // 
             // FillingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -179,9 +159,10 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "FillingForm";
             this.Text = "FillingForm";
+            this.Load += new System.EventHandler(this.FillingForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWrkstan)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -197,8 +178,6 @@
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.TabPage tabPage8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgvWrkstan;
     }
 }

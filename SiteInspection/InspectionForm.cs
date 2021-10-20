@@ -31,7 +31,8 @@ namespace SiteInspection
 
         private void InspectionForm_Load(object sender, EventArgs e)
         {
-            
+            DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet("SELECT * FROM form_data_type WHERE section_id = 1");
+            //dgvForm_type.DataSource = ds.Tables[0];
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
