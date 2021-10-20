@@ -55,7 +55,7 @@ namespace SiteInspection
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet("SELECT data_type_name FROM form_data_type WHERE section_id = 1");
+            DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet("SELECT data_type_name AS 'Section name' FROM form_data_type WHERE section_id = 1");
             dgvForm_type.DataSource = ds.Tables[0];
         }
     }
