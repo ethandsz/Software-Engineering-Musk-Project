@@ -1,4 +1,4 @@
-﻿namespace SiteInspection
+namespace SiteInspection
 {
     partial class FillingForm
     {

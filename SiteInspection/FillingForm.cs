@@ -23,5 +23,22 @@ namespace SiteInspection
             //    "WHERE section_id IS 1");
             //dgvWrkstan.DataSource = workStan.Tables[0];
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
