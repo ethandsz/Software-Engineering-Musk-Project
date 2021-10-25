@@ -78,5 +78,10 @@ namespace WindowsFormsApp1
         {
             MessageBox.Show("Admin login");
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
