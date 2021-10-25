@@ -60,7 +60,7 @@ namespace SiteInspection
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 9;
+            this.dateTimePicker1.TabIndex = 3;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // txtSite
@@ -72,18 +72,18 @@ namespace SiteInspection
             this.txtSite.Multiline = true;
             this.txtSite.Name = "txtSite";
             this.txtSite.Size = new System.Drawing.Size(259, 20);
-            this.txtSite.TabIndex = 10;
+            this.txtSite.TabIndex = 1;
             // 
             // txtSupr
             // 
             this.txtSupr.BackColor = System.Drawing.SystemColors.Window;
             this.txtSupr.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtSupr.Location = new System.Drawing.Point(128, 142);
+            this.txtSupr.Location = new System.Drawing.Point(128, 219);
             this.txtSupr.Margin = new System.Windows.Forms.Padding(2);
             this.txtSupr.Multiline = true;
             this.txtSupr.Name = "txtSupr";
             this.txtSupr.Size = new System.Drawing.Size(259, 20);
-            this.txtSupr.TabIndex = 11;
+            this.txtSupr.TabIndex = 6;
             this.txtSupr.TextChanged += new System.EventHandler(this.txtSupr_TextChanged);
             // 
             // txtCmpltd
@@ -95,52 +95,52 @@ namespace SiteInspection
             this.txtCmpltd.Multiline = true;
             this.txtCmpltd.Name = "txtCmpltd";
             this.txtCmpltd.Size = new System.Drawing.Size(259, 20);
-            this.txtCmpltd.TabIndex = 12;
+            this.txtCmpltd.TabIndex = 2;
             this.txtCmpltd.TextChanged += new System.EventHandler(this.txtCmpltd_TextChanged);
             // 
             // txtInspc
             // 
             this.txtInspc.BackColor = System.Drawing.SystemColors.Window;
             this.txtInspc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtInspc.Location = new System.Drawing.Point(128, 180);
+            this.txtInspc.Location = new System.Drawing.Point(128, 257);
             this.txtInspc.Margin = new System.Windows.Forms.Padding(2);
             this.txtInspc.Multiline = true;
             this.txtInspc.Name = "txtInspc";
             this.txtInspc.Size = new System.Drawing.Size(259, 20);
-            this.txtInspc.TabIndex = 13;
+            this.txtInspc.TabIndex = 7;
             // 
             // txtType
             // 
             this.txtType.BackColor = System.Drawing.SystemColors.Window;
             this.txtType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtType.Location = new System.Drawing.Point(128, 257);
+            this.txtType.Location = new System.Drawing.Point(128, 299);
             this.txtType.Margin = new System.Windows.Forms.Padding(2);
             this.txtType.Multiline = true;
             this.txtType.Name = "txtType";
             this.txtType.Size = new System.Drawing.Size(259, 20);
-            this.txtType.TabIndex = 14;
+            this.txtType.TabIndex = 8;
             // 
             // txtDesc
             // 
             this.txtDesc.BackColor = System.Drawing.SystemColors.Window;
             this.txtDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtDesc.Location = new System.Drawing.Point(128, 219);
+            this.txtDesc.Location = new System.Drawing.Point(128, 180);
             this.txtDesc.Margin = new System.Windows.Forms.Padding(2);
             this.txtDesc.Multiline = true;
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(259, 20);
-            this.txtDesc.TabIndex = 15;
+            this.txtDesc.TabIndex = 5;
             // 
             // txtWrk_Area
             // 
             this.txtWrk_Area.BackColor = System.Drawing.SystemColors.Window;
             this.txtWrk_Area.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtWrk_Area.Location = new System.Drawing.Point(128, 299);
+            this.txtWrk_Area.Location = new System.Drawing.Point(128, 142);
             this.txtWrk_Area.Margin = new System.Windows.Forms.Padding(2);
             this.txtWrk_Area.Multiline = true;
             this.txtWrk_Area.Name = "txtWrk_Area";
             this.txtWrk_Area.Size = new System.Drawing.Size(259, 20);
-            this.txtWrk_Area.TabIndex = 16;
+            this.txtWrk_Area.TabIndex = 4;
             this.txtWrk_Area.TextChanged += new System.EventHandler(this.txtWrk_Area_TextChanged);
             // 
             // dataGridView1
@@ -244,7 +244,7 @@ namespace SiteInspection
             this.button2.Location = new System.Drawing.Point(591, 325);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(104, 26);
-            this.button2.TabIndex = 30;
+            this.button2.TabIndex = 10;
             this.button2.Text = "Exit";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -257,7 +257,7 @@ namespace SiteInspection
             this.button3.Location = new System.Drawing.Point(460, 326);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(104, 26);
-            this.button3.TabIndex = 29;
+            this.button3.TabIndex = 9;
             this.button3.Text = "Continue";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
