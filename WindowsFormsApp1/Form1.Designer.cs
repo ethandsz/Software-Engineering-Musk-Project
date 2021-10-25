@@ -42,9 +42,11 @@ namespace WindowsFormsApp1
             this.homeComboBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.homeComboBox.FormattingEnabled = true;
             this.homeComboBox.Items.AddRange(new object[] {
-            "Form 1",
-            "Form 2 ",
-            "Form 3"});
+            "Site Inspection",
+            "----",
+            "----",
+            "----",
+            "----"});
             this.homeComboBox.Location = new System.Drawing.Point(24, 114);
             this.homeComboBox.Name = "homeComboBox";
             this.homeComboBox.Size = new System.Drawing.Size(207, 21);
@@ -70,6 +72,7 @@ namespace WindowsFormsApp1
             this.button2.TabIndex = 4;
             this.button2.Text = "Admin";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 

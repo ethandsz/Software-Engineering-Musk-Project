@@ -12,3 +12,17 @@ E:\Desktop\projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1
 E:\Desktop\projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form3.resources
 E:\Desktop\projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Database1.mdf
 E:\Desktop\projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Database1_log.ldf
+C:\Users\Tom\source\repos\projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Tom\source\repos\projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Tom\source\repos\projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\Tom\source\repos\projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\Tom\source\repos\projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Home.resources
+C:\Users\Tom\source\repos\projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form2.resources
+C:\Users\Tom\source\repos\projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form3.resources
+C:\Users\Tom\source\repos\projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Tom\source\repos\projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\Tom\source\repos\projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\Tom\source\repos\projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Tom\source\repos\projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Tom\source\repos\projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\form_db.mdf
+C:\Users\Tom\source\repos\projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\form_db_log.ldf

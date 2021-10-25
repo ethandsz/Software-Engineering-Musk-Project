@@ -26,9 +26,11 @@ namespace WindowsFormsApp1.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        public string DBconnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\form_db.mdf;I" +
+            "ntegrated Security=True;Connect Timeout=30")]
+        public string form_db_connection {
             get {
-                return ((string)(this["DBconnectionString"]));
+                return ((string)(this["form_db_connection"]));
             }
         }
     }
