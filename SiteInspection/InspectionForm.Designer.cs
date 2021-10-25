@@ -241,7 +241,7 @@ namespace SiteInspection
             // 
             this.button2.BackColor = System.Drawing.Color.DarkGray;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(587, 325);
+            this.button2.Location = new System.Drawing.Point(591, 325);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(104, 26);
             this.button2.TabIndex = 30;
@@ -254,7 +254,7 @@ namespace SiteInspection
             this.button3.BackColor = System.Drawing.Color.DarkGray;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
-            this.button3.Location = new System.Drawing.Point(456, 326);
+            this.button3.Location = new System.Drawing.Point(460, 326);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(104, 26);
             this.button3.TabIndex = 29;

@@ -46,6 +46,7 @@ namespace SiteInspection
             clear();
             Form3 form3 = new Form3();
             form3.Show();
+            this.Close();
         }
         //Method to clear textboxes after user has saved data
         public void clear()

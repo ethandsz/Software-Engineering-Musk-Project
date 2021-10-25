@@ -98,11 +98,6 @@ namespace SiteInspection
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void workingStndBtm_Click(object sender, EventArgs e)
         {
 
@@ -154,6 +149,7 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
+            label1.Text = "1A";
         }
 
         private void qualityBtn_Click(object sender, EventArgs e)
@@ -198,6 +194,7 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
+            label1.Text = "1B";
         }
 
         private void workingStandards3_Click(object sender, EventArgs e)
@@ -450,6 +447,18 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            InspectionForm form = new InspectionForm();
+            form.Show();
+            this.Close();
         }
     }
 }

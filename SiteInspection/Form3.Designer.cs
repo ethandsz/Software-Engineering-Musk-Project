@@ -81,6 +81,9 @@ namespace SiteInspection
             this.workingStandardsBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelTotalInterventionsSubmenu.SuspendLayout();
             this.panelMiscellaneousSubmenu.SuspendLayout();
@@ -119,7 +122,7 @@ namespace SiteInspection
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(250, 807);
+            this.panelSideMenu.Size = new System.Drawing.Size(250, 640);
             this.panelSideMenu.TabIndex = 0;
             // 
             // overalBtn
@@ -895,11 +898,46 @@ namespace SiteInspection
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = global::SiteInspection.Properties.Resources.WhatsApp_Image_2021_10_25_at_7_37_26_AM;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(250, 96);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(352, 82);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "label1";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DarkGray;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Location = new System.Drawing.Point(691, 599);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(104, 26);
+            this.button2.TabIndex = 32;
+            this.button2.Text = "Exit";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.DarkGray;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
+            this.button3.Location = new System.Drawing.Point(560, 600);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(104, 26);
+            this.button3.TabIndex = 31;
+            this.button3.Text = "Save";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // Form3
             // 
@@ -907,7 +945,10 @@ namespace SiteInspection
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(936, 807);
+            this.ClientSize = new System.Drawing.Size(807, 640);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panelSideMenu);
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -925,6 +966,7 @@ namespace SiteInspection
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -982,5 +1024,8 @@ namespace SiteInspection
         private System.Windows.Forms.Button tools19;
         private System.Windows.Forms.Button protectionInd18;
         private System.Windows.Forms.Button protectionInd17;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
