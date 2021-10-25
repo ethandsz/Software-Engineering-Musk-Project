@@ -1,5 +1,5 @@
 ﻿
-namespace WindowsFormsApp1
+namespace SiteInspection
 {
     partial class Form3
     {
