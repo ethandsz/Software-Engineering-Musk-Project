@@ -34,6 +34,7 @@ namespace SiteInspection
             this.btn_updateGrd = new System.Windows.Forms.Button();
             this.btn_back = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.slctd_form = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,10 +85,19 @@ namespace SiteInspection
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(635, 23);
+            this.textBox1.Location = new System.Drawing.Point(1168, 24);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(535, 31);
+            this.textBox1.Size = new System.Drawing.Size(114, 31);
             this.textBox1.TabIndex = 4;
+            // 
+            // slctd_form
+            // 
+            this.slctd_form.AutoSize = true;
+            this.slctd_form.Location = new System.Drawing.Point(1011, 27);
+            this.slctd_form.Name = "slctd_form";
+            this.slctd_form.Size = new System.Drawing.Size(151, 25);
+            this.slctd_form.TabIndex = 5;
+            this.slctd_form.Text = "Selected Form";
             // 
             // AdminForm
             // 
@@ -95,6 +105,7 @@ namespace SiteInspection
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1420, 700);
+            this.Controls.Add(this.slctd_form);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.btn_updateGrd);
@@ -116,5 +127,6 @@ namespace SiteInspection
         private System.Windows.Forms.Button btn_updateGrd;
         private System.Windows.Forms.Button btn_back;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label slctd_form;
     }
 }
