@@ -65,7 +65,7 @@ namespace SiteInspection
             // txtSite
             // 
             this.txtSite.BackColor = System.Drawing.SystemColors.Window;
-            this.txtSite.Font = new System.Drawing.Font("Bahnschrift Condensed", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSite.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtSite.Location = new System.Drawing.Point(159, 57);
             this.txtSite.Margin = new System.Windows.Forms.Padding(2);
             this.txtSite.Multiline = true;
@@ -76,7 +76,7 @@ namespace SiteInspection
             // txtSupr
             // 
             this.txtSupr.BackColor = System.Drawing.SystemColors.Window;
-            this.txtSupr.Font = new System.Drawing.Font("Bahnschrift Condensed", 16.2F);
+            this.txtSupr.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtSupr.Location = new System.Drawing.Point(159, 164);
             this.txtSupr.Margin = new System.Windows.Forms.Padding(2);
             this.txtSupr.Multiline = true;
@@ -88,7 +88,7 @@ namespace SiteInspection
             // txtCmpltd
             // 
             this.txtCmpltd.BackColor = System.Drawing.SystemColors.Window;
-            this.txtCmpltd.Font = new System.Drawing.Font("Bahnschrift Condensed", 16.2F);
+            this.txtCmpltd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtCmpltd.Location = new System.Drawing.Point(159, 92);
             this.txtCmpltd.Margin = new System.Windows.Forms.Padding(2);
             this.txtCmpltd.Multiline = true;
@@ -100,7 +100,7 @@ namespace SiteInspection
             // txtInspc
             // 
             this.txtInspc.BackColor = System.Drawing.SystemColors.Window;
-            this.txtInspc.Font = new System.Drawing.Font("Bahnschrift Condensed", 16.2F);
+            this.txtInspc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtInspc.Location = new System.Drawing.Point(159, 202);
             this.txtInspc.Margin = new System.Windows.Forms.Padding(2);
             this.txtInspc.Multiline = true;
@@ -111,7 +111,7 @@ namespace SiteInspection
             // txtType
             // 
             this.txtType.BackColor = System.Drawing.SystemColors.Window;
-            this.txtType.Font = new System.Drawing.Font("Bahnschrift Condensed", 16.2F);
+            this.txtType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtType.Location = new System.Drawing.Point(159, 279);
             this.txtType.Margin = new System.Windows.Forms.Padding(2);
             this.txtType.Multiline = true;
@@ -122,7 +122,7 @@ namespace SiteInspection
             // txtDesc
             // 
             this.txtDesc.BackColor = System.Drawing.SystemColors.Window;
-            this.txtDesc.Font = new System.Drawing.Font("Bahnschrift Condensed", 16.2F);
+            this.txtDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtDesc.Location = new System.Drawing.Point(159, 241);
             this.txtDesc.Margin = new System.Windows.Forms.Padding(2);
             this.txtDesc.Multiline = true;
@@ -133,7 +133,7 @@ namespace SiteInspection
             // txtWrk_Area
             // 
             this.txtWrk_Area.BackColor = System.Drawing.SystemColors.Window;
-            this.txtWrk_Area.Font = new System.Drawing.Font("Bahnschrift Condensed", 16.2F);
+            this.txtWrk_Area.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtWrk_Area.Location = new System.Drawing.Point(159, 321);
             this.txtWrk_Area.Margin = new System.Windows.Forms.Padding(2);
             this.txtWrk_Area.Multiline = true;
