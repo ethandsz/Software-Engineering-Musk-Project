@@ -151,11 +151,9 @@ namespace SiteInspection
             hideSubmenu();
             label1.Text = "1A";
             string frm_id = get_latest_form_id();
-            MessageBox.Show(frm_id);
-            
-            //string sql_query = string.Format("SELECT interventions,comment,completed,action_taken FROM form_data WHERE form_id = {0}",sql_form_id);
-            //DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(sql_query);
-            //dataGrd.DataSource = ds.Tables[0];
+            string sql_query = string.Format("SELECT interventions,comment,completed,action_taken FROM form_data WHERE form_id = {0}",frm_id);
+            DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(sql_query);
+            dataGrd.DataSource = ds.Tables[0];
         }
 
         private void qualityBtn_Click(object sender, EventArgs e)

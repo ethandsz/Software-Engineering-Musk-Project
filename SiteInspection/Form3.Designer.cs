@@ -999,11 +999,11 @@ namespace SiteInspection
             // dataGrd
             // 
             this.dataGrd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrd.Location = new System.Drawing.Point(602, 192);
+            this.dataGrd.Location = new System.Drawing.Point(517, 298);
             this.dataGrd.Name = "dataGrd";
             this.dataGrd.RowHeadersWidth = 82;
             this.dataGrd.RowTemplate.Height = 33;
-            this.dataGrd.Size = new System.Drawing.Size(767, 300);
+            this.dataGrd.Size = new System.Drawing.Size(601, 258);
             this.dataGrd.TabIndex = 33;
             // 
             // Form3
