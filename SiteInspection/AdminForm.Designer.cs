@@ -30,18 +30,18 @@ namespace SiteInspection
         private void InitializeComponent()
         {
             this.cmbBox_SortBy = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvViewData = new System.Windows.Forms.DataGridView();
             this.btn_updateGrd = new System.Windows.Forms.Button();
             this.btn_back = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvViewData)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbBox_SortBy
             // 
             this.cmbBox_SortBy.FormattingEnabled = true;
             this.cmbBox_SortBy.Items.AddRange(new object[] {
-            "Date▾",
-            "Date▴",
+            "Date [Oldest-Newest]",
+            "Date [Newest-Oldest]",
             "Site",
             "Type"});
             this.cmbBox_SortBy.Location = new System.Drawing.Point(12, 12);
@@ -50,15 +50,15 @@ namespace SiteInspection
             this.cmbBox_SortBy.TabIndex = 0;
             this.cmbBox_SortBy.Text = "Sort By";
             // 
-            // dataGridView1
+            // dgvViewData
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 99);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 82;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(1395, 589);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvViewData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvViewData.Location = new System.Drawing.Point(13, 99);
+            this.dgvViewData.Name = "dgvViewData";
+            this.dgvViewData.RowHeadersWidth = 82;
+            this.dgvViewData.RowTemplate.Height = 33;
+            this.dgvViewData.Size = new System.Drawing.Size(1395, 589);
+            this.dgvViewData.TabIndex = 1;
             // 
             // btn_updateGrd
             // 
@@ -68,6 +68,7 @@ namespace SiteInspection
             this.btn_updateGrd.TabIndex = 2;
             this.btn_updateGrd.Text = "Go";
             this.btn_updateGrd.UseVisualStyleBackColor = true;
+            this.btn_updateGrd.Click += new System.EventHandler(this.btn_updateGrd_Click);
             // 
             // btn_back
             // 
@@ -87,12 +88,12 @@ namespace SiteInspection
             this.ClientSize = new System.Drawing.Size(1420, 700);
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.btn_updateGrd);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvViewData);
             this.Controls.Add(this.cmbBox_SortBy);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "AdminForm";
             this.Text = "AdminForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvViewData)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -100,7 +101,7 @@ namespace SiteInspection
         #endregion
 
         private System.Windows.Forms.ComboBox cmbBox_SortBy;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvViewData;
         private System.Windows.Forms.Button btn_updateGrd;
         private System.Windows.Forms.Button btn_back;
     }

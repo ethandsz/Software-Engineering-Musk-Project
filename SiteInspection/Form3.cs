@@ -151,6 +151,7 @@ namespace SiteInspection
             hideSubmenu();
             label1.Text = "1A";
             string frm_id = get_latest_form_id();
+            //Display interventions,comment,completed,action_taken in the datagridview
             string sql_query = string.Format("SELECT interventions,comment,completed,action_taken FROM form_data WHERE form_id = {0}",frm_id);
             DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(sql_query);
             dataGrd.DataSource = ds.Tables[0];
@@ -467,6 +468,7 @@ namespace SiteInspection
 
         //Methods
 
+        //Method for getting the most latest(user_created) form
         public string get_latest_form_id()
         {
             DataSet get_id = DBConnection.getInstanceOfDBConnection().getDataSet("SELECT TOP 1 form_id FROM form ORDER BY form_id DESC");
