@@ -33,6 +33,7 @@ namespace SiteInspection
             this.dgvViewData = new System.Windows.Forms.DataGridView();
             this.btn_updateGrd = new System.Windows.Forms.Button();
             this.btn_back = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,6 +60,7 @@ namespace SiteInspection
             this.dgvViewData.RowTemplate.Height = 33;
             this.dgvViewData.Size = new System.Drawing.Size(1395, 589);
             this.dgvViewData.TabIndex = 1;
+            this.dgvViewData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvViewData_CellClick);
             // 
             // btn_updateGrd
             // 
@@ -80,12 +82,20 @@ namespace SiteInspection
             this.btn_back.UseVisualStyleBackColor = true;
             this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(635, 23);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(535, 31);
+            this.textBox1.TabIndex = 4;
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1420, 700);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.btn_updateGrd);
             this.Controls.Add(this.dgvViewData);
@@ -95,6 +105,7 @@ namespace SiteInspection
             this.Text = "AdminForm";
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewData)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -104,5 +115,6 @@ namespace SiteInspection
         private System.Windows.Forms.DataGridView dgvViewData;
         private System.Windows.Forms.Button btn_updateGrd;
         private System.Windows.Forms.Button btn_back;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
