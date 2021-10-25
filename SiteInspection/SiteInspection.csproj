@@ -166,6 +166,7 @@
       <DependentUpon>form_db.mdf</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\WhatsApp Image 2021-10-25 at 7.37.26 AM.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

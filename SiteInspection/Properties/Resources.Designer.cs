@@ -139,5 +139,15 @@ namespace SiteInspection.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2021_10_25_at_7_37_26_AM {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2021-10-25 at 7.37.26 AM", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
