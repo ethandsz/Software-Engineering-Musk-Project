@@ -150,6 +150,12 @@ namespace SiteInspection
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
             label1.Text = "1A";
+            string frm_id = get_latest_form_id();
+            MessageBox.Show(frm_id);
+            
+            //string sql_query = string.Format("SELECT interventions,comment,completed,action_taken FROM form_data WHERE form_id = {0}",sql_form_id);
+            //DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(sql_query);
+            //dataGrd.DataSource = ds.Tables[0];
         }
 
         private void qualityBtn_Click(object sender, EventArgs e)
@@ -459,6 +465,16 @@ namespace SiteInspection
             InspectionForm form = new InspectionForm();
             form.Show();
             this.Close();
+        }
+
+        //Methods
+
+        public string get_latest_form_id()
+        {
+            DataSet get_id = DBConnection.getInstanceOfDBConnection().getDataSet("SELECT TOP 1 form_id FROM form ORDER BY form_id DESC");
+            int f1 = Convert.ToInt32(get_id.Tables[0].Rows[0]["form_id"]);
+            string sql_form_id = f1.ToString();
+            return sql_form_id;
         }
     }
 }

@@ -81,9 +81,10 @@ namespace SiteInspection
             this.workingStandardsBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGrd = new System.Windows.Forms.DataGridView();
             this.panelSideMenu.SuspendLayout();
             this.panelTotalInterventionsSubmenu.SuspendLayout();
             this.panelMiscellaneousSubmenu.SuspendLayout();
@@ -95,6 +96,7 @@ namespace SiteInspection
             this.panelWorkingStandardSubmenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrd)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -121,8 +123,9 @@ namespace SiteInspection
             this.panelSideMenu.Controls.Add(this.panel2);
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelSideMenu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(250, 640);
+            this.panelSideMenu.Size = new System.Drawing.Size(500, 1231);
             this.panelSideMenu.TabIndex = 0;
             // 
             // overalBtn
@@ -132,10 +135,11 @@ namespace SiteInspection
             this.overalBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.overalBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.overalBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.overalBtn.Location = new System.Drawing.Point(0, 2508);
+            this.overalBtn.Location = new System.Drawing.Point(0, 4819);
+            this.overalBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.overalBtn.Name = "overalBtn";
-            this.overalBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.overalBtn.Size = new System.Drawing.Size(233, 60);
+            this.overalBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.overalBtn.Size = new System.Drawing.Size(466, 115);
             this.overalBtn.TabIndex = 17;
             this.overalBtn.Text = "Overall";
             this.overalBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -152,9 +156,10 @@ namespace SiteInspection
             this.panelTotalInterventionsSubmenu.Controls.Add(this.qualityB);
             this.panelTotalInterventionsSubmenu.Controls.Add(this.workingStandardsA);
             this.panelTotalInterventionsSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTotalInterventionsSubmenu.Location = new System.Drawing.Point(0, 2026);
+            this.panelTotalInterventionsSubmenu.Location = new System.Drawing.Point(0, 3892);
+            this.panelTotalInterventionsSubmenu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panelTotalInterventionsSubmenu.Name = "panelTotalInterventionsSubmenu";
-            this.panelTotalInterventionsSubmenu.Size = new System.Drawing.Size(233, 482);
+            this.panelTotalInterventionsSubmenu.Size = new System.Drawing.Size(466, 927);
             this.panelTotalInterventionsSubmenu.TabIndex = 16;
             // 
             // miscellaneousG
@@ -163,10 +168,11 @@ namespace SiteInspection
             this.miscellaneousG.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.miscellaneousG.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.miscellaneousG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.miscellaneousG.Location = new System.Drawing.Point(0, 360);
+            this.miscellaneousG.Location = new System.Drawing.Point(0, 690);
+            this.miscellaneousG.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.miscellaneousG.Name = "miscellaneousG";
-            this.miscellaneousG.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.miscellaneousG.Size = new System.Drawing.Size(233, 60);
+            this.miscellaneousG.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.miscellaneousG.Size = new System.Drawing.Size(466, 115);
             this.miscellaneousG.TabIndex = 28;
             this.miscellaneousG.Text = "G.";
             this.miscellaneousG.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -179,10 +185,11 @@ namespace SiteInspection
             this.toolsF.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.toolsF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.toolsF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.toolsF.Location = new System.Drawing.Point(0, 300);
+            this.toolsF.Location = new System.Drawing.Point(0, 575);
+            this.toolsF.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.toolsF.Name = "toolsF";
-            this.toolsF.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.toolsF.Size = new System.Drawing.Size(233, 60);
+            this.toolsF.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.toolsF.Size = new System.Drawing.Size(466, 115);
             this.toolsF.TabIndex = 27;
             this.toolsF.Text = "F.";
             this.toolsF.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -195,10 +202,11 @@ namespace SiteInspection
             this.protectionIndE.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.protectionIndE.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.protectionIndE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.protectionIndE.Location = new System.Drawing.Point(0, 240);
+            this.protectionIndE.Location = new System.Drawing.Point(0, 460);
+            this.protectionIndE.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.protectionIndE.Name = "protectionIndE";
-            this.protectionIndE.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.protectionIndE.Size = new System.Drawing.Size(233, 60);
+            this.protectionIndE.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.protectionIndE.Size = new System.Drawing.Size(466, 115);
             this.protectionIndE.TabIndex = 26;
             this.protectionIndE.Text = "E.";
             this.protectionIndE.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -211,10 +219,11 @@ namespace SiteInspection
             this.environmentalD.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.environmentalD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.environmentalD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.environmentalD.Location = new System.Drawing.Point(0, 180);
+            this.environmentalD.Location = new System.Drawing.Point(0, 345);
+            this.environmentalD.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.environmentalD.Name = "environmentalD";
-            this.environmentalD.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.environmentalD.Size = new System.Drawing.Size(233, 60);
+            this.environmentalD.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.environmentalD.Size = new System.Drawing.Size(466, 115);
             this.environmentalD.TabIndex = 25;
             this.environmentalD.Text = "D.";
             this.environmentalD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -227,10 +236,11 @@ namespace SiteInspection
             this.siteRulesC.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.siteRulesC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.siteRulesC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.siteRulesC.Location = new System.Drawing.Point(0, 120);
+            this.siteRulesC.Location = new System.Drawing.Point(0, 230);
+            this.siteRulesC.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.siteRulesC.Name = "siteRulesC";
-            this.siteRulesC.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.siteRulesC.Size = new System.Drawing.Size(233, 60);
+            this.siteRulesC.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.siteRulesC.Size = new System.Drawing.Size(466, 115);
             this.siteRulesC.TabIndex = 24;
             this.siteRulesC.Text = "C.";
             this.siteRulesC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -243,10 +253,11 @@ namespace SiteInspection
             this.qualityB.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.qualityB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.qualityB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.qualityB.Location = new System.Drawing.Point(0, 60);
+            this.qualityB.Location = new System.Drawing.Point(0, 115);
+            this.qualityB.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.qualityB.Name = "qualityB";
-            this.qualityB.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.qualityB.Size = new System.Drawing.Size(233, 60);
+            this.qualityB.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.qualityB.Size = new System.Drawing.Size(466, 115);
             this.qualityB.TabIndex = 23;
             this.qualityB.Text = "B.";
             this.qualityB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -260,9 +271,10 @@ namespace SiteInspection
             this.workingStandardsA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.workingStandardsA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.workingStandardsA.Location = new System.Drawing.Point(0, 0);
+            this.workingStandardsA.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.workingStandardsA.Name = "workingStandardsA";
-            this.workingStandardsA.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.workingStandardsA.Size = new System.Drawing.Size(233, 60);
+            this.workingStandardsA.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.workingStandardsA.Size = new System.Drawing.Size(466, 115);
             this.workingStandardsA.TabIndex = 22;
             this.workingStandardsA.Text = "A.";
             this.workingStandardsA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -276,10 +288,11 @@ namespace SiteInspection
             this.totalInterventionsBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.totalInterventionsBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.totalInterventionsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.totalInterventionsBtn.Location = new System.Drawing.Point(0, 1966);
+            this.totalInterventionsBtn.Location = new System.Drawing.Point(0, 3777);
+            this.totalInterventionsBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.totalInterventionsBtn.Name = "totalInterventionsBtn";
-            this.totalInterventionsBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.totalInterventionsBtn.Size = new System.Drawing.Size(233, 60);
+            this.totalInterventionsBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.totalInterventionsBtn.Size = new System.Drawing.Size(466, 115);
             this.totalInterventionsBtn.TabIndex = 15;
             this.totalInterventionsBtn.Text = "Total Interventions By Section";
             this.totalInterventionsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -293,9 +306,10 @@ namespace SiteInspection
             this.panelMiscellaneousSubmenu.Controls.Add(this.miscellaneous23);
             this.panelMiscellaneousSubmenu.Controls.Add(this.miscellaneous22);
             this.panelMiscellaneousSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMiscellaneousSubmenu.Location = new System.Drawing.Point(0, 1786);
+            this.panelMiscellaneousSubmenu.Location = new System.Drawing.Point(0, 3431);
+            this.panelMiscellaneousSubmenu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panelMiscellaneousSubmenu.Name = "panelMiscellaneousSubmenu";
-            this.panelMiscellaneousSubmenu.Size = new System.Drawing.Size(233, 180);
+            this.panelMiscellaneousSubmenu.Size = new System.Drawing.Size(466, 346);
             this.panelMiscellaneousSubmenu.TabIndex = 14;
             // 
             // miscellaneous24
@@ -304,10 +318,11 @@ namespace SiteInspection
             this.miscellaneous24.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.miscellaneous24.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.miscellaneous24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.miscellaneous24.Location = new System.Drawing.Point(0, 120);
+            this.miscellaneous24.Location = new System.Drawing.Point(0, 230);
+            this.miscellaneous24.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.miscellaneous24.Name = "miscellaneous24";
-            this.miscellaneous24.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.miscellaneous24.Size = new System.Drawing.Size(233, 60);
+            this.miscellaneous24.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.miscellaneous24.Size = new System.Drawing.Size(466, 115);
             this.miscellaneous24.TabIndex = 23;
             this.miscellaneous24.Text = "24. Workshop conditions";
             this.miscellaneous24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -320,10 +335,11 @@ namespace SiteInspection
             this.miscellaneous23.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.miscellaneous23.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.miscellaneous23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.miscellaneous23.Location = new System.Drawing.Point(0, 60);
+            this.miscellaneous23.Location = new System.Drawing.Point(0, 115);
+            this.miscellaneous23.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.miscellaneous23.Name = "miscellaneous23";
-            this.miscellaneous23.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.miscellaneous23.Size = new System.Drawing.Size(233, 60);
+            this.miscellaneous23.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.miscellaneous23.Size = new System.Drawing.Size(466, 115);
             this.miscellaneous23.TabIndex = 22;
             this.miscellaneous23.Text = "23. Fire precautions";
             this.miscellaneous23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -337,9 +353,10 @@ namespace SiteInspection
             this.miscellaneous22.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.miscellaneous22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.miscellaneous22.Location = new System.Drawing.Point(0, 0);
+            this.miscellaneous22.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.miscellaneous22.Name = "miscellaneous22";
-            this.miscellaneous22.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.miscellaneous22.Size = new System.Drawing.Size(233, 60);
+            this.miscellaneous22.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.miscellaneous22.Size = new System.Drawing.Size(466, 115);
             this.miscellaneous22.TabIndex = 21;
             this.miscellaneous22.Text = "22. Company vehicles";
             this.miscellaneous22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -353,10 +370,11 @@ namespace SiteInspection
             this.miscellaneousBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.miscellaneousBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.miscellaneousBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.miscellaneousBtn.Location = new System.Drawing.Point(0, 1726);
+            this.miscellaneousBtn.Location = new System.Drawing.Point(0, 3316);
+            this.miscellaneousBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.miscellaneousBtn.Name = "miscellaneousBtn";
-            this.miscellaneousBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.miscellaneousBtn.Size = new System.Drawing.Size(233, 60);
+            this.miscellaneousBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.miscellaneousBtn.Size = new System.Drawing.Size(466, 115);
             this.miscellaneousBtn.TabIndex = 13;
             this.miscellaneousBtn.Text = "Miscellaneous";
             this.miscellaneousBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -370,9 +388,10 @@ namespace SiteInspection
             this.panelToolsSubmenu.Controls.Add(this.tools20);
             this.panelToolsSubmenu.Controls.Add(this.tools19);
             this.panelToolsSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelToolsSubmenu.Location = new System.Drawing.Point(0, 1545);
+            this.panelToolsSubmenu.Location = new System.Drawing.Point(0, 2968);
+            this.panelToolsSubmenu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panelToolsSubmenu.Name = "panelToolsSubmenu";
-            this.panelToolsSubmenu.Size = new System.Drawing.Size(233, 181);
+            this.panelToolsSubmenu.Size = new System.Drawing.Size(466, 348);
             this.panelToolsSubmenu.TabIndex = 12;
             // 
             // tools21
@@ -381,10 +400,11 @@ namespace SiteInspection
             this.tools21.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.tools21.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.tools21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tools21.Location = new System.Drawing.Point(0, 120);
+            this.tools21.Location = new System.Drawing.Point(0, 230);
+            this.tools21.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tools21.Name = "tools21";
-            this.tools21.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.tools21.Size = new System.Drawing.Size(233, 60);
+            this.tools21.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.tools21.Size = new System.Drawing.Size(466, 115);
             this.tools21.TabIndex = 20;
             this.tools21.Text = "21. Tools used fit for purpose";
             this.tools21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -397,10 +417,11 @@ namespace SiteInspection
             this.tools20.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.tools20.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.tools20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tools20.Location = new System.Drawing.Point(0, 60);
+            this.tools20.Location = new System.Drawing.Point(0, 115);
+            this.tools20.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tools20.Name = "tools20";
-            this.tools20.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.tools20.Size = new System.Drawing.Size(233, 60);
+            this.tools20.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.tools20.Size = new System.Drawing.Size(466, 115);
             this.tools20.TabIndex = 19;
             this.tools20.Text = "20. Voltage detector checked";
             this.tools20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -414,9 +435,10 @@ namespace SiteInspection
             this.tools19.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.tools19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tools19.Location = new System.Drawing.Point(0, 0);
+            this.tools19.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tools19.Name = "tools19";
-            this.tools19.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.tools19.Size = new System.Drawing.Size(233, 60);
+            this.tools19.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.tools19.Size = new System.Drawing.Size(466, 115);
             this.tools19.TabIndex = 18;
             this.tools19.Text = "19. Power tools, cables and other equipment";
             this.tools19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -430,10 +452,11 @@ namespace SiteInspection
             this.toolsBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.toolsBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.toolsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.toolsBtn.Location = new System.Drawing.Point(0, 1485);
+            this.toolsBtn.Location = new System.Drawing.Point(0, 2853);
+            this.toolsBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.toolsBtn.Name = "toolsBtn";
-            this.toolsBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.toolsBtn.Size = new System.Drawing.Size(233, 60);
+            this.toolsBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.toolsBtn.Size = new System.Drawing.Size(466, 115);
             this.toolsBtn.TabIndex = 11;
             this.toolsBtn.Text = "Tools, Cables & Other Equipment";
             this.toolsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -447,9 +470,10 @@ namespace SiteInspection
             this.panelProtectionIndSubmenu.Controls.Add(this.protectionInd17);
             this.panelProtectionIndSubmenu.Controls.Add(this.protectionInd16);
             this.panelProtectionIndSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelProtectionIndSubmenu.Location = new System.Drawing.Point(0, 1305);
+            this.panelProtectionIndSubmenu.Location = new System.Drawing.Point(0, 2507);
+            this.panelProtectionIndSubmenu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panelProtectionIndSubmenu.Name = "panelProtectionIndSubmenu";
-            this.panelProtectionIndSubmenu.Size = new System.Drawing.Size(233, 180);
+            this.panelProtectionIndSubmenu.Size = new System.Drawing.Size(466, 346);
             this.panelProtectionIndSubmenu.TabIndex = 10;
             // 
             // protectionInd18
@@ -458,10 +482,11 @@ namespace SiteInspection
             this.protectionInd18.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.protectionInd18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.protectionInd18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.protectionInd18.Location = new System.Drawing.Point(0, 120);
+            this.protectionInd18.Location = new System.Drawing.Point(0, 230);
+            this.protectionInd18.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.protectionInd18.Name = "protectionInd18";
-            this.protectionInd18.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.protectionInd18.Size = new System.Drawing.Size(233, 60);
+            this.protectionInd18.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.protectionInd18.Size = new System.Drawing.Size(466, 115);
             this.protectionInd18.TabIndex = 18;
             this.protectionInd18.Text = "18. Other contractors";
             this.protectionInd18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -474,10 +499,11 @@ namespace SiteInspection
             this.protectionInd17.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.protectionInd17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.protectionInd17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.protectionInd17.Location = new System.Drawing.Point(0, 60);
+            this.protectionInd17.Location = new System.Drawing.Point(0, 115);
+            this.protectionInd17.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.protectionInd17.Name = "protectionInd17";
-            this.protectionInd17.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.protectionInd17.Size = new System.Drawing.Size(233, 60);
+            this.protectionInd17.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.protectionInd17.Size = new System.Drawing.Size(466, 115);
             this.protectionInd17.TabIndex = 17;
             this.protectionInd17.Text = "17. Manual handling";
             this.protectionInd17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -491,9 +517,10 @@ namespace SiteInspection
             this.protectionInd16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.protectionInd16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.protectionInd16.Location = new System.Drawing.Point(0, 0);
+            this.protectionInd16.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.protectionInd16.Name = "protectionInd16";
-            this.protectionInd16.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.protectionInd16.Size = new System.Drawing.Size(233, 60);
+            this.protectionInd16.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.protectionInd16.Size = new System.Drawing.Size(466, 115);
             this.protectionInd16.TabIndex = 16;
             this.protectionInd16.Text = "16. PPE";
             this.protectionInd16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -507,10 +534,11 @@ namespace SiteInspection
             this.protectionIndBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.protectionIndBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.protectionIndBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.protectionIndBtn.Location = new System.Drawing.Point(0, 1245);
+            this.protectionIndBtn.Location = new System.Drawing.Point(0, 2392);
+            this.protectionIndBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.protectionIndBtn.Name = "protectionIndBtn";
-            this.protectionIndBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.protectionIndBtn.Size = new System.Drawing.Size(233, 60);
+            this.protectionIndBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.protectionIndBtn.Size = new System.Drawing.Size(466, 115);
             this.protectionIndBtn.TabIndex = 9;
             this.protectionIndBtn.Text = "Protection Of Individuals";
             this.protectionIndBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -524,9 +552,10 @@ namespace SiteInspection
             this.panelEnvironmentalSubmenu.Controls.Add(this.environmental14);
             this.panelEnvironmentalSubmenu.Controls.Add(this.environmental13);
             this.panelEnvironmentalSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelEnvironmentalSubmenu.Location = new System.Drawing.Point(0, 1064);
+            this.panelEnvironmentalSubmenu.Location = new System.Drawing.Point(0, 2044);
+            this.panelEnvironmentalSubmenu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panelEnvironmentalSubmenu.Name = "panelEnvironmentalSubmenu";
-            this.panelEnvironmentalSubmenu.Size = new System.Drawing.Size(233, 181);
+            this.panelEnvironmentalSubmenu.Size = new System.Drawing.Size(466, 348);
             this.panelEnvironmentalSubmenu.TabIndex = 8;
             // 
             // environmental15
@@ -535,10 +564,11 @@ namespace SiteInspection
             this.environmental15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.environmental15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.environmental15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.environmental15.Location = new System.Drawing.Point(0, 120);
+            this.environmental15.Location = new System.Drawing.Point(0, 230);
+            this.environmental15.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.environmental15.Name = "environmental15";
-            this.environmental15.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.environmental15.Size = new System.Drawing.Size(233, 60);
+            this.environmental15.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.environmental15.Size = new System.Drawing.Size(466, 115);
             this.environmental15.TabIndex = 15;
             this.environmental15.Text = "15. COSHH and asbestos";
             this.environmental15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -551,10 +581,11 @@ namespace SiteInspection
             this.environmental14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.environmental14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.environmental14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.environmental14.Location = new System.Drawing.Point(0, 60);
+            this.environmental14.Location = new System.Drawing.Point(0, 115);
+            this.environmental14.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.environmental14.Name = "environmental14";
-            this.environmental14.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.environmental14.Size = new System.Drawing.Size(233, 60);
+            this.environmental14.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.environmental14.Size = new System.Drawing.Size(466, 115);
             this.environmental14.TabIndex = 14;
             this.environmental14.Text = "14. Product contamination";
             this.environmental14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -568,9 +599,10 @@ namespace SiteInspection
             this.environmental13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.environmental13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.environmental13.Location = new System.Drawing.Point(0, 0);
+            this.environmental13.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.environmental13.Name = "environmental13";
-            this.environmental13.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.environmental13.Size = new System.Drawing.Size(233, 60);
+            this.environmental13.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.environmental13.Size = new System.Drawing.Size(466, 115);
             this.environmental13.TabIndex = 13;
             this.environmental13.Text = "13. Waste management";
             this.environmental13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -584,10 +616,11 @@ namespace SiteInspection
             this.environmentalBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.environmentalBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.environmentalBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.environmentalBtn.Location = new System.Drawing.Point(0, 1004);
+            this.environmentalBtn.Location = new System.Drawing.Point(0, 1929);
+            this.environmentalBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.environmentalBtn.Name = "environmentalBtn";
-            this.environmentalBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.environmentalBtn.Size = new System.Drawing.Size(233, 60);
+            this.environmentalBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.environmentalBtn.Size = new System.Drawing.Size(466, 115);
             this.environmentalBtn.TabIndex = 7;
             this.environmentalBtn.Text = "Environmental";
             this.environmentalBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -602,9 +635,10 @@ namespace SiteInspection
             this.panelSiteRulesSubmenu.Controls.Add(this.siteRules10);
             this.panelSiteRulesSubmenu.Controls.Add(this.siteRules9);
             this.panelSiteRulesSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSiteRulesSubmenu.Location = new System.Drawing.Point(0, 759);
+            this.panelSiteRulesSubmenu.Location = new System.Drawing.Point(0, 1458);
+            this.panelSiteRulesSubmenu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panelSiteRulesSubmenu.Name = "panelSiteRulesSubmenu";
-            this.panelSiteRulesSubmenu.Size = new System.Drawing.Size(233, 245);
+            this.panelSiteRulesSubmenu.Size = new System.Drawing.Size(466, 471);
             this.panelSiteRulesSubmenu.TabIndex = 6;
             // 
             // siteRules12
@@ -613,10 +647,11 @@ namespace SiteInspection
             this.siteRules12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.siteRules12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.siteRules12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.siteRules12.Location = new System.Drawing.Point(0, 180);
+            this.siteRules12.Location = new System.Drawing.Point(0, 345);
+            this.siteRules12.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.siteRules12.Name = "siteRules12";
-            this.siteRules12.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.siteRules12.Size = new System.Drawing.Size(233, 65);
+            this.siteRules12.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.siteRules12.Size = new System.Drawing.Size(466, 125);
             this.siteRules12.TabIndex = 12;
             this.siteRules12.Text = "12. Awareness - fire exit, assembly point";
             this.siteRules12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -629,10 +664,11 @@ namespace SiteInspection
             this.siteRules11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.siteRules11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.siteRules11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.siteRules11.Location = new System.Drawing.Point(0, 120);
+            this.siteRules11.Location = new System.Drawing.Point(0, 230);
+            this.siteRules11.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.siteRules11.Name = "siteRules11";
-            this.siteRules11.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.siteRules11.Size = new System.Drawing.Size(233, 60);
+            this.siteRules11.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.siteRules11.Size = new System.Drawing.Size(466, 115);
             this.siteRules11.TabIndex = 11;
             this.siteRules11.Text = "11. Fire exits and escape routes";
             this.siteRules11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -645,10 +681,11 @@ namespace SiteInspection
             this.siteRules10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.siteRules10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.siteRules10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.siteRules10.Location = new System.Drawing.Point(0, 60);
+            this.siteRules10.Location = new System.Drawing.Point(0, 115);
+            this.siteRules10.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.siteRules10.Name = "siteRules10";
-            this.siteRules10.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.siteRules10.Size = new System.Drawing.Size(233, 60);
+            this.siteRules10.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.siteRules10.Size = new System.Drawing.Size(466, 115);
             this.siteRules10.TabIndex = 10;
             this.siteRules10.Text = "10. Isolation and lock offs";
             this.siteRules10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -662,9 +699,10 @@ namespace SiteInspection
             this.siteRules9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.siteRules9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.siteRules9.Location = new System.Drawing.Point(0, 0);
+            this.siteRules9.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.siteRules9.Name = "siteRules9";
-            this.siteRules9.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.siteRules9.Size = new System.Drawing.Size(233, 60);
+            this.siteRules9.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.siteRules9.Size = new System.Drawing.Size(466, 115);
             this.siteRules9.TabIndex = 9;
             this.siteRules9.Text = "9. Hot works";
             this.siteRules9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -678,10 +716,11 @@ namespace SiteInspection
             this.siteRulesBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.siteRulesBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.siteRulesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.siteRulesBtn.Location = new System.Drawing.Point(0, 699);
+            this.siteRulesBtn.Location = new System.Drawing.Point(0, 1343);
+            this.siteRulesBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.siteRulesBtn.Name = "siteRulesBtn";
-            this.siteRulesBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.siteRulesBtn.Size = new System.Drawing.Size(233, 60);
+            this.siteRulesBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.siteRulesBtn.Size = new System.Drawing.Size(466, 115);
             this.siteRulesBtn.TabIndex = 5;
             this.siteRulesBtn.Text = "Site Rules";
             this.siteRulesBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -695,9 +734,10 @@ namespace SiteInspection
             this.panelQualitySubmenu.Controls.Add(this.quality7);
             this.panelQualitySubmenu.Controls.Add(this.quality6);
             this.panelQualitySubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelQualitySubmenu.Location = new System.Drawing.Point(0, 519);
+            this.panelQualitySubmenu.Location = new System.Drawing.Point(0, 997);
+            this.panelQualitySubmenu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panelQualitySubmenu.Name = "panelQualitySubmenu";
-            this.panelQualitySubmenu.Size = new System.Drawing.Size(233, 180);
+            this.panelQualitySubmenu.Size = new System.Drawing.Size(466, 346);
             this.panelQualitySubmenu.TabIndex = 4;
             // 
             // quality8
@@ -706,10 +746,11 @@ namespace SiteInspection
             this.quality8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.quality8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.quality8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.quality8.Location = new System.Drawing.Point(0, 120);
+            this.quality8.Location = new System.Drawing.Point(0, 230);
+            this.quality8.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.quality8.Name = "quality8";
-            this.quality8.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.quality8.Size = new System.Drawing.Size(233, 60);
+            this.quality8.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.quality8.Size = new System.Drawing.Size(466, 115);
             this.quality8.TabIndex = 8;
             this.quality8.Text = "8. Certification - Training, insurance inspection, induction current";
             this.quality8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -722,10 +763,11 @@ namespace SiteInspection
             this.quality7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.quality7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.quality7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.quality7.Location = new System.Drawing.Point(0, 60);
+            this.quality7.Location = new System.Drawing.Point(0, 115);
+            this.quality7.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.quality7.Name = "quality7";
-            this.quality7.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.quality7.Size = new System.Drawing.Size(233, 60);
+            this.quality7.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.quality7.Size = new System.Drawing.Size(466, 115);
             this.quality7.TabIndex = 7;
             this.quality7.Text = "7. Paperwork (Permits, risk assessments, method statement)";
             this.quality7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -739,9 +781,10 @@ namespace SiteInspection
             this.quality6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.quality6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.quality6.Location = new System.Drawing.Point(0, 0);
+            this.quality6.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.quality6.Name = "quality6";
-            this.quality6.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.quality6.Size = new System.Drawing.Size(233, 60);
+            this.quality6.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.quality6.Size = new System.Drawing.Size(466, 115);
             this.quality6.TabIndex = 6;
             this.quality6.Text = "6. Site set up and appearance, signage";
             this.quality6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -755,10 +798,11 @@ namespace SiteInspection
             this.qualityBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.qualityBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.qualityBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.qualityBtn.Location = new System.Drawing.Point(0, 459);
+            this.qualityBtn.Location = new System.Drawing.Point(0, 882);
+            this.qualityBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.qualityBtn.Name = "qualityBtn";
-            this.qualityBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.qualityBtn.Size = new System.Drawing.Size(233, 60);
+            this.qualityBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.qualityBtn.Size = new System.Drawing.Size(466, 115);
             this.qualityBtn.TabIndex = 3;
             this.qualityBtn.Text = "Quality";
             this.qualityBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -775,9 +819,10 @@ namespace SiteInspection
             this.panelWorkingStandardSubmenu.Controls.Add(this.workingStandards1);
             this.panelWorkingStandardSubmenu.Controls.Add(this.button1);
             this.panelWorkingStandardSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelWorkingStandardSubmenu.Location = new System.Drawing.Point(0, 160);
+            this.panelWorkingStandardSubmenu.Location = new System.Drawing.Point(0, 307);
+            this.panelWorkingStandardSubmenu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panelWorkingStandardSubmenu.Name = "panelWorkingStandardSubmenu";
-            this.panelWorkingStandardSubmenu.Size = new System.Drawing.Size(233, 299);
+            this.panelWorkingStandardSubmenu.Size = new System.Drawing.Size(466, 575);
             this.panelWorkingStandardSubmenu.TabIndex = 2;
             // 
             // workingStandards5
@@ -786,10 +831,11 @@ namespace SiteInspection
             this.workingStandards5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.workingStandards5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.workingStandards5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.workingStandards5.Location = new System.Drawing.Point(0, 240);
+            this.workingStandards5.Location = new System.Drawing.Point(0, 460);
+            this.workingStandards5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.workingStandards5.Name = "workingStandards5";
-            this.workingStandards5.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.workingStandards5.Size = new System.Drawing.Size(233, 60);
+            this.workingStandards5.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.workingStandards5.Size = new System.Drawing.Size(466, 115);
             this.workingStandards5.TabIndex = 5;
             this.workingStandards5.Text = "5. Electrical work";
             this.workingStandards5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -802,10 +848,11 @@ namespace SiteInspection
             this.workingStandards4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.workingStandards4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.workingStandards4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.workingStandards4.Location = new System.Drawing.Point(0, 180);
+            this.workingStandards4.Location = new System.Drawing.Point(0, 345);
+            this.workingStandards4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.workingStandards4.Name = "workingStandards4";
-            this.workingStandards4.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.workingStandards4.Size = new System.Drawing.Size(233, 60);
+            this.workingStandards4.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.workingStandards4.Size = new System.Drawing.Size(466, 115);
             this.workingStandards4.TabIndex = 4;
             this.workingStandards4.Text = "4. Confined space work";
             this.workingStandards4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -818,10 +865,11 @@ namespace SiteInspection
             this.workingStandards3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.workingStandards3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.workingStandards3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.workingStandards3.Location = new System.Drawing.Point(0, 120);
+            this.workingStandards3.Location = new System.Drawing.Point(0, 230);
+            this.workingStandards3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.workingStandards3.Name = "workingStandards3";
-            this.workingStandards3.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.workingStandards3.Size = new System.Drawing.Size(233, 60);
+            this.workingStandards3.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.workingStandards3.Size = new System.Drawing.Size(466, 115);
             this.workingStandards3.TabIndex = 3;
             this.workingStandards3.Text = "3. Certification - Daily checksheets for MEWP and FLT";
             this.workingStandards3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -834,10 +882,11 @@ namespace SiteInspection
             this.workingStandards2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.workingStandards2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.workingStandards2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.workingStandards2.Location = new System.Drawing.Point(0, 60);
+            this.workingStandards2.Location = new System.Drawing.Point(0, 115);
+            this.workingStandards2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.workingStandards2.Name = "workingStandards2";
-            this.workingStandards2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.workingStandards2.Size = new System.Drawing.Size(233, 60);
+            this.workingStandards2.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.workingStandards2.Size = new System.Drawing.Size(466, 115);
             this.workingStandards2.TabIndex = 2;
             this.workingStandards2.Text = "2. Lifting operations - Crane, fork lift truck, hoists etc.";
             this.workingStandards2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -851,9 +900,10 @@ namespace SiteInspection
             this.workingStandards1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.workingStandards1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.workingStandards1.Location = new System.Drawing.Point(0, 0);
+            this.workingStandards1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.workingStandards1.Name = "workingStandards1";
-            this.workingStandards1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.workingStandards1.Size = new System.Drawing.Size(233, 60);
+            this.workingStandards1.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.workingStandards1.Size = new System.Drawing.Size(466, 115);
             this.workingStandards1.TabIndex = 1;
             this.workingStandards1.Text = "1. Work at height";
             this.workingStandards1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -864,8 +914,9 @@ namespace SiteInspection
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(233, 0);
+            this.button1.Size = new System.Drawing.Size(466, 0);
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -877,10 +928,11 @@ namespace SiteInspection
             this.workingStandardsBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.workingStandardsBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.workingStandardsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.workingStandardsBtn.Location = new System.Drawing.Point(0, 100);
+            this.workingStandardsBtn.Location = new System.Drawing.Point(0, 192);
+            this.workingStandardsBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.workingStandardsBtn.Name = "workingStandardsBtn";
-            this.workingStandardsBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.workingStandardsBtn.Size = new System.Drawing.Size(233, 60);
+            this.workingStandardsBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.workingStandardsBtn.Size = new System.Drawing.Size(466, 115);
             this.workingStandardsBtn.TabIndex = 1;
             this.workingStandardsBtn.Text = "Working Standards";
             this.workingStandardsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -892,36 +944,29 @@ namespace SiteInspection
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(233, 100);
+            this.panel2.Size = new System.Drawing.Size(466, 192);
             this.panel2.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::SiteInspection.Properties.Resources.WhatsApp_Image_2021_10_25_at_7_37_26_AM;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(250, 96);
+            this.pictureBox1.Size = new System.Drawing.Size(500, 185);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(352, 82);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.DarkGray;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(691, 599);
+            this.button2.Location = new System.Drawing.Point(1382, 1152);
+            this.button2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 26);
+            this.button2.Size = new System.Drawing.Size(208, 50);
             this.button2.TabIndex = 32;
             this.button2.Text = "Exit";
             this.button2.UseVisualStyleBackColor = false;
@@ -932,24 +977,48 @@ namespace SiteInspection
             this.button3.BackColor = System.Drawing.Color.DarkGray;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
-            this.button3.Location = new System.Drawing.Point(560, 600);
+            this.button3.Location = new System.Drawing.Point(1120, 1154);
+            this.button3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 26);
+            this.button3.Size = new System.Drawing.Size(208, 50);
             this.button3.TabIndex = 31;
             this.button3.Text = "Save";
             this.button3.UseVisualStyleBackColor = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(512, 96);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 25);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "label1";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // dataGrd
+            // 
+            this.dataGrd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrd.Location = new System.Drawing.Point(602, 192);
+            this.dataGrd.Name = "dataGrd";
+            this.dataGrd.RowHeadersWidth = 82;
+            this.dataGrd.RowTemplate.Height = 33;
+            this.dataGrd.Size = new System.Drawing.Size(767, 300);
+            this.dataGrd.TabIndex = 33;
+            // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(807, 640);
+            this.ClientSize = new System.Drawing.Size(1614, 1231);
+            this.Controls.Add(this.dataGrd);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelSideMenu);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Filling Form";
@@ -965,6 +1034,7 @@ namespace SiteInspection
             this.panelWorkingStandardSubmenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1024,8 +1094,9 @@ namespace SiteInspection
         private System.Windows.Forms.Button tools19;
         private System.Windows.Forms.Button protectionInd18;
         private System.Windows.Forms.Button protectionInd17;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGrd;
     }
 }
