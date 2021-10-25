@@ -25,6 +25,9 @@ namespace SiteInspection
         private void button2_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Admin Login");
+            AdminForm adminform = new AdminForm();
+            adminform.Show();
+            this.Hide();
             
         }
         //Exit Button on Click method

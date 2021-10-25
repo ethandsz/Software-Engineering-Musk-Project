@@ -28,3 +28,4 @@ C:\Users\18482\Source\Repos\ethandsz\Software-Engineering-Musk-Project\SiteInspe
 C:\Users\18482\Source\Repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\obj\Debug\SiteInspection.exe
 C:\Users\18482\Source\Repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\obj\Debug\SiteInspection.pdb
 C:\Users\18482\Source\Repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\obj\Debug\SiteInspection.csproj.AssemblyReference.cache
+C:\Users\18482\Source\Repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\obj\Debug\SiteInspection.AdminForm.resources
