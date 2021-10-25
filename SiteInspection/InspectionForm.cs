@@ -14,8 +14,7 @@ namespace SiteInspection
     
     public partial class InspectionForm : Form
     {
-        Form3 form3 = new Form3();
-       
+               
         //Variables
         string sqlQuery = "INSERT INTO form (form_type_id, site_name, cmpltd_by, date, work_area, job_desc, " +
                     "supervisor, inspector, type) VALUES (@form_type_id, @site_name, @cmpltd_by, @date, @work_area, @job_desc," +
@@ -45,6 +44,7 @@ namespace SiteInspection
             dataGridView1.DataSource = ds.Tables[0];
 
             clear();
+            Form3 form3 = new Form3();
             form3.Show();
         }
         //Method to clear textboxes after user has saved data
