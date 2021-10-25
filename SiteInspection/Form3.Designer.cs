@@ -81,6 +81,9 @@ namespace SiteInspection
             this.workingStandardsBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelTotalInterventionsSubmenu.SuspendLayout();
             this.panelMiscellaneousSubmenu.SuspendLayout();
@@ -119,7 +122,7 @@ namespace SiteInspection
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(250, 807);
+            this.panelSideMenu.Size = new System.Drawing.Size(250, 640);
             this.panelSideMenu.TabIndex = 0;
             // 
             // overalBtn
@@ -306,7 +309,7 @@ namespace SiteInspection
             this.miscellaneous24.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.miscellaneous24.Size = new System.Drawing.Size(233, 60);
             this.miscellaneous24.TabIndex = 23;
-            this.miscellaneous24.Text = "24.";
+            this.miscellaneous24.Text = "24. Workshop conditions";
             this.miscellaneous24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.miscellaneous24.UseVisualStyleBackColor = true;
             this.miscellaneous24.Click += new System.EventHandler(this.miscellaneous24_Click);
@@ -322,7 +325,7 @@ namespace SiteInspection
             this.miscellaneous23.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.miscellaneous23.Size = new System.Drawing.Size(233, 60);
             this.miscellaneous23.TabIndex = 22;
-            this.miscellaneous23.Text = "23.";
+            this.miscellaneous23.Text = "23. Fire precautions";
             this.miscellaneous23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.miscellaneous23.UseVisualStyleBackColor = true;
             this.miscellaneous23.Click += new System.EventHandler(this.miscellaneous23_Click);
@@ -338,7 +341,7 @@ namespace SiteInspection
             this.miscellaneous22.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.miscellaneous22.Size = new System.Drawing.Size(233, 60);
             this.miscellaneous22.TabIndex = 21;
-            this.miscellaneous22.Text = "22.";
+            this.miscellaneous22.Text = "22. Company vehicles";
             this.miscellaneous22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.miscellaneous22.UseVisualStyleBackColor = true;
             this.miscellaneous22.Click += new System.EventHandler(this.miscellaneous22_Click);
@@ -383,7 +386,7 @@ namespace SiteInspection
             this.tools21.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.tools21.Size = new System.Drawing.Size(233, 60);
             this.tools21.TabIndex = 20;
-            this.tools21.Text = "21.";
+            this.tools21.Text = "21. Tools used fit for purpose";
             this.tools21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tools21.UseVisualStyleBackColor = true;
             this.tools21.Click += new System.EventHandler(this.button4_Click_1);
@@ -399,7 +402,7 @@ namespace SiteInspection
             this.tools20.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.tools20.Size = new System.Drawing.Size(233, 60);
             this.tools20.TabIndex = 19;
-            this.tools20.Text = "20.";
+            this.tools20.Text = "20. Voltage detector checked";
             this.tools20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tools20.UseVisualStyleBackColor = true;
             this.tools20.Click += new System.EventHandler(this.button3_Click_1);
@@ -415,7 +418,7 @@ namespace SiteInspection
             this.tools19.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.tools19.Size = new System.Drawing.Size(233, 60);
             this.tools19.TabIndex = 18;
-            this.tools19.Text = "19.";
+            this.tools19.Text = "19. Power tools, cables and other equipment";
             this.tools19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tools19.UseVisualStyleBackColor = true;
             this.tools19.Click += new System.EventHandler(this.tools19_Click);
@@ -460,7 +463,7 @@ namespace SiteInspection
             this.protectionInd18.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.protectionInd18.Size = new System.Drawing.Size(233, 60);
             this.protectionInd18.TabIndex = 18;
-            this.protectionInd18.Text = "18.";
+            this.protectionInd18.Text = "18. Other contractors";
             this.protectionInd18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.protectionInd18.UseVisualStyleBackColor = true;
             this.protectionInd18.Click += new System.EventHandler(this.protectionInd18_Click);
@@ -476,7 +479,7 @@ namespace SiteInspection
             this.protectionInd17.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.protectionInd17.Size = new System.Drawing.Size(233, 60);
             this.protectionInd17.TabIndex = 17;
-            this.protectionInd17.Text = "17.";
+            this.protectionInd17.Text = "17. Manual handling";
             this.protectionInd17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.protectionInd17.UseVisualStyleBackColor = true;
             this.protectionInd17.Click += new System.EventHandler(this.protectionInd17_Click);
@@ -492,7 +495,7 @@ namespace SiteInspection
             this.protectionInd16.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.protectionInd16.Size = new System.Drawing.Size(233, 60);
             this.protectionInd16.TabIndex = 16;
-            this.protectionInd16.Text = "16.";
+            this.protectionInd16.Text = "16. PPE";
             this.protectionInd16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.protectionInd16.UseVisualStyleBackColor = true;
             this.protectionInd16.Click += new System.EventHandler(this.protectionInd16_Click);
@@ -537,7 +540,7 @@ namespace SiteInspection
             this.environmental15.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.environmental15.Size = new System.Drawing.Size(233, 60);
             this.environmental15.TabIndex = 15;
-            this.environmental15.Text = "15.";
+            this.environmental15.Text = "15. COSHH and asbestos";
             this.environmental15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.environmental15.UseVisualStyleBackColor = true;
             this.environmental15.Click += new System.EventHandler(this.environmental15_Click);
@@ -553,7 +556,7 @@ namespace SiteInspection
             this.environmental14.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.environmental14.Size = new System.Drawing.Size(233, 60);
             this.environmental14.TabIndex = 14;
-            this.environmental14.Text = "14.";
+            this.environmental14.Text = "14. Product contamination";
             this.environmental14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.environmental14.UseVisualStyleBackColor = true;
             this.environmental14.Click += new System.EventHandler(this.environmental14_Click);
@@ -569,7 +572,7 @@ namespace SiteInspection
             this.environmental13.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.environmental13.Size = new System.Drawing.Size(233, 60);
             this.environmental13.TabIndex = 13;
-            this.environmental13.Text = "13.";
+            this.environmental13.Text = "13. Waste management";
             this.environmental13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.environmental13.UseVisualStyleBackColor = true;
             this.environmental13.Click += new System.EventHandler(this.environmental13_Click);
@@ -615,7 +618,7 @@ namespace SiteInspection
             this.siteRules12.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.siteRules12.Size = new System.Drawing.Size(233, 65);
             this.siteRules12.TabIndex = 12;
-            this.siteRules12.Text = "12.";
+            this.siteRules12.Text = "12. Awareness - fire exit, assembly point";
             this.siteRules12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.siteRules12.UseVisualStyleBackColor = true;
             this.siteRules12.Click += new System.EventHandler(this.siteRules12_Click);
@@ -631,7 +634,7 @@ namespace SiteInspection
             this.siteRules11.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.siteRules11.Size = new System.Drawing.Size(233, 60);
             this.siteRules11.TabIndex = 11;
-            this.siteRules11.Text = "11.";
+            this.siteRules11.Text = "11. Fire exits and escape routes";
             this.siteRules11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.siteRules11.UseVisualStyleBackColor = true;
             this.siteRules11.Click += new System.EventHandler(this.siteRules11_Click);
@@ -647,7 +650,7 @@ namespace SiteInspection
             this.siteRules10.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.siteRules10.Size = new System.Drawing.Size(233, 60);
             this.siteRules10.TabIndex = 10;
-            this.siteRules10.Text = "10.";
+            this.siteRules10.Text = "10. Isolation and lock offs";
             this.siteRules10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.siteRules10.UseVisualStyleBackColor = true;
             this.siteRules10.Click += new System.EventHandler(this.siteRules10_Click);
@@ -663,7 +666,7 @@ namespace SiteInspection
             this.siteRules9.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.siteRules9.Size = new System.Drawing.Size(233, 60);
             this.siteRules9.TabIndex = 9;
-            this.siteRules9.Text = "9.";
+            this.siteRules9.Text = "9. Hot works";
             this.siteRules9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.siteRules9.UseVisualStyleBackColor = true;
             this.siteRules9.Click += new System.EventHandler(this.siteRules9_Click);
@@ -708,7 +711,7 @@ namespace SiteInspection
             this.quality8.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.quality8.Size = new System.Drawing.Size(233, 60);
             this.quality8.TabIndex = 8;
-            this.quality8.Text = "8.";
+            this.quality8.Text = "8. Certification - Training, insurance inspection, induction current";
             this.quality8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.quality8.UseVisualStyleBackColor = true;
             this.quality8.Click += new System.EventHandler(this.quality8_Click);
@@ -724,7 +727,7 @@ namespace SiteInspection
             this.quality7.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.quality7.Size = new System.Drawing.Size(233, 60);
             this.quality7.TabIndex = 7;
-            this.quality7.Text = "7.";
+            this.quality7.Text = "7. Paperwork (Permits, risk assessments, method statement)";
             this.quality7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.quality7.UseVisualStyleBackColor = true;
             this.quality7.Click += new System.EventHandler(this.quality7_Click);
@@ -740,7 +743,7 @@ namespace SiteInspection
             this.quality6.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.quality6.Size = new System.Drawing.Size(233, 60);
             this.quality6.TabIndex = 6;
-            this.quality6.Text = "6.";
+            this.quality6.Text = "6. Site set up and appearance, signage";
             this.quality6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.quality6.UseVisualStyleBackColor = true;
             this.quality6.Click += new System.EventHandler(this.quality6_Click);
@@ -788,7 +791,7 @@ namespace SiteInspection
             this.workingStandards5.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.workingStandards5.Size = new System.Drawing.Size(233, 60);
             this.workingStandards5.TabIndex = 5;
-            this.workingStandards5.Text = "5.";
+            this.workingStandards5.Text = "5. Electrical work";
             this.workingStandards5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.workingStandards5.UseVisualStyleBackColor = true;
             this.workingStandards5.Click += new System.EventHandler(this.workingStandards5_Click);
@@ -804,7 +807,7 @@ namespace SiteInspection
             this.workingStandards4.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.workingStandards4.Size = new System.Drawing.Size(233, 60);
             this.workingStandards4.TabIndex = 4;
-            this.workingStandards4.Text = "4.";
+            this.workingStandards4.Text = "4. Confined space work";
             this.workingStandards4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.workingStandards4.UseVisualStyleBackColor = true;
             this.workingStandards4.Click += new System.EventHandler(this.workingStandards4_Click);
@@ -820,7 +823,7 @@ namespace SiteInspection
             this.workingStandards3.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.workingStandards3.Size = new System.Drawing.Size(233, 60);
             this.workingStandards3.TabIndex = 3;
-            this.workingStandards3.Text = "3.";
+            this.workingStandards3.Text = "3. Certification - Daily checksheets for MEWP and FLT";
             this.workingStandards3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.workingStandards3.UseVisualStyleBackColor = true;
             this.workingStandards3.Click += new System.EventHandler(this.workingStandards3_Click);
@@ -836,7 +839,7 @@ namespace SiteInspection
             this.workingStandards2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.workingStandards2.Size = new System.Drawing.Size(233, 60);
             this.workingStandards2.TabIndex = 2;
-            this.workingStandards2.Text = "2.";
+            this.workingStandards2.Text = "2. Lifting operations - Crane, fork lift truck, hoists etc.";
             this.workingStandards2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.workingStandards2.UseVisualStyleBackColor = true;
             this.workingStandards2.Click += new System.EventHandler(this.workingStandards2_Click);
@@ -852,7 +855,7 @@ namespace SiteInspection
             this.workingStandards1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.workingStandards1.Size = new System.Drawing.Size(233, 60);
             this.workingStandards1.TabIndex = 1;
-            this.workingStandards1.Text = "1.";
+            this.workingStandards1.Text = "1. Work at height";
             this.workingStandards1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.workingStandards1.UseVisualStyleBackColor = true;
             this.workingStandards1.Click += new System.EventHandler(this.workingStandards1_Click);
@@ -895,12 +898,46 @@ namespace SiteInspection
             // 
             // pictureBox1
             // 
-            //this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.Screenshot_2021_10_10_205039;
+            this.pictureBox1.BackgroundImage = global::SiteInspection.Properties.Resources.WhatsApp_Image_2021_10_25_at_7_37_26_AM;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(250, 96);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(352, 82);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "label1";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DarkGray;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Location = new System.Drawing.Point(691, 599);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(104, 26);
+            this.button2.TabIndex = 32;
+            this.button2.Text = "Exit";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.DarkGray;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
+            this.button3.Location = new System.Drawing.Point(560, 600);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(104, 26);
+            this.button3.TabIndex = 31;
+            this.button3.Text = "Save";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // Form3
             // 
@@ -908,7 +945,10 @@ namespace SiteInspection
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(936, 807);
+            this.ClientSize = new System.Drawing.Size(807, 640);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panelSideMenu);
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -926,6 +966,7 @@ namespace SiteInspection
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -983,5 +1024,8 @@ namespace SiteInspection
         private System.Windows.Forms.Button tools19;
         private System.Windows.Forms.Button protectionInd18;
         private System.Windows.Forms.Button protectionInd17;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
