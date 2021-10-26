@@ -11,8 +11,10 @@ namespace SiteInspection
     class DBConnection
     {
         //private object of the class itself
+        
         private static DBConnection _instance;
 
+        //this one was set in the settings part
         //connection string
         private string connStr;
 
