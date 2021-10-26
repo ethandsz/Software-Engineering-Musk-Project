@@ -153,6 +153,8 @@ namespace SiteInspection
             label1.Text = "1A";
             //Display interventions,comment,completed,action_taken in the datagridview
             populate_dgv("1");
+
+            
             
         }
 
@@ -501,7 +503,7 @@ namespace SiteInspection
         //Method for making a query coressponding to each button, change get_latest_form_id() to "1" to see how its supposed to work with a actual form
         public string data_query(string num)
         {
-            string query = string.Format("SELECT interventions,comment,completed,action_taken FROM form_data WHERE form_id = {0} AND form_data_type_id = {1}", get_latest_form_id(), num);
+            string query = string.Format("SELECT interventions,comment,completed,action_taken FROM form_data WHERE form_id = {0} AND form_data_type_id = {1}", "1", num);
             return query;
         }
 
@@ -510,6 +512,20 @@ namespace SiteInspection
         {
             DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(data_query(num));
             dataGrd.DataSource = ds.Tables[0];
+            //txtInterventions.Text = dataGrd.Rows[0].Cells[0].Value.ToString();
+            txtInterventions.Text = populate_txtBox(0);
+            txtComment.Text = populate_txtBox(1);
+            txtCompleted.Text = populate_txtBox(2);
+            txtAction_takn.Text = populate_txtBox(3);
+
+            
+            
+
+        }
+        public string populate_txtBox(int column_num)
+        {
+            string s = dataGrd.Rows[0].Cells[column_num].Value.ToString();
+            return s;
         }
     }
 }

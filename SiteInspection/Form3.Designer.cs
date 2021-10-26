@@ -89,6 +89,10 @@ namespace SiteInspection
             this.txtComment = new System.Windows.Forms.TextBox();
             this.txtCompleted = new System.Windows.Forms.TextBox();
             this.txtAction_takn = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panelSideMenu.SuspendLayout();
             this.panelTotalInterventionsSubmenu.SuspendLayout();
             this.panelMiscellaneousSubmenu.SuspendLayout();
@@ -992,7 +996,7 @@ namespace SiteInspection
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(512, 96);
+            this.label1.Location = new System.Drawing.Point(512, 33);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 25);
@@ -1007,19 +1011,20 @@ namespace SiteInspection
             this.dataGrd.Name = "dataGrd";
             this.dataGrd.RowHeadersWidth = 82;
             this.dataGrd.RowTemplate.Height = 33;
-            this.dataGrd.Size = new System.Drawing.Size(601, 258);
+            this.dataGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGrd.Size = new System.Drawing.Size(1085, 364);
             this.dataGrd.TabIndex = 33;
             // 
             // txtInterventions
             // 
-            this.txtInterventions.Location = new System.Drawing.Point(517, 160);
+            this.txtInterventions.Location = new System.Drawing.Point(659, 58);
             this.txtInterventions.Name = "txtInterventions";
             this.txtInterventions.Size = new System.Drawing.Size(186, 31);
             this.txtInterventions.TabIndex = 34;
             // 
             // txtComment
             // 
-            this.txtComment.Location = new System.Drawing.Point(709, 161);
+            this.txtComment.Location = new System.Drawing.Point(659, 100);
             this.txtComment.Multiline = true;
             this.txtComment.Name = "txtComment";
             this.txtComment.Size = new System.Drawing.Size(314, 85);
@@ -1027,17 +1032,53 @@ namespace SiteInspection
             // 
             // txtCompleted
             // 
-            this.txtCompleted.Location = new System.Drawing.Point(517, 261);
+            this.txtCompleted.Location = new System.Drawing.Point(659, 192);
             this.txtCompleted.Name = "txtCompleted";
             this.txtCompleted.Size = new System.Drawing.Size(186, 31);
             this.txtCompleted.TabIndex = 36;
             // 
             // txtAction_takn
             // 
-            this.txtAction_takn.Location = new System.Drawing.Point(709, 261);
+            this.txtAction_takn.Location = new System.Drawing.Point(659, 234);
             this.txtAction_takn.Name = "txtAction_takn";
             this.txtAction_takn.Size = new System.Drawing.Size(314, 31);
             this.txtAction_takn.TabIndex = 37;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(512, 58);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(141, 25);
+            this.label2.TabIndex = 38;
+            this.label2.Text = "Interventions:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(509, 100);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(120, 25);
+            this.label3.TabIndex = 39;
+            this.label3.Text = "Comments:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(512, 192);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(121, 25);
+            this.label4.TabIndex = 40;
+            this.label4.Text = "Completed:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(512, 240);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(144, 25);
+            this.label5.TabIndex = 41;
+            this.label5.Text = "Action Taken:";
             // 
             // Form3
             // 
@@ -1046,6 +1087,10 @@ namespace SiteInspection
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1614, 1231);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtAction_takn);
             this.Controls.Add(this.txtCompleted);
             this.Controls.Add(this.txtComment);
@@ -1139,5 +1184,9 @@ namespace SiteInspection
         private System.Windows.Forms.TextBox txtComment;
         private System.Windows.Forms.TextBox txtCompleted;
         private System.Windows.Forms.TextBox txtAction_takn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
