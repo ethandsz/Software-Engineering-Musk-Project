@@ -85,6 +85,10 @@ namespace SiteInspection
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGrd = new System.Windows.Forms.DataGridView();
+            this.txtInterventions = new System.Windows.Forms.TextBox();
+            this.txtComment = new System.Windows.Forms.TextBox();
+            this.txtCompleted = new System.Windows.Forms.TextBox();
+            this.txtAction_takn = new System.Windows.Forms.TextBox();
             this.panelSideMenu.SuspendLayout();
             this.panelTotalInterventionsSubmenu.SuspendLayout();
             this.panelMiscellaneousSubmenu.SuspendLayout();
@@ -123,7 +127,7 @@ namespace SiteInspection
             this.panelSideMenu.Controls.Add(this.panel2);
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelSideMenu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panelSideMenu.Margin = new System.Windows.Forms.Padding(6);
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(500, 1231);
             this.panelSideMenu.TabIndex = 0;
@@ -136,7 +140,7 @@ namespace SiteInspection
             this.overalBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.overalBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.overalBtn.Location = new System.Drawing.Point(0, 4819);
-            this.overalBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.overalBtn.Margin = new System.Windows.Forms.Padding(6);
             this.overalBtn.Name = "overalBtn";
             this.overalBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.overalBtn.Size = new System.Drawing.Size(466, 115);
@@ -157,7 +161,7 @@ namespace SiteInspection
             this.panelTotalInterventionsSubmenu.Controls.Add(this.workingStandardsA);
             this.panelTotalInterventionsSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTotalInterventionsSubmenu.Location = new System.Drawing.Point(0, 3892);
-            this.panelTotalInterventionsSubmenu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panelTotalInterventionsSubmenu.Margin = new System.Windows.Forms.Padding(6);
             this.panelTotalInterventionsSubmenu.Name = "panelTotalInterventionsSubmenu";
             this.panelTotalInterventionsSubmenu.Size = new System.Drawing.Size(466, 927);
             this.panelTotalInterventionsSubmenu.TabIndex = 16;
@@ -169,7 +173,7 @@ namespace SiteInspection
             this.miscellaneousG.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.miscellaneousG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.miscellaneousG.Location = new System.Drawing.Point(0, 690);
-            this.miscellaneousG.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.miscellaneousG.Margin = new System.Windows.Forms.Padding(6);
             this.miscellaneousG.Name = "miscellaneousG";
             this.miscellaneousG.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.miscellaneousG.Size = new System.Drawing.Size(466, 115);
@@ -186,7 +190,7 @@ namespace SiteInspection
             this.toolsF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.toolsF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.toolsF.Location = new System.Drawing.Point(0, 575);
-            this.toolsF.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.toolsF.Margin = new System.Windows.Forms.Padding(6);
             this.toolsF.Name = "toolsF";
             this.toolsF.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.toolsF.Size = new System.Drawing.Size(466, 115);
@@ -203,7 +207,7 @@ namespace SiteInspection
             this.protectionIndE.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.protectionIndE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.protectionIndE.Location = new System.Drawing.Point(0, 460);
-            this.protectionIndE.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.protectionIndE.Margin = new System.Windows.Forms.Padding(6);
             this.protectionIndE.Name = "protectionIndE";
             this.protectionIndE.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.protectionIndE.Size = new System.Drawing.Size(466, 115);
@@ -220,7 +224,7 @@ namespace SiteInspection
             this.environmentalD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.environmentalD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.environmentalD.Location = new System.Drawing.Point(0, 345);
-            this.environmentalD.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.environmentalD.Margin = new System.Windows.Forms.Padding(6);
             this.environmentalD.Name = "environmentalD";
             this.environmentalD.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.environmentalD.Size = new System.Drawing.Size(466, 115);
@@ -237,7 +241,7 @@ namespace SiteInspection
             this.siteRulesC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.siteRulesC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.siteRulesC.Location = new System.Drawing.Point(0, 230);
-            this.siteRulesC.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.siteRulesC.Margin = new System.Windows.Forms.Padding(6);
             this.siteRulesC.Name = "siteRulesC";
             this.siteRulesC.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.siteRulesC.Size = new System.Drawing.Size(466, 115);
@@ -254,7 +258,7 @@ namespace SiteInspection
             this.qualityB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.qualityB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.qualityB.Location = new System.Drawing.Point(0, 115);
-            this.qualityB.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.qualityB.Margin = new System.Windows.Forms.Padding(6);
             this.qualityB.Name = "qualityB";
             this.qualityB.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.qualityB.Size = new System.Drawing.Size(466, 115);
@@ -271,7 +275,7 @@ namespace SiteInspection
             this.workingStandardsA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.workingStandardsA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.workingStandardsA.Location = new System.Drawing.Point(0, 0);
-            this.workingStandardsA.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.workingStandardsA.Margin = new System.Windows.Forms.Padding(6);
             this.workingStandardsA.Name = "workingStandardsA";
             this.workingStandardsA.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.workingStandardsA.Size = new System.Drawing.Size(466, 115);
@@ -289,7 +293,7 @@ namespace SiteInspection
             this.totalInterventionsBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.totalInterventionsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.totalInterventionsBtn.Location = new System.Drawing.Point(0, 3777);
-            this.totalInterventionsBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.totalInterventionsBtn.Margin = new System.Windows.Forms.Padding(6);
             this.totalInterventionsBtn.Name = "totalInterventionsBtn";
             this.totalInterventionsBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.totalInterventionsBtn.Size = new System.Drawing.Size(466, 115);
@@ -307,7 +311,7 @@ namespace SiteInspection
             this.panelMiscellaneousSubmenu.Controls.Add(this.miscellaneous22);
             this.panelMiscellaneousSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMiscellaneousSubmenu.Location = new System.Drawing.Point(0, 3431);
-            this.panelMiscellaneousSubmenu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panelMiscellaneousSubmenu.Margin = new System.Windows.Forms.Padding(6);
             this.panelMiscellaneousSubmenu.Name = "panelMiscellaneousSubmenu";
             this.panelMiscellaneousSubmenu.Size = new System.Drawing.Size(466, 346);
             this.panelMiscellaneousSubmenu.TabIndex = 14;
@@ -319,7 +323,7 @@ namespace SiteInspection
             this.miscellaneous24.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.miscellaneous24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.miscellaneous24.Location = new System.Drawing.Point(0, 230);
-            this.miscellaneous24.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.miscellaneous24.Margin = new System.Windows.Forms.Padding(6);
             this.miscellaneous24.Name = "miscellaneous24";
             this.miscellaneous24.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.miscellaneous24.Size = new System.Drawing.Size(466, 115);
@@ -336,7 +340,7 @@ namespace SiteInspection
             this.miscellaneous23.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.miscellaneous23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.miscellaneous23.Location = new System.Drawing.Point(0, 115);
-            this.miscellaneous23.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.miscellaneous23.Margin = new System.Windows.Forms.Padding(6);
             this.miscellaneous23.Name = "miscellaneous23";
             this.miscellaneous23.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.miscellaneous23.Size = new System.Drawing.Size(466, 115);
@@ -353,7 +357,7 @@ namespace SiteInspection
             this.miscellaneous22.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.miscellaneous22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.miscellaneous22.Location = new System.Drawing.Point(0, 0);
-            this.miscellaneous22.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.miscellaneous22.Margin = new System.Windows.Forms.Padding(6);
             this.miscellaneous22.Name = "miscellaneous22";
             this.miscellaneous22.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.miscellaneous22.Size = new System.Drawing.Size(466, 115);
@@ -371,7 +375,7 @@ namespace SiteInspection
             this.miscellaneousBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.miscellaneousBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.miscellaneousBtn.Location = new System.Drawing.Point(0, 3316);
-            this.miscellaneousBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.miscellaneousBtn.Margin = new System.Windows.Forms.Padding(6);
             this.miscellaneousBtn.Name = "miscellaneousBtn";
             this.miscellaneousBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.miscellaneousBtn.Size = new System.Drawing.Size(466, 115);
@@ -389,7 +393,7 @@ namespace SiteInspection
             this.panelToolsSubmenu.Controls.Add(this.tools19);
             this.panelToolsSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelToolsSubmenu.Location = new System.Drawing.Point(0, 2968);
-            this.panelToolsSubmenu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panelToolsSubmenu.Margin = new System.Windows.Forms.Padding(6);
             this.panelToolsSubmenu.Name = "panelToolsSubmenu";
             this.panelToolsSubmenu.Size = new System.Drawing.Size(466, 348);
             this.panelToolsSubmenu.TabIndex = 12;
@@ -401,7 +405,7 @@ namespace SiteInspection
             this.tools21.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.tools21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tools21.Location = new System.Drawing.Point(0, 230);
-            this.tools21.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tools21.Margin = new System.Windows.Forms.Padding(6);
             this.tools21.Name = "tools21";
             this.tools21.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.tools21.Size = new System.Drawing.Size(466, 115);
@@ -418,7 +422,7 @@ namespace SiteInspection
             this.tools20.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.tools20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tools20.Location = new System.Drawing.Point(0, 115);
-            this.tools20.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tools20.Margin = new System.Windows.Forms.Padding(6);
             this.tools20.Name = "tools20";
             this.tools20.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.tools20.Size = new System.Drawing.Size(466, 115);
@@ -435,7 +439,7 @@ namespace SiteInspection
             this.tools19.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.tools19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tools19.Location = new System.Drawing.Point(0, 0);
-            this.tools19.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tools19.Margin = new System.Windows.Forms.Padding(6);
             this.tools19.Name = "tools19";
             this.tools19.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.tools19.Size = new System.Drawing.Size(466, 115);
@@ -453,7 +457,7 @@ namespace SiteInspection
             this.toolsBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.toolsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.toolsBtn.Location = new System.Drawing.Point(0, 2853);
-            this.toolsBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.toolsBtn.Margin = new System.Windows.Forms.Padding(6);
             this.toolsBtn.Name = "toolsBtn";
             this.toolsBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.toolsBtn.Size = new System.Drawing.Size(466, 115);
@@ -471,7 +475,7 @@ namespace SiteInspection
             this.panelProtectionIndSubmenu.Controls.Add(this.protectionInd16);
             this.panelProtectionIndSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelProtectionIndSubmenu.Location = new System.Drawing.Point(0, 2507);
-            this.panelProtectionIndSubmenu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panelProtectionIndSubmenu.Margin = new System.Windows.Forms.Padding(6);
             this.panelProtectionIndSubmenu.Name = "panelProtectionIndSubmenu";
             this.panelProtectionIndSubmenu.Size = new System.Drawing.Size(466, 346);
             this.panelProtectionIndSubmenu.TabIndex = 10;
@@ -483,7 +487,7 @@ namespace SiteInspection
             this.protectionInd18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.protectionInd18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.protectionInd18.Location = new System.Drawing.Point(0, 230);
-            this.protectionInd18.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.protectionInd18.Margin = new System.Windows.Forms.Padding(6);
             this.protectionInd18.Name = "protectionInd18";
             this.protectionInd18.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.protectionInd18.Size = new System.Drawing.Size(466, 115);
@@ -500,7 +504,7 @@ namespace SiteInspection
             this.protectionInd17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.protectionInd17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.protectionInd17.Location = new System.Drawing.Point(0, 115);
-            this.protectionInd17.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.protectionInd17.Margin = new System.Windows.Forms.Padding(6);
             this.protectionInd17.Name = "protectionInd17";
             this.protectionInd17.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.protectionInd17.Size = new System.Drawing.Size(466, 115);
@@ -517,7 +521,7 @@ namespace SiteInspection
             this.protectionInd16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.protectionInd16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.protectionInd16.Location = new System.Drawing.Point(0, 0);
-            this.protectionInd16.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.protectionInd16.Margin = new System.Windows.Forms.Padding(6);
             this.protectionInd16.Name = "protectionInd16";
             this.protectionInd16.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.protectionInd16.Size = new System.Drawing.Size(466, 115);
@@ -535,7 +539,7 @@ namespace SiteInspection
             this.protectionIndBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.protectionIndBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.protectionIndBtn.Location = new System.Drawing.Point(0, 2392);
-            this.protectionIndBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.protectionIndBtn.Margin = new System.Windows.Forms.Padding(6);
             this.protectionIndBtn.Name = "protectionIndBtn";
             this.protectionIndBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.protectionIndBtn.Size = new System.Drawing.Size(466, 115);
@@ -553,7 +557,7 @@ namespace SiteInspection
             this.panelEnvironmentalSubmenu.Controls.Add(this.environmental13);
             this.panelEnvironmentalSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelEnvironmentalSubmenu.Location = new System.Drawing.Point(0, 2044);
-            this.panelEnvironmentalSubmenu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panelEnvironmentalSubmenu.Margin = new System.Windows.Forms.Padding(6);
             this.panelEnvironmentalSubmenu.Name = "panelEnvironmentalSubmenu";
             this.panelEnvironmentalSubmenu.Size = new System.Drawing.Size(466, 348);
             this.panelEnvironmentalSubmenu.TabIndex = 8;
@@ -565,7 +569,7 @@ namespace SiteInspection
             this.environmental15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.environmental15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.environmental15.Location = new System.Drawing.Point(0, 230);
-            this.environmental15.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.environmental15.Margin = new System.Windows.Forms.Padding(6);
             this.environmental15.Name = "environmental15";
             this.environmental15.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.environmental15.Size = new System.Drawing.Size(466, 115);
@@ -582,7 +586,7 @@ namespace SiteInspection
             this.environmental14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.environmental14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.environmental14.Location = new System.Drawing.Point(0, 115);
-            this.environmental14.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.environmental14.Margin = new System.Windows.Forms.Padding(6);
             this.environmental14.Name = "environmental14";
             this.environmental14.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.environmental14.Size = new System.Drawing.Size(466, 115);
@@ -599,7 +603,7 @@ namespace SiteInspection
             this.environmental13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.environmental13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.environmental13.Location = new System.Drawing.Point(0, 0);
-            this.environmental13.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.environmental13.Margin = new System.Windows.Forms.Padding(6);
             this.environmental13.Name = "environmental13";
             this.environmental13.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.environmental13.Size = new System.Drawing.Size(466, 115);
@@ -617,7 +621,7 @@ namespace SiteInspection
             this.environmentalBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.environmentalBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.environmentalBtn.Location = new System.Drawing.Point(0, 1929);
-            this.environmentalBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.environmentalBtn.Margin = new System.Windows.Forms.Padding(6);
             this.environmentalBtn.Name = "environmentalBtn";
             this.environmentalBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.environmentalBtn.Size = new System.Drawing.Size(466, 115);
@@ -636,7 +640,7 @@ namespace SiteInspection
             this.panelSiteRulesSubmenu.Controls.Add(this.siteRules9);
             this.panelSiteRulesSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSiteRulesSubmenu.Location = new System.Drawing.Point(0, 1458);
-            this.panelSiteRulesSubmenu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panelSiteRulesSubmenu.Margin = new System.Windows.Forms.Padding(6);
             this.panelSiteRulesSubmenu.Name = "panelSiteRulesSubmenu";
             this.panelSiteRulesSubmenu.Size = new System.Drawing.Size(466, 471);
             this.panelSiteRulesSubmenu.TabIndex = 6;
@@ -648,7 +652,7 @@ namespace SiteInspection
             this.siteRules12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.siteRules12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.siteRules12.Location = new System.Drawing.Point(0, 345);
-            this.siteRules12.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.siteRules12.Margin = new System.Windows.Forms.Padding(6);
             this.siteRules12.Name = "siteRules12";
             this.siteRules12.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.siteRules12.Size = new System.Drawing.Size(466, 125);
@@ -665,7 +669,7 @@ namespace SiteInspection
             this.siteRules11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.siteRules11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.siteRules11.Location = new System.Drawing.Point(0, 230);
-            this.siteRules11.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.siteRules11.Margin = new System.Windows.Forms.Padding(6);
             this.siteRules11.Name = "siteRules11";
             this.siteRules11.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.siteRules11.Size = new System.Drawing.Size(466, 115);
@@ -682,7 +686,7 @@ namespace SiteInspection
             this.siteRules10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.siteRules10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.siteRules10.Location = new System.Drawing.Point(0, 115);
-            this.siteRules10.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.siteRules10.Margin = new System.Windows.Forms.Padding(6);
             this.siteRules10.Name = "siteRules10";
             this.siteRules10.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.siteRules10.Size = new System.Drawing.Size(466, 115);
@@ -699,7 +703,7 @@ namespace SiteInspection
             this.siteRules9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.siteRules9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.siteRules9.Location = new System.Drawing.Point(0, 0);
-            this.siteRules9.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.siteRules9.Margin = new System.Windows.Forms.Padding(6);
             this.siteRules9.Name = "siteRules9";
             this.siteRules9.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.siteRules9.Size = new System.Drawing.Size(466, 115);
@@ -717,7 +721,7 @@ namespace SiteInspection
             this.siteRulesBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.siteRulesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.siteRulesBtn.Location = new System.Drawing.Point(0, 1343);
-            this.siteRulesBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.siteRulesBtn.Margin = new System.Windows.Forms.Padding(6);
             this.siteRulesBtn.Name = "siteRulesBtn";
             this.siteRulesBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.siteRulesBtn.Size = new System.Drawing.Size(466, 115);
@@ -735,7 +739,7 @@ namespace SiteInspection
             this.panelQualitySubmenu.Controls.Add(this.quality6);
             this.panelQualitySubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelQualitySubmenu.Location = new System.Drawing.Point(0, 997);
-            this.panelQualitySubmenu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panelQualitySubmenu.Margin = new System.Windows.Forms.Padding(6);
             this.panelQualitySubmenu.Name = "panelQualitySubmenu";
             this.panelQualitySubmenu.Size = new System.Drawing.Size(466, 346);
             this.panelQualitySubmenu.TabIndex = 4;
@@ -747,7 +751,7 @@ namespace SiteInspection
             this.quality8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.quality8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.quality8.Location = new System.Drawing.Point(0, 230);
-            this.quality8.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.quality8.Margin = new System.Windows.Forms.Padding(6);
             this.quality8.Name = "quality8";
             this.quality8.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.quality8.Size = new System.Drawing.Size(466, 115);
@@ -764,7 +768,7 @@ namespace SiteInspection
             this.quality7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.quality7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.quality7.Location = new System.Drawing.Point(0, 115);
-            this.quality7.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.quality7.Margin = new System.Windows.Forms.Padding(6);
             this.quality7.Name = "quality7";
             this.quality7.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.quality7.Size = new System.Drawing.Size(466, 115);
@@ -781,7 +785,7 @@ namespace SiteInspection
             this.quality6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.quality6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.quality6.Location = new System.Drawing.Point(0, 0);
-            this.quality6.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.quality6.Margin = new System.Windows.Forms.Padding(6);
             this.quality6.Name = "quality6";
             this.quality6.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.quality6.Size = new System.Drawing.Size(466, 115);
@@ -799,7 +803,7 @@ namespace SiteInspection
             this.qualityBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.qualityBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.qualityBtn.Location = new System.Drawing.Point(0, 882);
-            this.qualityBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.qualityBtn.Margin = new System.Windows.Forms.Padding(6);
             this.qualityBtn.Name = "qualityBtn";
             this.qualityBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.qualityBtn.Size = new System.Drawing.Size(466, 115);
@@ -820,7 +824,7 @@ namespace SiteInspection
             this.panelWorkingStandardSubmenu.Controls.Add(this.button1);
             this.panelWorkingStandardSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelWorkingStandardSubmenu.Location = new System.Drawing.Point(0, 307);
-            this.panelWorkingStandardSubmenu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panelWorkingStandardSubmenu.Margin = new System.Windows.Forms.Padding(6);
             this.panelWorkingStandardSubmenu.Name = "panelWorkingStandardSubmenu";
             this.panelWorkingStandardSubmenu.Size = new System.Drawing.Size(466, 575);
             this.panelWorkingStandardSubmenu.TabIndex = 2;
@@ -832,7 +836,7 @@ namespace SiteInspection
             this.workingStandards5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.workingStandards5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.workingStandards5.Location = new System.Drawing.Point(0, 460);
-            this.workingStandards5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.workingStandards5.Margin = new System.Windows.Forms.Padding(6);
             this.workingStandards5.Name = "workingStandards5";
             this.workingStandards5.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.workingStandards5.Size = new System.Drawing.Size(466, 115);
@@ -849,7 +853,7 @@ namespace SiteInspection
             this.workingStandards4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.workingStandards4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.workingStandards4.Location = new System.Drawing.Point(0, 345);
-            this.workingStandards4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.workingStandards4.Margin = new System.Windows.Forms.Padding(6);
             this.workingStandards4.Name = "workingStandards4";
             this.workingStandards4.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.workingStandards4.Size = new System.Drawing.Size(466, 115);
@@ -866,7 +870,7 @@ namespace SiteInspection
             this.workingStandards3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.workingStandards3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.workingStandards3.Location = new System.Drawing.Point(0, 230);
-            this.workingStandards3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.workingStandards3.Margin = new System.Windows.Forms.Padding(6);
             this.workingStandards3.Name = "workingStandards3";
             this.workingStandards3.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.workingStandards3.Size = new System.Drawing.Size(466, 115);
@@ -883,7 +887,7 @@ namespace SiteInspection
             this.workingStandards2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.workingStandards2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.workingStandards2.Location = new System.Drawing.Point(0, 115);
-            this.workingStandards2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.workingStandards2.Margin = new System.Windows.Forms.Padding(6);
             this.workingStandards2.Name = "workingStandards2";
             this.workingStandards2.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.workingStandards2.Size = new System.Drawing.Size(466, 115);
@@ -900,7 +904,7 @@ namespace SiteInspection
             this.workingStandards1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.workingStandards1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.workingStandards1.Location = new System.Drawing.Point(0, 0);
-            this.workingStandards1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.workingStandards1.Margin = new System.Windows.Forms.Padding(6);
             this.workingStandards1.Name = "workingStandards1";
             this.workingStandards1.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
             this.workingStandards1.Size = new System.Drawing.Size(466, 115);
@@ -914,7 +918,7 @@ namespace SiteInspection
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button1.Margin = new System.Windows.Forms.Padding(6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(466, 0);
             this.button1.TabIndex = 0;
@@ -929,7 +933,7 @@ namespace SiteInspection
             this.workingStandardsBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.workingStandardsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.workingStandardsBtn.Location = new System.Drawing.Point(0, 192);
-            this.workingStandardsBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.workingStandardsBtn.Margin = new System.Windows.Forms.Padding(6);
             this.workingStandardsBtn.Name = "workingStandardsBtn";
             this.workingStandardsBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.workingStandardsBtn.Size = new System.Drawing.Size(466, 115);
@@ -944,7 +948,7 @@ namespace SiteInspection
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel2.Margin = new System.Windows.Forms.Padding(6);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(466, 192);
             this.panel2.TabIndex = 0;
@@ -953,7 +957,7 @@ namespace SiteInspection
             // 
             this.pictureBox1.BackgroundImage = global::SiteInspection.Properties.Resources.WhatsApp_Image_2021_10_25_at_7_37_26_AM;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(500, 185);
             this.pictureBox1.TabIndex = 1;
@@ -964,7 +968,7 @@ namespace SiteInspection
             this.button2.BackColor = System.Drawing.Color.DarkGray;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Location = new System.Drawing.Point(1382, 1152);
-            this.button2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button2.Margin = new System.Windows.Forms.Padding(6);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(208, 50);
             this.button2.TabIndex = 32;
@@ -978,7 +982,7 @@ namespace SiteInspection
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
             this.button3.Location = new System.Drawing.Point(1120, 1154);
-            this.button3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button3.Margin = new System.Windows.Forms.Padding(6);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(208, 50);
             this.button3.TabIndex = 31;
@@ -1006,6 +1010,35 @@ namespace SiteInspection
             this.dataGrd.Size = new System.Drawing.Size(601, 258);
             this.dataGrd.TabIndex = 33;
             // 
+            // txtInterventions
+            // 
+            this.txtInterventions.Location = new System.Drawing.Point(517, 160);
+            this.txtInterventions.Name = "txtInterventions";
+            this.txtInterventions.Size = new System.Drawing.Size(186, 31);
+            this.txtInterventions.TabIndex = 34;
+            // 
+            // txtComment
+            // 
+            this.txtComment.Location = new System.Drawing.Point(709, 161);
+            this.txtComment.Multiline = true;
+            this.txtComment.Name = "txtComment";
+            this.txtComment.Size = new System.Drawing.Size(314, 85);
+            this.txtComment.TabIndex = 35;
+            // 
+            // txtCompleted
+            // 
+            this.txtCompleted.Location = new System.Drawing.Point(517, 261);
+            this.txtCompleted.Name = "txtCompleted";
+            this.txtCompleted.Size = new System.Drawing.Size(186, 31);
+            this.txtCompleted.TabIndex = 36;
+            // 
+            // txtAction_takn
+            // 
+            this.txtAction_takn.Location = new System.Drawing.Point(709, 261);
+            this.txtAction_takn.Name = "txtAction_takn";
+            this.txtAction_takn.Size = new System.Drawing.Size(314, 31);
+            this.txtAction_takn.TabIndex = 37;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -1013,12 +1046,16 @@ namespace SiteInspection
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1614, 1231);
+            this.Controls.Add(this.txtAction_takn);
+            this.Controls.Add(this.txtCompleted);
+            this.Controls.Add(this.txtComment);
+            this.Controls.Add(this.txtInterventions);
             this.Controls.Add(this.dataGrd);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelSideMenu);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Filling Form";
@@ -1098,5 +1135,9 @@ namespace SiteInspection
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGrd;
+        private System.Windows.Forms.TextBox txtInterventions;
+        private System.Windows.Forms.TextBox txtComment;
+        private System.Windows.Forms.TextBox txtCompleted;
+        private System.Windows.Forms.TextBox txtAction_takn;
     }
 }
