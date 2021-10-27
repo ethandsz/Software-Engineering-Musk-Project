@@ -12,6 +12,8 @@ namespace SiteInspection
 {
     public partial class Form3 : Form
     {
+
+        string form_data_type_id;
         public Form3()
         {
             InitializeComponent();
@@ -150,9 +152,10 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
+            form_data_type_id = "1";
             label1.Text = "1A";
             //Display interventions,comment,completed,action_taken in the datagridview
-            populate_dgv("1");
+            //populate_dgv("1");
 
             
             
@@ -201,7 +204,8 @@ namespace SiteInspection
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
             label1.Text = "1B";
-            populate_dgv("2");
+            form_data_type_id = "2";
+            //populate_dgv("2");
         }
 
         private void workingStandards3_Click(object sender, EventArgs e)
@@ -241,7 +245,8 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
-            populate_dgv("6");
+            form_data_type_id = "6";
+            //populate_dgv("6");
         }
 
         private void quality7_Click(object sender, EventArgs e)
@@ -503,7 +508,7 @@ namespace SiteInspection
         //Method for making a query coressponding to each button, change get_latest_form_id() to "1" to see how its supposed to work with a actual form
         public string data_query(string num)
         {
-            string query = string.Format("SELECT interventions,comment,completed,action_taken FROM form_data WHERE form_id = {0} AND form_data_type_id = {1}", "1", num);
+            string query = string.Format("SELECT interventions,comment,completed,action_taken FROM form_data WHERE form_id = {0} AND form_data_type_id = {1}", get_latest_form_id(), num);
             return query;
         }
 
@@ -517,15 +522,48 @@ namespace SiteInspection
             txtComment.Text = populate_txtBox(1);
             txtCompleted.Text = populate_txtBox(2);
             txtAction_takn.Text = populate_txtBox(3);
-
-            
-            
-
         }
         public string populate_txtBox(int column_num)
         {
             string s = dataGrd.Rows[0].Cells[column_num].Value.ToString();
             return s;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button4_Click_2(object sender, EventArgs e)
+        {
+            string sqlQuery = "INSERT INTO form_data (form_data_type_id, form_id, interventions, comment, completed, action_taken)" +
+                " VALUES (@form_data_type_id, @form_id, @interventions, @comment, @completed, @action_taken)";
+            DBConnection.getInstanceOfDBConnection().saveToDB2(sqlQuery, form_data_type_id, get_latest_form_id(), textBox4.Text, textBox3.Text, textBox2.Text,
+                textBox1.Text);
+
+            DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(string.Format("SELECT interventions, comment, completed," +
+                " action_taken FROM form_data WHERE form_id = {0} AND form_data_type_id = {1}", get_latest_form_id(), form_data_type_id));
+            dataGridView1.DataSource = ds.Tables[0];
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

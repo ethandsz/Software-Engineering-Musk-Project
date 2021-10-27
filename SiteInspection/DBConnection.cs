@@ -100,8 +100,32 @@ namespace SiteInspection
 
         }
 
+        public void saveToDB2(string sqlQuery, string form_data_type_id, string form_id, string interventions, string comment,
+            string completed, string action_taken)
+        {
+            using (SqlConnection connToDB = new SqlConnection(connStr))
+            {
+                //open connection
+                connToDB.Open();
+
+                SqlCommand sqlCommand = new SqlCommand(sqlQuery, connToDB);
+
+                //set the sqlCommand's properties
+                sqlCommand.CommandType = CommandType.Text;
+
+                //add the parameters to the sqlCommand
+                sqlCommand.Parameters.Add(new SqlParameter("form_data_type_id", form_data_type_id));
+                sqlCommand.Parameters.Add(new SqlParameter("form_id", form_id));
+                sqlCommand.Parameters.Add(new SqlParameter("interventions", interventions));
+                sqlCommand.Parameters.Add(new SqlParameter("comment", comment));
+                sqlCommand.Parameters.Add(new SqlParameter("completed", completed));
+                sqlCommand.Parameters.Add(new SqlParameter("action_taken", action_taken));
+
+                //execute the command
+                sqlCommand.ExecuteNonQuery();
+
+                connToDB.Close();
+            }
+        }
     }
-
-
-
 }
