@@ -51,7 +51,7 @@
             "----",
             "----"});
             this.cmbBox_Form.Location = new System.Drawing.Point(6, 67);
-            this.cmbBox_Form.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbBox_Form.Margin = new System.Windows.Forms.Padding(2);
             this.cmbBox_Form.Name = "cmbBox_Form";
             this.cmbBox_Form.Size = new System.Drawing.Size(267, 21);
             this.cmbBox_Form.TabIndex = 0;
@@ -64,7 +64,7 @@
             this.btn_CreateForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.btn_CreateForm.ForeColor = System.Drawing.Color.Black;
             this.btn_CreateForm.Location = new System.Drawing.Point(6, 98);
-            this.btn_CreateForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_CreateForm.Margin = new System.Windows.Forms.Padding(2);
             this.btn_CreateForm.Name = "btn_CreateForm";
             this.btn_CreateForm.Size = new System.Drawing.Size(265, 29);
             this.btn_CreateForm.TabIndex = 1;
@@ -79,7 +79,7 @@
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
             this.button3.ForeColor = System.Drawing.Color.Black;
             this.button3.Location = new System.Drawing.Point(6, 331);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(104, 26);
             this.button3.TabIndex = 4;
@@ -94,7 +94,7 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
             this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Location = new System.Drawing.Point(6, 295);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(104, 26);
             this.button2.TabIndex = 2;
@@ -111,7 +111,7 @@
             this.dgvForm_type.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvForm_type.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvForm_type.Location = new System.Drawing.Point(335, 178);
-            this.dgvForm_type.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvForm_type.Margin = new System.Windows.Forms.Padding(2);
             this.dgvForm_type.Name = "dgvForm_type";
             this.dgvForm_type.ReadOnly = true;
             this.dgvForm_type.RowHeadersWidth = 51;
@@ -123,7 +123,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(335, 148);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(52, 26);
             this.button1.TabIndex = 5;
@@ -136,7 +136,7 @@
             this.panel1.BackgroundImage = global::SiteInspection.Properties.Resources.WhatsApp_Image_2021_10_25_at_7_37_26_AM;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel1.Location = new System.Drawing.Point(414, 6);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(220, 97);
             this.panel1.TabIndex = 6;
@@ -154,11 +154,12 @@
             this.Controls.Add(this.dgvForm_type);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_CreateForm);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvForm_type)).EndInit();
             this.ResumeLayout(false);
 

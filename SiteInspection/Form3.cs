@@ -533,7 +533,9 @@ namespace SiteInspection
                 textBox1.Text);
 
             populate_dgv(form_data_type_id);
-            
+
+            clearTxtBox();
+
             //DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(string.Format("SELECT interventions, comment, completed," +
             //    " action_taken FROM form_data WHERE form_id = {0} AND form_data_type_id = {1}", get_latest_form_id(), form_data_type_id));
             //dataGridView1.DataSource = ds.Tables[0];
@@ -545,6 +547,8 @@ namespace SiteInspection
             label1.Text = num;
             populate_dgv(num);
             clearTxtBox();
+            DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet("SELECT * FROM form_data");
+            dataGridView1.DataSource = ds.Tables[0];
         }
 
         public void clearTxtBox()
@@ -586,6 +590,11 @@ namespace SiteInspection
         }
 
         private void section_label(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

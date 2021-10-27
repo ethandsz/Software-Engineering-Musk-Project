@@ -20,6 +20,7 @@ namespace SiteInspection
         public Form1()
         {
             InitializeComponent();
+            cmbBox_Form.SelectedIndex = 0;
         }
         //Admin Button on click method
         private void admin_login_btn(object sender, EventArgs e)
@@ -72,6 +73,11 @@ namespace SiteInspection
         }
 
         private void dgvForm_type_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
