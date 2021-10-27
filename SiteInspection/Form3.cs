@@ -544,6 +544,15 @@ namespace SiteInspection
             form_data_type_id = num;
             label1.Text = num;
             populate_dgv(num);
+            clearTxtBox();
+        }
+
+        public void clearTxtBox()
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
         }
 
         private void interv_txt(object sender, EventArgs e)
