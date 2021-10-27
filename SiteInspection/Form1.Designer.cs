@@ -85,7 +85,7 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "Exit";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.exit_btn);
             // 
             // button2
             // 
@@ -100,7 +100,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "Admin Login";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.admin_login_btn);
             // 
             // dgvForm_type
             // 

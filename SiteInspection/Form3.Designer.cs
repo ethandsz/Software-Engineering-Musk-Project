@@ -93,6 +93,7 @@ namespace SiteInspection
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelSideMenu.SuspendLayout();
             this.panelTotalInterventionsSubmenu.SuspendLayout();
             this.panelMiscellaneousSubmenu.SuspendLayout();
@@ -919,42 +920,44 @@ namespace SiteInspection
             // 
             this.button2.BackColor = System.Drawing.Color.DarkGray;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(695, 344);
+            this.button2.Location = new System.Drawing.Point(691, 376);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(104, 26);
             this.button2.TabIndex = 32;
             this.button2.Text = "Exit";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.exit_btn);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.DarkGray;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
-            this.button3.Location = new System.Drawing.Point(564, 345);
+            this.button3.Location = new System.Drawing.Point(560, 377);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(104, 26);
             this.button3.TabIndex = 31;
             this.button3.Text = "Save";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dataGrd
             // 
             this.dataGrd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrd.Location = new System.Drawing.Point(259, 151);
-            this.dataGrd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGrd.Location = new System.Drawing.Point(255, 183);
+            this.dataGrd.Margin = new System.Windows.Forms.Padding(2);
             this.dataGrd.Name = "dataGrd";
             this.dataGrd.RowHeadersWidth = 82;
             this.dataGrd.RowTemplate.Height = 33;
             this.dataGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGrd.Size = new System.Drawing.Size(354, 189);
             this.dataGrd.TabIndex = 33;
+            this.dataGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrd_CellContentClick);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(260, 125);
+            this.label6.Location = new System.Drawing.Point(256, 157);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 13);
@@ -964,7 +967,7 @@ namespace SiteInspection
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(260, 100);
+            this.label7.Location = new System.Drawing.Point(256, 132);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 13);
@@ -974,7 +977,7 @@ namespace SiteInspection
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(258, 52);
+            this.label8.Location = new System.Drawing.Point(254, 84);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(59, 13);
@@ -984,7 +987,7 @@ namespace SiteInspection
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(260, 30);
+            this.label9.Location = new System.Drawing.Point(256, 62);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(71, 13);
@@ -993,53 +996,64 @@ namespace SiteInspection
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(334, 122);
+            this.textBox1.Location = new System.Drawing.Point(330, 154);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(159, 20);
             this.textBox1.TabIndex = 45;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.TextChanged += new System.EventHandler(this.action_text);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(334, 100);
+            this.textBox2.Location = new System.Drawing.Point(330, 132);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(95, 20);
             this.textBox2.TabIndex = 44;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox2.TextChanged += new System.EventHandler(this.completed_txt);
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(334, 52);
+            this.textBox3.Location = new System.Drawing.Point(330, 84);
             this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(159, 46);
             this.textBox3.TabIndex = 43;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.textBox3.TextChanged += new System.EventHandler(this.comment_txt);
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(334, 30);
+            this.textBox4.Location = new System.Drawing.Point(330, 62);
             this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(95, 20);
             this.textBox4.TabIndex = 42;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.textBox4.TextChanged += new System.EventHandler(this.interv_txt);
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.DarkGray;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
-            this.button4.Location = new System.Drawing.Point(509, 112);
+            this.button4.Location = new System.Drawing.Point(505, 144);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(104, 26);
             this.button4.TabIndex = 50;
             this.button4.Text = "Add";
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click_2);
+            this.button4.Click += new System.EventHandler(this.add_btn);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(256, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(215, 31);
+            this.label1.TabIndex = 51;
+            this.label1.Text = "Section indicator";
+            this.label1.Click += new System.EventHandler(this.section_label);
             // 
             // Form3
             // 
@@ -1048,6 +1062,7 @@ namespace SiteInspection
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(807, 552);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
@@ -1148,5 +1163,6 @@ namespace SiteInspection
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label1;
     }
 }

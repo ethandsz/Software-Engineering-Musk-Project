@@ -33,7 +33,7 @@ namespace SiteInspection
             //dgvForm_type.DataSource = ds.Tables[0];
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void continue_btn(object sender, EventArgs e)
         {
             //This saves the form data to the database. There has to be a way of reducing the amount of parameters!
             DBConnection.getInstanceOfDBConnection().saveToDB(sqlQuery, Form1.form_type_id_var, txtSite.Text, txtCmpltd.Text, dateTimePicker1.Text, 
@@ -77,7 +77,7 @@ namespace SiteInspection
             form1.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void exit_btn(object sender, EventArgs e)
         {
             Form1 form1 = new Form1();
             form1.Show();
@@ -125,6 +125,11 @@ namespace SiteInspection
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSite_TextChanged(object sender, EventArgs e)
         {
 
         }

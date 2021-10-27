@@ -137,7 +137,7 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
-            populate_dgv("12");
+            setVars("12");
         }
 
         private void workingStandardsBtn_Click(object sender, EventArgs e)
@@ -152,12 +152,9 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
-            form_data_type_id = "1";
-            //Display interventions,comment,completed,action_taken in the datagridview
-            populate_dgv("1");
-
-            
-            
+            //Method to set various variables to the section number for later reference
+            setVars("1");            
+            //Display interventions,comment,completed,action_taken in the datagridview            
         }
 
         private void qualityBtn_Click(object sender, EventArgs e)
@@ -202,8 +199,7 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
-            form_data_type_id = "2";
-            populate_dgv("2");
+            setVars("2");
         }
 
         private void workingStandards3_Click(object sender, EventArgs e)
@@ -213,8 +209,7 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
-            form_data_type_id = "3";
-            populate_dgv("3");
+            setVars("3");
         }
 
         private void workingStandards4_Click(object sender, EventArgs e)
@@ -224,7 +219,7 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
-            populate_dgv("4");
+            setVars("4");
         }
 
         private void workingStandards5_Click(object sender, EventArgs e)
@@ -234,7 +229,7 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
-            populate_dgv("5");
+            setVars("5");
         }
 
         private void quality6_Click(object sender, EventArgs e)
@@ -244,8 +239,7 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
-            form_data_type_id = "6";
-            //populate_dgv("6");
+            setVars("6");
         }
 
         private void quality7_Click(object sender, EventArgs e)
@@ -255,7 +249,7 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
-            populate_dgv("7");
+            setVars("7");
         }
 
         private void quality8_Click(object sender, EventArgs e)
@@ -265,7 +259,7 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
-            populate_dgv("8");
+            setVars("8");
         }
 
         private void siteRules9_Click(object sender, EventArgs e)
@@ -275,7 +269,7 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
-            populate_dgv("9");
+            setVars("9");
         }
 
         private void siteRules10_Click(object sender, EventArgs e)
@@ -285,7 +279,7 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
-            populate_dgv("10");
+            setVars("10");
         }
 
         private void siteRules11_Click(object sender, EventArgs e)
@@ -295,7 +289,7 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
-            populate_dgv("11");
+            setVars("11");
         }
 
         private void environmental13_Click(object sender, EventArgs e)
@@ -305,7 +299,7 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
-            populate_dgv("13");
+            setVars("13");
         }
 
         private void environmental14_Click(object sender, EventArgs e)
@@ -315,7 +309,7 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
-            populate_dgv("14");
+            setVars("14");
         }
 
         private void environmental15_Click(object sender, EventArgs e)
@@ -325,7 +319,7 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
-            populate_dgv("15");
+            setVars("15");
         }
 
         private void protectionInd16_Click(object sender, EventArgs e)
@@ -335,7 +329,7 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
-            populate_dgv("16");
+            setVars("16");
         }
 
         private void protectionInd17_Click(object sender, EventArgs e)
@@ -345,7 +339,7 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
-            populate_dgv("17");
+            setVars("17");
         }
 
         private void protectionInd18_Click(object sender, EventArgs e)
@@ -355,7 +349,7 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
-            populate_dgv("18");
+            setVars("18");
         }
 
         private void tools19_Click(object sender, EventArgs e)
@@ -365,7 +359,7 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
-            populate_dgv("19");
+            setVars("19");
         }
 
         private void button3_Click_1(object sender, EventArgs e)
@@ -375,7 +369,7 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
-            populate_dgv("20");
+            setVars("20");
         }
 
         private void button4_Click_1(object sender, EventArgs e)
@@ -385,7 +379,7 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
-            populate_dgv("21");
+            setVars("21");
         }
 
         private void miscellaneous22_Click(object sender, EventArgs e)
@@ -395,7 +389,7 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
-            populate_dgv("22");
+            setVars("22");
         }
 
         private void miscellaneous23_Click(object sender, EventArgs e)
@@ -405,7 +399,7 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
-            populate_dgv("23");
+            setVars("23");
         }
 
         private void miscellaneous24_Click(object sender, EventArgs e)
@@ -415,7 +409,7 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
-            populate_dgv("24");
+            setVars("24");
         }
 
         private void workingStandardsA_Click(object sender, EventArgs e)
@@ -486,7 +480,7 @@ namespace SiteInspection
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void exit_btn(object sender, EventArgs e)
         {
             InspectionForm form = new InspectionForm();
             form.Show();
@@ -516,24 +510,22 @@ namespace SiteInspection
         {
             DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(data_query(num));
             dataGrd.DataSource = ds.Tables[0];
+            //Redundant
             //txtInterventions.Text = dataGrd.Rows[0].Cells[0].Value.ToString();
             //txtInterventions.Text = populate_txtBox(0);
             //txtComment.Text = populate_txtBox(1);
             //txtCompleted.Text = populate_txtBox(2);
             //txtAction_takn.Text = populate_txtBox(3);
         }
-        public string populate_txtBox(int column_num)
-        {
-            string s = dataGrd.Rows[0].Cells[column_num].Value.ToString();
-            return s;
-        }
+        
+        //Redundant
+        //public string populate_txtBox(int column_num)
+        //{
+        //    string s = dataGrd.Rows[0].Cells[column_num].Value.ToString();
+        //    return s;
+        //}
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void button4_Click_2(object sender, EventArgs e)
+        private void add_btn(object sender, EventArgs e)
         {
             string sqlQuery = "INSERT INTO form_data (form_data_type_id, form_id, interventions, comment, completed, action_taken)" +
                 " VALUES (@form_data_type_id, @form_id, @interventions, @comment, @completed, @action_taken)";
@@ -547,22 +539,44 @@ namespace SiteInspection
             //dataGridView1.DataSource = ds.Tables[0];
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
+        public void setVars(string num)
+        {
+            form_data_type_id = num;
+            label1.Text = num;
+            populate_dgv(num);
+        }
+
+        private void interv_txt(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
+        private void comment_txt(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void completed_txt(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void action_text(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //Here will be code to commit all interventions from form_data table to a pdf document
+        }
+
+        private void dataGrd_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void section_label(object sender, EventArgs e)
         {
 
         }

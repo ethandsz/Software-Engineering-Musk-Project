@@ -22,7 +22,7 @@ namespace SiteInspection
             InitializeComponent();
         }
         //Admin Button on click method
-        private void button2_Click(object sender, EventArgs e)
+        private void admin_login_btn(object sender, EventArgs e)
         {
             MessageBox.Show("Admin Login");
             AdminForm adminform = new AdminForm();
@@ -31,7 +31,7 @@ namespace SiteInspection
             
         }
         //Exit Button on Click method
-        private void button3_Click(object sender, EventArgs e)
+        private void exit_btn(object sender, EventArgs e)
         {
             //Exits Environment/Quits Program
             Environment.Exit(0);
