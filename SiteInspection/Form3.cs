@@ -130,31 +130,12 @@ namespace SiteInspection
 
         }
 
-        private void siteRules12_Click(object sender, EventArgs e)
-        {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
-            hideSubmenu();
-            setVars("12");
-        }
-
+        //
+        //Heading buttons
+        //
         private void workingStandardsBtn_Click(object sender, EventArgs e)
         {
             showSubmenu(panelWorkingStandardSubmenu);
-        }
-
-        private void workingStandards1_Click(object sender, EventArgs e)
-        {
-            //here goes the code 
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
-            hideSubmenu();
-            //Method to set various variables to the section number for later reference
-            setVars("1");            
-            //Display interventions,comment,completed,action_taken in the datagridview            
         }
 
         private void qualityBtn_Click(object sender, EventArgs e)
@@ -192,286 +173,186 @@ namespace SiteInspection
             showSubmenu(panelTotalInterventionsSubmenu);
         }
 
+        //
+        //Section buttons
+        //
+        private void workingStandards1_Click(object sender, EventArgs e)
+        {
+            hideSubmenu();
+            //Method to set various variables to the section number for later reference
+            setVars("1");
+        }
+
         private void workingStandards2_Click(object sender, EventArgs e)
         {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
             setVars("2");
         }
 
         private void workingStandards3_Click(object sender, EventArgs e)
         {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
             setVars("3");
         }
 
         private void workingStandards4_Click(object sender, EventArgs e)
         {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
             setVars("4");
         }
 
         private void workingStandards5_Click(object sender, EventArgs e)
         {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
             setVars("5");
         }
 
         private void quality6_Click(object sender, EventArgs e)
         {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
             setVars("6");
         }
 
         private void quality7_Click(object sender, EventArgs e)
         {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
             setVars("7");
         }
 
         private void quality8_Click(object sender, EventArgs e)
         {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
             setVars("8");
         }
 
         private void siteRules9_Click(object sender, EventArgs e)
         {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
             setVars("9");
         }
 
         private void siteRules10_Click(object sender, EventArgs e)
         {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
             setVars("10");
         }
 
         private void siteRules11_Click(object sender, EventArgs e)
         {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
             setVars("11");
         }
 
+        private void siteRules12_Click(object sender, EventArgs e)
+        {
+            hideSubmenu();
+            setVars("12");
+        }
+
         private void environmental13_Click(object sender, EventArgs e)
         {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
             setVars("13");
         }
 
         private void environmental14_Click(object sender, EventArgs e)
         {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
             setVars("14");
         }
 
         private void environmental15_Click(object sender, EventArgs e)
         {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
             setVars("15");
         }
 
         private void protectionInd16_Click(object sender, EventArgs e)
         {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
             setVars("16");
         }
 
         private void protectionInd17_Click(object sender, EventArgs e)
         {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
             setVars("17");
         }
 
         private void protectionInd18_Click(object sender, EventArgs e)
         {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
             setVars("18");
         }
 
         private void tools19_Click(object sender, EventArgs e)
         {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
             setVars("19");
         }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
             setVars("20");
         }
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
             setVars("21");
         }
 
         private void miscellaneous22_Click(object sender, EventArgs e)
         {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
             setVars("22");
         }
 
         private void miscellaneous23_Click(object sender, EventArgs e)
         {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
             setVars("23");
         }
 
         private void miscellaneous24_Click(object sender, EventArgs e)
         {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
             setVars("24");
         }
 
         private void workingStandardsA_Click(object sender, EventArgs e)
         {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
         }
 
         private void qualityB_Click(object sender, EventArgs e)
         {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
         }
 
         private void siteRulesC_Click(object sender, EventArgs e)
         {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
         }
 
         private void environmentalD_Click(object sender, EventArgs e)
         {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
         }
 
         private void protectionIndE_Click(object sender, EventArgs e)
         {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
         }
 
         private void toolsF_Click(object sender, EventArgs e)
         {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
         }
 
         private void miscellaneousG_Click(object sender, EventArgs e)
-        {
-            // here goes the code
-            //maybe database and so on
-
-            //but once you click the number menu, it will disappear from the side menu panel
+        {            
             hideSubmenu();
         }
 
@@ -488,7 +369,7 @@ namespace SiteInspection
         }
 
         //Methods
-
+        //
         //Method for getting the most latest(user_created) form
         public string get_latest_form_id()
         {
@@ -510,20 +391,7 @@ namespace SiteInspection
         {
             DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(data_query(num));
             dataGrd.DataSource = ds.Tables[0];
-            //Redundant
-            //txtInterventions.Text = dataGrd.Rows[0].Cells[0].Value.ToString();
-            //txtInterventions.Text = populate_txtBox(0);
-            //txtComment.Text = populate_txtBox(1);
-            //txtCompleted.Text = populate_txtBox(2);
-            //txtAction_takn.Text = populate_txtBox(3);
         }
-        
-        //Redundant
-        //public string populate_txtBox(int column_num)
-        //{
-        //    string s = dataGrd.Rows[0].Cells[column_num].Value.ToString();
-        //    return s;
-        //}
 
         private void add_btn(object sender, EventArgs e)
         {
@@ -535,12 +403,12 @@ namespace SiteInspection
             populate_dgv(form_data_type_id);
 
             clearTxtBox();
-
-            //DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(string.Format("SELECT interventions, comment, completed," +
-            //    " action_taken FROM form_data WHERE form_id = {0} AND form_data_type_id = {1}", get_latest_form_id(), form_data_type_id));
-            //dataGridView1.DataSource = ds.Tables[0];
         }
 
+        //Each time a button is pressed this method is called
+        //Variables used in sqlQueries to call from the corresponding sections
+        //Populates the datagridview
+        //Clears textboxes
         public void setVars(string num)
         {
             form_data_type_id = num;
@@ -581,7 +449,7 @@ namespace SiteInspection
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //Here will be code to commit all interventions from form_data table to a pdf document
+            //This will be where the code to commit all interventions from form_data table to a pdf document will go
         }
 
         private void dataGrd_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -16,9 +16,7 @@ namespace SiteInspection
     {
                
         //Variables
-        string sqlQuery = "INSERT INTO form (form_type_id, site_name, cmpltd_by, date, work_area, job_desc, " +
-                    "supervisor, inspector, type) VALUES (@form_type_id, @site_name, @cmpltd_by, @date, @work_area, @job_desc," +
-                    " @supervisor, @inspector, @type)";
+        
         public InspectionForm()
         {
             InitializeComponent();
@@ -35,6 +33,10 @@ namespace SiteInspection
 
         private void continue_btn(object sender, EventArgs e)
         {
+            string sqlQuery = "INSERT INTO form (form_type_id, site_name, cmpltd_by, date, work_area, job_desc, " +
+                    "supervisor, inspector, type) VALUES (@form_type_id, @site_name, @cmpltd_by, @date, @work_area, @job_desc," +
+                    " @supervisor, @inspector, @type)";
+
             //This saves the form data to the database. There has to be a way of reducing the amount of parameters!
             DBConnection.getInstanceOfDBConnection().saveToDB(sqlQuery, Form1.form_type_id_var, txtSite.Text, txtCmpltd.Text, dateTimePicker1.Text, 
                 txtWrk_Area.Text, txtDesc.Text, txtSupr.Text, txtInspc.Text, txtType.Text);
