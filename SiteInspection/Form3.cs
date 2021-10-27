@@ -415,7 +415,8 @@ namespace SiteInspection
             label1.Text = num;
             populate_dgv(num);
             clearTxtBox();
-            DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet("SELECT * FROM form_data");
+            string sqlQuery = string.Format("SELECT form_id,fd_t.form_data_type_id,interventions,comment,completed,action_taken,data_type_name FROM form_data fd RIGHT JOIN form_data_type fd_t ON(fd_t.form_data_type_id = fd.form_data_type_id) WHERE form_id = {0} ORDER BY fd_t.form_data_type_id",get_latest_form_id());
+            DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(sqlQuery);
             dataGridView1.DataSource = ds.Tables[0];
         }
 
