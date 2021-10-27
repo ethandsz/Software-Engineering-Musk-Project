@@ -153,9 +153,8 @@ namespace SiteInspection
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
             form_data_type_id = "1";
-            label1.Text = "1A";
             //Display interventions,comment,completed,action_taken in the datagridview
-            //populate_dgv("1");
+            populate_dgv("1");
 
             
             
@@ -203,9 +202,8 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
-            label1.Text = "1B";
             form_data_type_id = "2";
-            //populate_dgv("2");
+            populate_dgv("2");
         }
 
         private void workingStandards3_Click(object sender, EventArgs e)
@@ -215,6 +213,7 @@ namespace SiteInspection
 
             //but once you click the number menu, it will disappear from the side menu panel
             hideSubmenu();
+            form_data_type_id = "3";
             populate_dgv("3");
         }
 
@@ -518,10 +517,10 @@ namespace SiteInspection
             DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(data_query(num));
             dataGrd.DataSource = ds.Tables[0];
             //txtInterventions.Text = dataGrd.Rows[0].Cells[0].Value.ToString();
-            txtInterventions.Text = populate_txtBox(0);
-            txtComment.Text = populate_txtBox(1);
-            txtCompleted.Text = populate_txtBox(2);
-            txtAction_takn.Text = populate_txtBox(3);
+            //txtInterventions.Text = populate_txtBox(0);
+            //txtComment.Text = populate_txtBox(1);
+            //txtCompleted.Text = populate_txtBox(2);
+            //txtAction_takn.Text = populate_txtBox(3);
         }
         public string populate_txtBox(int column_num)
         {
@@ -541,9 +540,11 @@ namespace SiteInspection
             DBConnection.getInstanceOfDBConnection().saveToDB2(sqlQuery, form_data_type_id, get_latest_form_id(), textBox4.Text, textBox3.Text, textBox2.Text,
                 textBox1.Text);
 
-            DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(string.Format("SELECT interventions, comment, completed," +
-                " action_taken FROM form_data WHERE form_id = {0} AND form_data_type_id = {1}", get_latest_form_id(), form_data_type_id));
-            dataGridView1.DataSource = ds.Tables[0];
+            populate_dgv(form_data_type_id);
+            
+            //DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(string.Format("SELECT interventions, comment, completed," +
+            //    " action_taken FROM form_data WHERE form_id = {0} AND form_data_type_id = {1}", get_latest_form_id(), form_data_type_id));
+            //dataGridView1.DataSource = ds.Tables[0];
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
