@@ -391,6 +391,11 @@ namespace SiteInspection
         {
             DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(data_query(num));
             dataGrd.DataSource = ds.Tables[0];
+            //
+            textBox4.Text = populate_txtBox(0);
+            textBox3.Text = populate_txtBox(1);
+            textBox2.Text = populate_txtBox(2);
+            textBox1.Text = populate_txtBox(3);
         }
 
         private void add_btn(object sender, EventArgs e)
@@ -401,8 +406,9 @@ namespace SiteInspection
                 textBox1.Text);
 
             populate_dgv(form_data_type_id);
+            populate_currentDgv();
 
-            clearTxtBox();
+            //clearTxtBox();
         }
 
         //Each time a button is pressed this method is called
@@ -414,8 +420,14 @@ namespace SiteInspection
             form_data_type_id = num;
             label1.Text = num;
             populate_dgv(num);
-            clearTxtBox();
-            string sqlQuery = string.Format("SELECT form_id,fd_t.form_data_type_id,interventions,comment,completed,action_taken,data_type_name FROM form_data fd RIGHT JOIN form_data_type fd_t ON(fd_t.form_data_type_id = fd.form_data_type_id) WHERE form_id = {0} ORDER BY fd_t.form_data_type_id",get_latest_form_id());
+            //clearTxtBox();
+            //string sqlQuery = string.Format("SELECT form_id,fd_t.form_data_type_id,interventions,comment,completed,action_taken,data_type_name FROM form_data fd RIGHT JOIN form_data_type fd_t ON(fd_t.form_data_type_id = fd.form_data_type_id) WHERE form_id = {0} ORDER BY fd_t.form_data_type_id",get_latest_form_id());
+            //DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(sqlQuery);
+            //dataGridView1.DataSource = ds.Tables[0];
+        }
+        public void populate_currentDgv()
+        {
+            string sqlQuery = string.Format("SELECT form_id,fd_t.form_data_type_id,interventions,comment,completed,action_taken,data_type_name FROM form_data fd RIGHT JOIN form_data_type fd_t ON(fd_t.form_data_type_id = fd.form_data_type_id) WHERE form_id = {0} ORDER BY fd_t.form_data_type_id", get_latest_form_id());
             DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(sqlQuery);
             dataGridView1.DataSource = ds.Tables[0];
         }
@@ -426,6 +438,22 @@ namespace SiteInspection
             textBox2.Text = "";
             textBox3.Text = "";
             textBox4.Text = "";
+        }
+
+        public string populate_txtBox(int column_num)
+        {
+            string s = "";
+            //dataGrd.Rows[0].Cells[column_num].Value.ToString()
+            if(dataGrd.Rows[0].Cells[column_num].Value == null)
+            {
+                s = "";
+            }
+            else
+            {
+                s = dataGrd.Rows[0].Cells[column_num].Value.ToString();
+            }
+            //MessageBox.Show(s);
+            return s;
         }
 
         private void interv_txt(object sender, EventArgs e)
