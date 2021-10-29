@@ -38,7 +38,7 @@ namespace SiteInspection
                     " @supervisor, @inspector, @type)";
 
             //This saves the form data to the database. There has to be a way of reducing the amount of parameters!
-            DBConnection.getInstanceOfDBConnection().saveToDB(sqlQuery, Form1.form_type_id_var, txtSite.Text, txtCmpltd.Text, dateTimePicker1.Text, 
+            DBConnection.getInstanceOfDBConnection().saveToDB(sqlQuery, Form1.form_type_id_var, txtSite.Text, txtCmpltd.Text, convert_date(dateTimePicker1.Text), 
                 txtWrk_Area.Text, txtDesc.Text, txtSupr.Text, txtInspc.Text, txtType.Text);
 
             //Display the database to the datagridview, this is just for debugging and making sure the database has been updated
@@ -60,6 +60,76 @@ namespace SiteInspection
             txtSupr.Text = "";
             txtType.Text = "";
             txtWrk_Area.Text = "";
+        }
+        public static string convert_date(string date)
+        {
+            string converted_date = "";
+            int find = 0;
+            find = date.IndexOf(",");
+            date = (date.Substring(find + 2));
+            find = date.IndexOf(" ");
+            string month = date.Substring(0, find);
+            switch (month)
+            {
+                case "January":
+                    converted_date = "01";
+                    break;
+
+                case "Febuary":
+                    converted_date = "02";
+                    break;
+
+                case "March":
+                    converted_date = "03";
+                    break;
+
+                case "April":
+                    converted_date = "04";
+                    break;
+
+                case "May":
+                    converted_date = "05";
+                    break;
+
+                case "June":
+                    converted_date = "06";
+                    break;
+
+                case "July":
+                    converted_date = "07";
+                    break;
+
+                case "August":
+                    converted_date = "08";
+                    break;
+
+                case "September":
+                    converted_date = "09";
+                    break;
+
+                case "October":
+                    converted_date = "10";
+                    break;
+
+                case "November":
+                    converted_date = "11";
+                    break;
+
+                case "December":
+                    converted_date = "12";
+                    break;
+            }
+            date = date.Substring(find + 1);
+            find = date.IndexOf(",");
+            string day = date.Substring(0, find);
+            if (day.Length == 1)
+            {
+                day = "0" + day;
+            }
+            converted_date = (converted_date + "-" + day);
+            date = date.Substring(find + 2);
+            converted_date = date + "-" + converted_date;
+            return converted_date;
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
