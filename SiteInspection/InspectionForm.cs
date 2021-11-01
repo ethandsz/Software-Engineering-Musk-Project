@@ -63,72 +63,79 @@ namespace SiteInspection
         }
         public static string convert_date(string date)
         {
-            string converted_date = "";
-            int find = 0;
-            find = date.IndexOf(",");
-            date = (date.Substring(find + 2));
-            find = date.IndexOf(" ");
-            string month = date.Substring(0, find);
-            switch (month)
+            string converted_date = date;
+            if (date.StartsWith("0") || date.StartsWith("1") || date.StartsWith("2") || date.StartsWith("3"))
             {
-                case "January":
-                    converted_date = "01";
-                    break;
 
-                case "Febuary":
-                    converted_date = "02";
-                    break;
-
-                case "March":
-                    converted_date = "03";
-                    break;
-
-                case "April":
-                    converted_date = "04";
-                    break;
-
-                case "May":
-                    converted_date = "05";
-                    break;
-
-                case "June":
-                    converted_date = "06";
-                    break;
-
-                case "July":
-                    converted_date = "07";
-                    break;
-
-                case "August":
-                    converted_date = "08";
-                    break;
-
-                case "September":
-                    converted_date = "09";
-                    break;
-
-                case "October":
-                    converted_date = "10";
-                    break;
-
-                case "November":
-                    converted_date = "11";
-                    break;
-
-                case "December":
-                    converted_date = "12";
-                    break;
             }
-            date = date.Substring(find + 1);
-            find = date.IndexOf(",");
-            string day = date.Substring(0, find);
-            if (day.Length == 1)
+            else
             {
-                day = "0" + day;
+                int find = 0;
+                find = date.IndexOf(",");
+                date = (date.Substring(find + 2));
+                find = date.IndexOf(" ");
+                string month = date.Substring(0, find);
+                switch (month)
+                {
+                    case "January":
+                        converted_date = "01";
+                        break;
+
+                    case "Febuary":
+                        converted_date = "02";
+                        break;
+
+                    case "March":
+                        converted_date = "03";
+                        break;
+
+                    case "April":
+                        converted_date = "04";
+                        break;
+
+                    case "May":
+                        converted_date = "05";
+                        break;
+
+                    case "June":
+                        converted_date = "06";
+                        break;
+
+                    case "July":
+                        converted_date = "07";
+                        break;
+
+                    case "August":
+                        converted_date = "08";
+                        break;
+
+                    case "September":
+                        converted_date = "09";
+                        break;
+
+                    case "October":
+                        converted_date = "10";
+                        break;
+
+                    case "November":
+                        converted_date = "11";
+                        break;
+
+                    case "December":
+                        converted_date = "12";
+                        break;
+                }
+                date = date.Substring(find + 1);
+                find = date.IndexOf(",");
+                string day = date.Substring(0, find);
+                if (day.Length == 1)
+                {
+                    day = "0" + day;
+                }
+                converted_date = (converted_date + "-" + day);
+                date = date.Substring(find + 2);
+                converted_date = date + "-" + converted_date;
             }
-            converted_date = (converted_date + "-" + day);
-            date = date.Substring(find + 2);
-            converted_date = date + "-" + converted_date;
             return converted_date;
         }
 
