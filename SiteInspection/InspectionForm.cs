@@ -68,13 +68,15 @@ namespace SiteInspection
             //Ex. 01 November 2021
             if (date.StartsWith("0") || date.StartsWith("1") || date.StartsWith("2") || date.StartsWith("3"))
             {
-                //Finds first space after the day dd and sets day = everything upto the first space
+                //Finds first space after the day dd and sets day = everything upto the first space Ex. 01
                 int find = date.IndexOf(" ");
                 string day = date.Substring(0, find);
+                //Date now is equal to everything but the day dd. Ex. November 2021
                 date = date.Substring(find + 1);
-                System.Console.WriteLine(date);
+                //Finds next space which is before the year and sets month equal to everything up to the first space. Ex. November
                 find = date.IndexOf(" ");
                 string month = date.Substring(0, find);
+                //Switch case for converting month to number format
                 switch (month)
                 {
                     case "January":
@@ -125,10 +127,10 @@ namespace SiteInspection
                         month = "12";
                         break;
                 }
+                //Date now equals everything past the first space, just the year Ex. 2021
                 date = date.Substring(find + 1);
-                System.Console.WriteLine(date);
-                //find = date.IndexOf(" ");
                 string year = date;
+                //Saves the date in yyyy-mm-dd Format
                 converted_date = year + "-" + month + "-" + day;
             }
             //Statement for converting american time/date
