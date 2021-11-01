@@ -66,7 +66,67 @@ namespace SiteInspection
             string converted_date = date;
             if (date.StartsWith("0") || date.StartsWith("1") || date.StartsWith("2") || date.StartsWith("3"))
             {
+                int find = date.IndexOf(" ");
+                string day = date.Substring(0, find);
+                date = date.Substring(find + 1);
+                System.Console.WriteLine(date);
+                find = date.IndexOf(" ");
+                string month = date.Substring(0, find);
+                switch (month)
+                {
+                    case "January":
+                        month = "01";
+                        break;
 
+                    case "Febuary":
+                        month = "02";
+                        break;
+
+                    case "March":
+                        month = "03";
+                        break;
+
+                    case "April":
+                        month = "04";
+                        break;
+
+                    case "May":
+                        month = "05";
+                        break;
+
+                    case "June":
+                        month = "06";
+                        break;
+
+                    case "July":
+                        month = "07";
+                        break;
+
+                    case "August":
+                        month = "08";
+                        break;
+
+                    case "September":
+                        month = "09";
+                        break;
+
+                    case "October":
+                        month = "10";
+                        break;
+
+                    case "November":
+                        month = "11";
+                        break;
+
+                    case "December":
+                        month = "12";
+                        break;
+                }
+                date = date.Substring(find + 1);
+                System.Console.WriteLine(date);
+                //find = date.IndexOf(" ");
+                string year = date;
+                converted_date = year + "-" + month + "-" + day;
             }
             else
             {
