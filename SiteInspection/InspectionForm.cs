@@ -63,9 +63,12 @@ namespace SiteInspection
         }
         public static string convert_date(string date)
         {
-            string converted_date = date;
+            string converted_date = date;  
+            //Statement for converting british time/date
+            //Ex. 01 November 2021
             if (date.StartsWith("0") || date.StartsWith("1") || date.StartsWith("2") || date.StartsWith("3"))
             {
+                //Finds first space after the day dd and sets day = everything upto the first space
                 int find = date.IndexOf(" ");
                 string day = date.Substring(0, find);
                 date = date.Substring(find + 1);
@@ -128,6 +131,7 @@ namespace SiteInspection
                 string year = date;
                 converted_date = year + "-" + month + "-" + day;
             }
+            //Statement for converting american time/date
             else
             {
                 int find = 0;
