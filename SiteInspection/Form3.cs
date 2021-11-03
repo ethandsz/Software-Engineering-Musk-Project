@@ -495,5 +495,20 @@ namespace SiteInspection
         {
 
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+            Form4 newForm = new Form4();
+
+            newForm.Show();
+            this.Hide();
+
+        }
     }
 }

@@ -122,7 +122,17 @@ namespace SiteInspection
                 sqlCommand.Parameters.Add(new SqlParameter("action_taken", action_taken));
 
                 //execute the command
-                sqlCommand.ExecuteNonQuery();
+                try {
+                    
+                   sqlCommand.ExecuteNonQuery(); 
+                
+                }
+                catch (Exception)
+                {
+                 
+                }
+
+                
 
                 connToDB.Close();
             }
