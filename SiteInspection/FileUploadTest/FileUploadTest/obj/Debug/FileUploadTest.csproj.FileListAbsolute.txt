@@ -1,0 +1,10 @@
+C:\Users\Sprite Cranberry\source\repos\FileUploadTest\FileUploadTest\bin\Debug\FileUploadTest.exe.config
+C:\Users\Sprite Cranberry\source\repos\FileUploadTest\FileUploadTest\bin\Debug\FileUploadTest.exe
+C:\Users\Sprite Cranberry\source\repos\FileUploadTest\FileUploadTest\bin\Debug\FileUploadTest.pdb
+C:\Users\Sprite Cranberry\source\repos\FileUploadTest\FileUploadTest\obj\Debug\FileUploadTest.csproj.AssemblyReference.cache
+C:\Users\Sprite Cranberry\source\repos\FileUploadTest\FileUploadTest\obj\Debug\FileUploadTest.Form1.resources
+C:\Users\Sprite Cranberry\source\repos\FileUploadTest\FileUploadTest\obj\Debug\FileUploadTest.Properties.Resources.resources
+C:\Users\Sprite Cranberry\source\repos\FileUploadTest\FileUploadTest\obj\Debug\FileUploadTest.csproj.GenerateResource.cache
+C:\Users\Sprite Cranberry\source\repos\FileUploadTest\FileUploadTest\obj\Debug\FileUploadTest.csproj.CoreCompileInputs.cache
+C:\Users\Sprite Cranberry\source\repos\FileUploadTest\FileUploadTest\obj\Debug\FileUploadTest.exe
+C:\Users\Sprite Cranberry\source\repos\FileUploadTest\FileUploadTest\obj\Debug\FileUploadTest.pdb
