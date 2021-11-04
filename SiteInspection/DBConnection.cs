@@ -69,9 +69,10 @@ namespace SiteInspection
         }
 
         //ExecuteScalar sends a query to the database and receives a single value. Much easier than converting an entire dataset into a single variable.
-        public int getScalar(string sqlQuery)
+        //Returns a string but output can easily be converted to int if it actually retrieves an int from the query.
+        public string getScalar(string sqlQuery)
         {
-            Int32 num;
+            string scalar;
 
             using (connToDB = new SqlConnection(connStr))
             {
@@ -79,11 +80,12 @@ namespace SiteInspection
                 connToDB.Open();
 
                 SqlCommand sqlCommand = new SqlCommand(sqlQuery, connToDB);
-                num = (Int32)sqlCommand.ExecuteScalar();
+                scalar = sqlCommand.ExecuteScalar().ToString();
             }
 
-            return num;
+            return scalar;
         }
+
 
         public void saveToDB(string sqlQuery, int form_type, string site_name, string cmpltd_by, string date, string work_area, string job_desc,
             string supervisor, string inspector, string type)

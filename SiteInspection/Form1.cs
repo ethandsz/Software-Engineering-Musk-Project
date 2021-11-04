@@ -96,12 +96,9 @@ namespace SiteInspection
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-            //PDFSharp testing
-            //Attempting to generate a pdf from initial data in database
-            //Current default file path: \ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug
-
-            //Coordinates in a PDFSharp document are 1/72 of an inch, using an inch variable improves readability throughout.
-            int inch = 72;
+            //PDFSharp testing.
+            //Attempting to generate a pdf from initial data in database.
+            //Current default file path: \ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug.
             
             //Initialising the PDFSharp classes and creating the document/pages.
             PdfDocument doc = new PdfDocument();
@@ -161,9 +158,7 @@ namespace SiteInspection
 
             //Get the number of entries for the selected form, this will be used in a for loop to populate the pdf.
             query = String.Format("SELECT COUNT(*) FROM form_data WHERE form_id = {0}", form_id_var);
-            int num_of_entries = DBConnection.getInstanceOfDBConnection().getScalar(query);
-            MessageBox.Show(num_of_entries.ToString());
-
+            int num_of_entries = Convert.ToInt32(DBConnection.getInstanceOfDBConnection().getScalar(query));
 
             //Name of the pdf document.
             //Could use a for loop to create the name or even retrieve the form_id from the form table.
