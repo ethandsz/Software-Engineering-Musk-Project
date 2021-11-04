@@ -68,6 +68,23 @@ namespace SiteInspection
 
         }
 
+        //ExecuteScalar sends a query to the database and receives a single value. Much easier than converting an entire dataset into a single variable.
+        public int getScalar(string sqlQuery)
+        {
+            Int32 num;
+
+            using (connToDB = new SqlConnection(connStr))
+            {
+                //open the connection
+                connToDB.Open();
+
+                SqlCommand sqlCommand = new SqlCommand(sqlQuery, connToDB);
+                num = (Int32)sqlCommand.ExecuteScalar();
+            }
+
+            return num;
+        }
+
         public void saveToDB(string sqlQuery, int form_type, string site_name, string cmpltd_by, string date, string work_area, string job_desc,
             string supervisor, string inspector, string type)
         {

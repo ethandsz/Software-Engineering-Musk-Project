@@ -488,25 +488,25 @@ namespace SiteInspection
             //After pressing the generate pdf button the program will attempt to open the newly created pdf file
             //Current default file path: \ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug
 
-            PdfDocument doc = new PdfDocument();
-            doc.Info.Title = "Site Inspection";
+            //PdfDocument doc = new PdfDocument();
+            //doc.Info.Title = "Site Inspection";
 
-            PdfPage page = doc.AddPage();
+            //PdfPage page = doc.AddPage();
 
-            XGraphics gfx = XGraphics.FromPdfPage(page);
+            //XGraphics gfx = XGraphics.FromPdfPage(page);
 
-            XFont font = new XFont("Verdana", 14, XFontStyle.Bold);
+            //XFont font = new XFont("Verdana", 14, XFontStyle.Bold);
 
-            string pdfTitle;
-            DataSet get_title = DBConnection.getInstanceOfDBConnection().getDataSet("SELECT form_name FROM form_type WHERE form_type_id = 1");
-            pdfTitle = get_title.Tables[0].Rows[0]["form_name"].ToString();
+            //string pdfTitle;
+            //DataSet get_title = DBConnection.getInstanceOfDBConnection().getDataSet("SELECT form_name FROM form_type WHERE form_type_id = 1");
+            //pdfTitle = get_title.Tables[0].Rows[0]["form_name"].ToString();
 
-            gfx.DrawString(pdfTitle, font, XBrushes.Black, new XRect(0, 0, page.Width, page.Height), XStringFormats.Center);
+            //gfx.DrawString(pdfTitle, font, XBrushes.Black, new XRect(0, 0, page.Width, page.Height), XStringFormats.Center);
 
-            const string filename = "HelloWorld.pdf";
-            doc.Save(filename);
+            //const string filename = "HelloWorld.pdf";
+            //doc.Save(filename);
 
-            Process.Start(filename);
+            //Process.Start(filename);
 
         }
 

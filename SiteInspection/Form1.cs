@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PdfSharp;
 using PdfSharp.Drawing;
+using PdfSharp.Drawing.Layout;
 using PdfSharp.Pdf;
 using PdfSharp.Pdf.IO;
 
@@ -107,6 +108,7 @@ namespace SiteInspection
             doc.Info.Title = "Site Inspection";
             PdfPage page = doc.AddPage();
             XGraphics gfx = XGraphics.FromPdfPage(page);
+            XTextFormatter tf = new XTextFormatter(gfx);
 
             //Setting the various fonts.
             XFont titleFont = new XFont("Verdana", 11, XFontStyle.Bold);
@@ -115,23 +117,53 @@ namespace SiteInspection
             //An example of retrieving the title of the inspection form from the form_name table in the database.
             //This can be copied and used for other such retrievals.
             string pdfTitle;
-            int form_type = 1;
-            string query = String.Format("SELECT form_name FROM form_type WHERE form_type_id = {0}", form_type);
-            DataSet get_title = DBConnection.getInstanceOfDBConnection().getDataSet("SELECT form_name FROM form_type WHERE form_type_id = 1");
+            int form_id_var = 1;
+            string query = String.Format("SELECT form_name FROM form_type WHERE form_type_id = {0}", form_id_var);
+            DataSet get_title = DBConnection.getInstanceOfDBConnection().getDataSet(query);
             pdfTitle = get_title.Tables[0].Rows[0]["form_name"].ToString();
 
             //Draw the text for the title and headers.
             //Instead of manually entering each title, the strings can be retrieved from the form table headings.
             //Possibly turn this whole block into a for loop to reduce bloat.
-            gfx.DrawString(pdfTitle, titleFont, XBrushes.Black, new XRect(0, inch/2, page.Width, page.Height), XStringFormats.TopCenter);
-            gfx.DrawString("Site: ", headerFont, XBrushes.Black, inch/2, inch);
-            gfx.DrawString("Completed By: ", headerFont, XBrushes.Black, inch*3.5, inch);
-            gfx.DrawString("Date: ", headerFont, XBrushes.Black, inch*6.5, inch);
-            gfx.DrawString("Work Area: ", headerFont, XBrushes.Black, inch/2, inch*1.3);
-            gfx.DrawString("Job Description: ", headerFont, XBrushes.Black, inch*3.5, inch*1.3);
-            gfx.DrawString("Supervisor: ", headerFont, XBrushes.Black, inch/2, inch*1.6);
-            gfx.DrawString("Inspector: ", headerFont, XBrushes.Black, inch*3.5, inch*1.6);
-            gfx.DrawString("Type: ", headerFont, XBrushes.Black, inch*6.5, inch*1.6);
+            //To have text wrap inside a box, use XTextFormatter. See the "Action Taken" entry below.
+            gfx.DrawString(pdfTitle, titleFont, XBrushes.Black, new XRect(0, 36, page.Width, page.Height), XStringFormats.TopCenter);
+            gfx.DrawString("Site: ", headerFont, XBrushes.Black, 36, 72);
+            gfx.DrawString("Completed By: ", headerFont, XBrushes.Black, 252, 72);
+            gfx.DrawString("Date: ", headerFont, XBrushes.Black, 468, 72);
+            gfx.DrawString("Work Area: ", headerFont, XBrushes.Black, 36, 94);
+            gfx.DrawString("Job Description: ", headerFont, XBrushes.Black, 252, 94);
+            gfx.DrawString("Supervisor: ", headerFont, XBrushes.Black, 36, 115);
+            gfx.DrawString("Inspector: ", headerFont, XBrushes.Black, 252, 115);
+            gfx.DrawString("Type: ", headerFont, XBrushes.Black, 468, 115);
+            gfx.DrawString("Interventions", headerFont, XBrushes.Black, 230, 144);
+            gfx.DrawString("Comment", headerFont, XBrushes.Black, 302, 144);
+            gfx.DrawString("Completed", headerFont, XBrushes.Black, 454, 144);
+            tf.DrawString("Action Taken", headerFont, XBrushes.Black, new XRect(518, 130, 50, 50));
+
+            //Example code for drawing text inside a box
+            //XRect rect = new XRect(100, 100, 100, 100);
+            //XPen xpen = new XPen(XColors.Black, 0.4);
+            //gfx.DrawRectangle(xpen, rect);
+            //XStringFormat format = new XStringFormat();
+            //format.LineAlignment = XLineAlignment.Near;
+            //format.Alignment = XStringAlignment.Near;
+            //XBrush brush = XBrushes.Purple;
+            //tf.DrawString("Here goes a load of text that should fit into the box blah blah blah blah", new XFont("Helvetica", 8), brush,
+            //    new XRect(rect.X + 5, rect.Y, rect.Width, 34), format);
+
+            //Drawing some boxes at the top of the pdf to get coordinates and an idea of how it will look.
+            XPen xpen = new XPen(XColors.Black, 0.4);
+            gfx.DrawRectangle(xpen, new XRect(36, 158, 192, 18));
+            gfx.DrawRectangle(xpen, new XRect(228, 158, 72, 18));
+            gfx.DrawRectangle(xpen, new XRect(300, 158, 150, 18));
+            gfx.DrawRectangle(xpen, new XRect(450, 158, 60, 18));
+            gfx.DrawRectangle(xpen, new XRect(510, 158, 75, 18));
+
+            //Get the number of entries for the selected form, this will be used in a for loop to populate the pdf.
+            query = String.Format("SELECT COUNT(*) FROM form_data WHERE form_id = {0}", form_id_var);
+            int num_of_entries = DBConnection.getInstanceOfDBConnection().getScalar(query);
+            MessageBox.Show(num_of_entries.ToString());
+
 
             //Name of the pdf document.
             //Could use a for loop to create the name or even retrieve the form_id from the form table.
