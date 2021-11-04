@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PdfSharp;
+using PdfSharp.Drawing;
+using PdfSharp.Pdf;
+using PdfSharp.Pdf.IO;
 
 namespace SiteInspection
 {
@@ -478,7 +483,30 @@ namespace SiteInspection
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //This will be where the code to commit all interventions from form_data table to a pdf document will go
+            //WORK IN PROGRESS
+            //Saving data from an inspection to a pdf
+            //Current default file path: \ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug
+
+            PdfDocument doc = new PdfDocument();
+            doc.Info.Title = "Site Inspection";
+
+            PdfPage page = doc.AddPage();
+
+            XGraphics gfx = XGraphics.FromPdfPage(page);
+
+            XFont font = new XFont("Verdana", 14, XFontStyle.Bold);
+
+            string pdfTitle;
+            DataSet get_title = DBConnection.getInstanceOfDBConnection().getDataSet("SELECT form_name FROM form_type WHERE form_type_id = 1");
+            pdfTitle = get_title.Tables[0].Rows[0]["form_name"].ToString();
+
+            gfx.DrawString(pdfTitle, font, XBrushes.Black, new XRect(0, 0, page.Width, page.Height), XStringFormats.Center);
+
+            const string filename = "HelloWorld.pdf";
+            doc.Save(filename);
+
+            Process.Start(filename);
+
         }
 
         private void dataGrd_CellContentClick(object sender, DataGridViewCellEventArgs e)

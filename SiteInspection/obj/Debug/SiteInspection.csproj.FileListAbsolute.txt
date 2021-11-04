@@ -5,7 +5,6 @@ C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspect
 C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug\SiteInspection.pdb
 C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\obj\Debug\SiteInspection.csproj.AssemblyReference.cache
 C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\obj\Debug\SiteInspection.Form1.resources
-C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\obj\Debug\SiteInspection.Form2.resources
 C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\obj\Debug\SiteInspection.Form3.resources
 C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\obj\Debug\SiteInspection.InspectionForm.resources
 C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\obj\Debug\SiteInspection.Properties.Resources.resources
@@ -62,3 +61,10 @@ E:\3NOV\SiteInspection\obj\Debug\SiteInspection.InspectionForm.resources
 E:\3NOV\SiteInspection\obj\Debug\SiteInspection.Properties.Resources.resources
 E:\3NOV\SiteInspection\obj\Debug\SiteInspection.csproj.GenerateResource.cache
 E:\3NOV\SiteInspection\obj\Debug\SiteInspection.csproj.CoreCompileInputs.cache
+C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug\PdfSharp.Charting.dll
+C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug\PdfSharp.dll
+C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug\PdfSharp.xml
+C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug\PdfSharp.Charting.xml
+C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug\de\PdfSharp.Charting.resources.dll
+C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\obj\Debug\SiteInspection.Form4.resources

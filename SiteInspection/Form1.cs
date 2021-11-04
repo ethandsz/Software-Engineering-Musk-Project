@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +9,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PdfSharp;
+using PdfSharp.Drawing;
+using PdfSharp.Pdf;
+using PdfSharp.Pdf.IO;
 
 namespace SiteInspection
 {
@@ -78,6 +84,45 @@ namespace SiteInspection
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            //PDFSharp testing
+            //Attempting to generate a pdf from initial data in database
+            //Current default file path: \ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug
+
+            PdfDocument doc = new PdfDocument();
+            doc.Info.Title = "Site Inspection";
+
+            PdfPage page = doc.AddPage();
+
+            XGraphics gfx = XGraphics.FromPdfPage(page);
+
+            XFont font = new XFont("Verdana", 14, XFontStyle.Bold);
+
+            string pdfTitle;
+            int form_type = 1;
+            string query = String.Format("SELECT form_name FROM form_type WHERE form_type_id = {0}", form_type);
+            DataSet get_title = DBConnection.getInstanceOfDBConnection().getDataSet("SELECT form_name FROM form_type WHERE form_type_id = 1");
+            pdfTitle = get_title.Tables[0].Rows[0]["form_name"].ToString();
+
+            gfx.DrawString(pdfTitle, font, XBrushes.Black, new XRect(0, 30, page.Width, page.Height), XStringFormats.TopCenter);
+
+            const string filename = "HelloWorld.pdf";
+            doc.Save(filename);
+
+            Process.Start(filename);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
