@@ -485,6 +485,7 @@ namespace SiteInspection
         {
             //WORK IN PROGRESS
             //Saving data from an inspection to a pdf
+            //After pressing the generate pdf button the program will attempt to open the newly created pdf file
             //Current default file path: \ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug
 
             PdfDocument doc = new PdfDocument();

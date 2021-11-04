@@ -99,26 +99,46 @@ namespace SiteInspection
             //Attempting to generate a pdf from initial data in database
             //Current default file path: \ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug
 
+            //Coordinates in a PDFSharp document are 1/72 of an inch, using an inch variable improves readability throughout.
+            int inch = 72;
+            
+            //Initialising the PDFSharp classes and creating the document/pages.
             PdfDocument doc = new PdfDocument();
             doc.Info.Title = "Site Inspection";
-
             PdfPage page = doc.AddPage();
-
             XGraphics gfx = XGraphics.FromPdfPage(page);
 
-            XFont font = new XFont("Verdana", 14, XFontStyle.Bold);
+            //Setting the various fonts.
+            XFont titleFont = new XFont("Verdana", 11, XFontStyle.Bold);
+            XFont headerFont = new XFont("Verdana", 9, XFontStyle.Bold);
 
+            //An example of retrieving the title of the inspection form from the form_name table in the database.
+            //This can be copied and used for other such retrievals.
             string pdfTitle;
             int form_type = 1;
             string query = String.Format("SELECT form_name FROM form_type WHERE form_type_id = {0}", form_type);
             DataSet get_title = DBConnection.getInstanceOfDBConnection().getDataSet("SELECT form_name FROM form_type WHERE form_type_id = 1");
             pdfTitle = get_title.Tables[0].Rows[0]["form_name"].ToString();
 
-            gfx.DrawString(pdfTitle, font, XBrushes.Black, new XRect(0, 30, page.Width, page.Height), XStringFormats.TopCenter);
+            //Draw the text for the title and headers.
+            //Instead of manually entering each title, the strings can be retrieved from the form table headings.
+            //Possibly turn this whole block into a for loop to reduce bloat.
+            gfx.DrawString(pdfTitle, titleFont, XBrushes.Black, new XRect(0, inch/2, page.Width, page.Height), XStringFormats.TopCenter);
+            gfx.DrawString("Site: ", headerFont, XBrushes.Black, inch/2, inch);
+            gfx.DrawString("Completed By: ", headerFont, XBrushes.Black, inch*3.5, inch);
+            gfx.DrawString("Date: ", headerFont, XBrushes.Black, inch*6.5, inch);
+            gfx.DrawString("Work Area: ", headerFont, XBrushes.Black, inch/2, inch*1.3);
+            gfx.DrawString("Job Description: ", headerFont, XBrushes.Black, inch*3.5, inch*1.3);
+            gfx.DrawString("Supervisor: ", headerFont, XBrushes.Black, inch/2, inch*1.6);
+            gfx.DrawString("Inspector: ", headerFont, XBrushes.Black, inch*3.5, inch*1.6);
+            gfx.DrawString("Type: ", headerFont, XBrushes.Black, inch*6.5, inch*1.6);
 
+            //Name of the pdf document.
+            //Could use a for loop to create the name or even retrieve the form_id from the form table.
             const string filename = "HelloWorld.pdf";
             doc.Save(filename);
 
+            //Opens a process to view the pdf, this is mainly here for debugging.
             Process.Start(filename);
         }
 
