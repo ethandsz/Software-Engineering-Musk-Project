@@ -32,9 +32,9 @@ namespace SiteInspection
         //Admin Button on click method
         private void admin_login_btn(object sender, EventArgs e)
         {
-            MessageBox.Show("Admin Login");
-            AdminForm adminform = new AdminForm();
-            adminform.Show();
+           
+            Form2 form2 = new Form2();
+            form2.Show();
             this.Hide();
             
         }
