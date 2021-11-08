@@ -38,6 +38,7 @@ namespace SiteInspection
             // 
             this.UserPassField.Location = new System.Drawing.Point(88, 12);
             this.UserPassField.Name = "UserPassField";
+            this.UserPassField.PasswordChar = '*';
             this.UserPassField.Size = new System.Drawing.Size(100, 20);
             this.UserPassField.TabIndex = 0;
             // 
