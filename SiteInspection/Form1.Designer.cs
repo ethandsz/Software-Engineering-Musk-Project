@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmbBox_Form = new System.Windows.Forms.ComboBox();
             this.btn_CreateForm = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -38,6 +38,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.cmbBox_pdf_form = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvForm_type)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,11 +107,11 @@
             // 
             // dgvForm_type
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.dgvForm_type.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.dgvForm_type.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvForm_type.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvForm_type.Location = new System.Drawing.Point(670, 342);
             this.dgvForm_type.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -161,10 +162,19 @@
             // cmbBox_pdf_form
             // 
             this.cmbBox_pdf_form.FormattingEnabled = true;
-            this.cmbBox_pdf_form.Location = new System.Drawing.Point(1104, 614);
+            this.cmbBox_pdf_form.Location = new System.Drawing.Point(1042, 592);
             this.cmbBox_pdf_form.Name = "cmbBox_pdf_form";
             this.cmbBox_pdf_form.Size = new System.Drawing.Size(121, 33);
             this.cmbBox_pdf_form.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(963, 600);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 25);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Form: ";
             // 
             // Form1
             // 
@@ -172,6 +182,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1420, 700);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbBox_pdf_form);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.panel1);
@@ -189,6 +200,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvForm_type)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -203,6 +215,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ComboBox cmbBox_pdf_form;
+        private System.Windows.Forms.Label label1;
     }
 }
 
