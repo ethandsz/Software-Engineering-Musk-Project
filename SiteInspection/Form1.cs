@@ -118,20 +118,36 @@ namespace SiteInspection
             int form_id_var = 1;
             string query = String.Format("SELECT form_name FROM form_type WHERE form_type_id = {0}", form_id_var);
             pdfTitle = DBConnection.getInstanceOfDBConnection().getScalar(query);
-
+            //Pulling heading titles from database
+            string site = String.Format("SELECT site_name FROM form WHERE form_id = {0}", form_id_var);
+            site = DBConnection.getInstanceOfDBConnection().getScalar(site);
+            string cmplt_by = String.Format("SELECT cmpltd_by FROM form WHERE form_id = {0}", form_id_var);
+            cmplt_by = DBConnection.getInstanceOfDBConnection().getScalar(cmplt_by);
+            string date = String.Format("SELECT date FROM form WHERE form_id = {0}", form_id_var);
+            date = DBConnection.getInstanceOfDBConnection().getScalar(date);
+            string work_area = String.Format("SELECT work_area FROM form WHERE form_id = {0}", form_id_var);
+            work_area = DBConnection.getInstanceOfDBConnection().getScalar(work_area);
+            string job_desc = String.Format("SELECT job_desc FROM form WHERE form_id = {0}", form_id_var);
+            job_desc = DBConnection.getInstanceOfDBConnection().getScalar(job_desc);
+            string supervisor = String.Format("SELECT supervisor FROM form WHERE form_id = {0}", form_id_var);
+            supervisor = DBConnection.getInstanceOfDBConnection().getScalar(supervisor);
+            string inspector = String.Format("SELECT inspector FROM form WHERE form_id = {0}", form_id_var);
+            inspector = DBConnection.getInstanceOfDBConnection().getScalar(inspector);
+            string type = String.Format("SELECT type FROM form WHERE form_id = {0}", form_id_var);
+            type = DBConnection.getInstanceOfDBConnection().getScalar(type);
             //Draw the text for the title and headers.
             //Instead of manually entering each title, the strings can be retrieved from the form table headings.
             //Possibly turn this whole block into a for loop to reduce bloat.
             //To have text wrap inside a box, use XTextFormatter. See the "Action Taken" entry below.
             gfx.DrawString(pdfTitle, titleFont, XBrushes.Black, new XRect(0, 36, page.Width, page.Height), XStringFormats.TopCenter);
-            gfx.DrawString("Site: ", headerFont, XBrushes.Black, 36, 72);
-            gfx.DrawString("Completed By: ", headerFont, XBrushes.Black, 252, 72);
-            gfx.DrawString("Date: ", headerFont, XBrushes.Black, 468, 72);
-            gfx.DrawString("Work Area: ", headerFont, XBrushes.Black, 36, 94);
-            gfx.DrawString("Job Description: ", headerFont, XBrushes.Black, 252, 94);
-            gfx.DrawString("Supervisor: ", headerFont, XBrushes.Black, 36, 115);
-            gfx.DrawString("Inspector: ", headerFont, XBrushes.Black, 252, 115);
-            gfx.DrawString("Type: ", headerFont, XBrushes.Black, 468, 115);
+            gfx.DrawString("Site: " + site, headerFont, XBrushes.Black, 36, 72);
+            gfx.DrawString("Completed By: " + cmplt_by, headerFont, XBrushes.Black, 252, 72);
+            gfx.DrawString("Date: " + date, headerFont, XBrushes.Black, 468, 72);
+            gfx.DrawString("Work Area: " + work_area, headerFont, XBrushes.Black, 36, 94);
+            gfx.DrawString("Job Description: " + job_desc, headerFont, XBrushes.Black, 252, 94);
+            gfx.DrawString("Supervisor: " + supervisor, headerFont, XBrushes.Black, 36, 115);
+            gfx.DrawString("Inspector: " + inspector, headerFont, XBrushes.Black, 252, 115);
+            gfx.DrawString("Type: " + type, headerFont, XBrushes.Black, 468, 115);
             gfx.DrawString("Interventions", headerFont, XBrushes.Black, 230, 144);
             gfx.DrawString("Comment", headerFont, XBrushes.Black, 302, 144);
             gfx.DrawString("Completed", headerFont, XBrushes.Black, 454, 144);

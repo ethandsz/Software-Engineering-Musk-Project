@@ -92,3 +92,10 @@ C:\Users\Sprite Cranberry\Source\Repos\ethandsz\Software-Engineering-Musk-Projec
 C:\Users\Sprite Cranberry\Source\Repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\obj\Debug\SiteInspection.exe
 C:\Users\Sprite Cranberry\Source\Repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\obj\Debug\SiteInspection.pdb
 C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\obj\Debug\SiteInspection.Form2.resources
+C:\Users\18482\Source\Repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug\PdfSharp.Charting.dll
+C:\Users\18482\Source\Repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug\PdfSharp.dll
+C:\Users\18482\Source\Repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug\PdfSharp.xml
+C:\Users\18482\Source\Repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug\PdfSharp.Charting.xml
+C:\Users\18482\Source\Repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\18482\Source\Repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug\de\PdfSharp.Charting.resources.dll
+C:\Users\18482\Source\Repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\obj\Debug\SiteInspection.Form4.resources
