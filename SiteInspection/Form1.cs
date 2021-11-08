@@ -110,14 +110,14 @@ namespace SiteInspection
             //Setting the various fonts.
             XFont titleFont = new XFont("Verdana", 11, XFontStyle.Bold);
             XFont headerFont = new XFont("Verdana", 9, XFontStyle.Bold);
+            XFont stdFont = new XFont("Verdana", 7, XFontStyle.Regular);
 
             //An example of retrieving the title of the inspection form from the form_name table in the database.
             //This can be copied and used for other such retrievals.
             string pdfTitle;
             int form_id_var = 1;
             string query = String.Format("SELECT form_name FROM form_type WHERE form_type_id = {0}", form_id_var);
-            DataSet get_title = DBConnection.getInstanceOfDBConnection().getDataSet(query);
-            pdfTitle = get_title.Tables[0].Rows[0]["form_name"].ToString();
+            pdfTitle = DBConnection.getInstanceOfDBConnection().getScalar(query);
 
             //Draw the text for the title and headers.
             //Instead of manually entering each title, the strings can be retrieved from the form table headings.
@@ -157,8 +157,56 @@ namespace SiteInspection
             gfx.DrawRectangle(xpen, new XRect(510, 158, 75, 18));
 
             //Get the number of entries for the selected form, this will be used in a for loop to populate the pdf.
-            query = String.Format("SELECT COUNT(*) FROM form_data WHERE form_id = {0}", form_id_var);
+            query = String.Format("SELECT COUNT(*) FROM form_data_type");
             int num_of_entries = Convert.ToInt32(DBConnection.getInstanceOfDBConnection().getScalar(query));
+
+            //Loop for printing text from form_data_type and form_data to the pdf.
+            string text;
+            int xCoord = 40;
+            int yCoord = 170;            
+            //Variables to track the section_id within the loop. Compares the current ID to the previous ID.
+            //Used to trigger the if statement to print out a section header.
+            int prevId = 0;
+            int currId = 1;
+            for (int i = 1; i < num_of_entries + 1; i++)
+            {
+                //Prints a section header when triggered.
+                if (prevId != currId)
+                {
+                    query = String.Format("SELECT section_name FROM section WHERE section_id = {0}", currId);
+                    text = DBConnection.getInstanceOfDBConnection().getScalar(query);
+                    gfx.DrawString(text, headerFont, XBrushes.Black, xCoord, yCoord);
+
+                    yCoord += 20;
+                    prevId = currId;
+                }
+
+                query = String.Format("SELECT data_type_name FROM form_data_type WHERE form_data_type_id = {0}", i);
+                text = DBConnection.getInstanceOfDBConnection().getScalar(query);
+                gfx.DrawString(text, stdFont, XBrushes.Black, xCoord, yCoord);
+
+                query = String.Format("SELECT interventions FROM form_data WHERE form_data_type_id = {0}", i);
+                text = DBConnection.getInstanceOfDBConnection().getScalar(query);
+                gfx.DrawString(text, stdFont, XBrushes.Black, xCoord + 220, yCoord);
+
+                query = String.Format("SELECT comment FROM form_data WHERE form_data_type_id = {0}", i);
+                text = DBConnection.getInstanceOfDBConnection().getScalar(query);
+                gfx.DrawString(text, stdFont, XBrushes.Black, xCoord + 263, yCoord);
+
+                query = String.Format("SELECT completed FROM form_data WHERE form_data_type_id = {0}", i);
+                text = DBConnection.getInstanceOfDBConnection().getScalar(query);
+                gfx.DrawString(text, stdFont, XBrushes.Black, xCoord + 430, yCoord);
+
+                query = String.Format("SELECT action_taken FROM form_data WHERE form_data_type_id = {0}", i);
+                text = DBConnection.getInstanceOfDBConnection().getScalar(query);
+                gfx.DrawString(text, stdFont, XBrushes.Black, xCoord + 470, yCoord);
+
+                //Get the current section_id, eventually it will be different to the prevID and trigger the header printing statement.
+                query = String.Format("SELECT section_id FROM form_data_type WHERE form_data_type_id = {0}", i);
+                currId = Convert.ToInt32(DBConnection.getInstanceOfDBConnection().getScalar(query));
+                    
+                yCoord += 20;
+            }
 
             //Name of the pdf document.
             //Could use a for loop to create the name or even retrieve the form_id from the form table.
