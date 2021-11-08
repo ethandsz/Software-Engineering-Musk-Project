@@ -28,6 +28,13 @@ namespace SiteInspection
         {
             InitializeComponent();
             cmbBox_Form.SelectedIndex = 0;
+            string max_forms = ("SELECT MAX(form_id) FROM form");
+            max_forms = DBConnection.getInstanceOfDBConnection().getScalar(max_forms);
+            int max = Convert.ToInt32(max_forms);
+            for (int i = 1; i <= max; i++)
+            {
+                cmbBox_pdf_form.Items.Add(i);
+            }
         }
         //Admin Button on click method
         private void admin_login_btn(object sender, EventArgs e)
@@ -115,7 +122,7 @@ namespace SiteInspection
             //An example of retrieving the title of the inspection form from the form_name table in the database.
             //This can be copied and used for other such retrievals.
             string pdfTitle;
-            int form_id_var = 1;
+            int form_id_var = Convert.ToInt32(cmbBox_pdf_form.SelectedItem.ToString());
             string query = String.Format("SELECT form_name FROM form_type WHERE form_type_id = {0}", form_id_var);
             pdfTitle = DBConnection.getInstanceOfDBConnection().getScalar(query);
             //Pulling heading titles from database
