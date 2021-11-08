@@ -193,19 +193,20 @@ namespace SiteInspection
                 text = DBConnection.getInstanceOfDBConnection().getScalar(query);
                 gfx.DrawString(text, stdFont, XBrushes.Black, xCoord, yCoord);
 
-                query = String.Format("SELECT interventions FROM form_data WHERE form_data_type_id = {0}", i);
+                query = String.Format("SELECT interventions FROM form_data WHERE form_data_type_id = {0} AND form_id = {1}", i,form_id_var);
                 text = DBConnection.getInstanceOfDBConnection().getScalar(query);
+                if(text.Equals("")) { text = "0"; }
                 gfx.DrawString(text, stdFont, XBrushes.Black, xCoord + 220, yCoord);
 
-                query = String.Format("SELECT comment FROM form_data WHERE form_data_type_id = {0}", i);
+                query = String.Format("SELECT comment FROM form_data WHERE form_data_type_id = {0} AND form_id = {1}", i, form_id_var);
                 text = DBConnection.getInstanceOfDBConnection().getScalar(query);
                 gfx.DrawString(text, stdFont, XBrushes.Black, xCoord + 263, yCoord);
 
-                query = String.Format("SELECT completed FROM form_data WHERE form_data_type_id = {0}", i);
+                query = String.Format("SELECT completed FROM form_data WHERE form_data_type_id = {0} AND form_id = {1}", i, form_id_var);
                 text = DBConnection.getInstanceOfDBConnection().getScalar(query);
                 gfx.DrawString(text, stdFont, XBrushes.Black, xCoord + 430, yCoord);
 
-                query = String.Format("SELECT action_taken FROM form_data WHERE form_data_type_id = {0}", i);
+                query = String.Format("SELECT action_taken FROM form_data WHERE form_data_type_id = {0} AND form_id = {1}", i, form_id_var);
                 text = DBConnection.getInstanceOfDBConnection().getScalar(query);
                 gfx.DrawString(text, stdFont, XBrushes.Black, xCoord + 470, yCoord);
 
