@@ -77,10 +77,20 @@ namespace SiteInspection
             using (connToDB = new SqlConnection(connStr))
             {
                 //open the connection
+            
+                
                 connToDB.Open();
-
                 SqlCommand sqlCommand = new SqlCommand(sqlQuery, connToDB);
-                scalar = sqlCommand.ExecuteScalar().ToString();
+                try
+                {
+                    scalar = sqlCommand.ExecuteScalar().ToString();
+                }
+                catch (Exception ex)
+                {
+                    scalar = "";
+                }
+                
+                
             }
 
             return scalar;

@@ -119,22 +119,14 @@ namespace SiteInspection
             string query = String.Format("SELECT form_name FROM form_type WHERE form_type_id = {0}", form_id_var);
             pdfTitle = DBConnection.getInstanceOfDBConnection().getScalar(query);
             //Pulling heading titles from database
-            string site = String.Format("SELECT site_name FROM form WHERE form_id = {0}", form_id_var);
-            site = DBConnection.getInstanceOfDBConnection().getScalar(site);
-            string cmplt_by = String.Format("SELECT cmpltd_by FROM form WHERE form_id = {0}", form_id_var);
-            cmplt_by = DBConnection.getInstanceOfDBConnection().getScalar(cmplt_by);
-            string date = String.Format("SELECT date FROM form WHERE form_id = {0}", form_id_var);
-            date = DBConnection.getInstanceOfDBConnection().getScalar(date);
-            string work_area = String.Format("SELECT work_area FROM form WHERE form_id = {0}", form_id_var);
-            work_area = DBConnection.getInstanceOfDBConnection().getScalar(work_area);
-            string job_desc = String.Format("SELECT job_desc FROM form WHERE form_id = {0}", form_id_var);
-            job_desc = DBConnection.getInstanceOfDBConnection().getScalar(job_desc);
-            string supervisor = String.Format("SELECT supervisor FROM form WHERE form_id = {0}", form_id_var);
-            supervisor = DBConnection.getInstanceOfDBConnection().getScalar(supervisor);
-            string inspector = String.Format("SELECT inspector FROM form WHERE form_id = {0}", form_id_var);
-            inspector = DBConnection.getInstanceOfDBConnection().getScalar(inspector);
-            string type = String.Format("SELECT type FROM form WHERE form_id = {0}", form_id_var);
-            type = DBConnection.getInstanceOfDBConnection().getScalar(type);
+            string site = form_headers("site_name", form_id_var);
+            string cmplt_by = form_headers("cmpltd_by", form_id_var);
+            string date = form_headers("date", form_id_var);
+            string work_area = form_headers("work_area", form_id_var);
+            string job_desc = form_headers("job_desc", form_id_var);
+            string supervisor = form_headers("supervisor", form_id_var);
+            string inspector = form_headers("inspector", form_id_var);
+            string type = form_headers("type", form_id_var);
             //Draw the text for the title and headers.
             //Instead of manually entering each title, the strings can be retrieved from the form table headings.
             //Possibly turn this whole block into a for loop to reduce bloat.
@@ -232,7 +224,19 @@ namespace SiteInspection
             //Opens a process to view the pdf, this is mainly here for debugging.
             Process.Start(filename);
         }
-
+        public string form_headers(string data, int form_id)
+        {
+            try
+            {
+                string name = String.Format("SELECT {0} FROM form WHERE form_id = {1}", data, form_id);
+                return name = DBConnection.getInstanceOfDBConnection().getScalar(name);
+            }
+            catch (System.NullReferenceException)
+            {
+                return "";
+            }
+            return "";
+        }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
