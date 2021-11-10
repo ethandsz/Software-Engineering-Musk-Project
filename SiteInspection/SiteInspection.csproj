@@ -94,11 +94,15 @@
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form4.cs">
-      <SubType>Form</SubType>
+    <Compile Include="form_dbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>form_dbDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <Compile Include="form_dbDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>form_dbDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="InspectionForm.cs">
       <SubType>Form</SubType>
@@ -120,9 +124,6 @@
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="InspectionForm.resx">
       <DependentUpon>InspectionForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +137,28 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="form_dbDataSet.xsc">
+      <DependentUpon>form_dbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="form_dbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>form_dbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="form_dbDataSet.xss">
+      <DependentUpon>form_dbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="form_dbDataSet1.xsc">
+      <DependentUpon>form_dbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="form_dbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>form_dbDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="form_dbDataSet1.xss">
+      <DependentUpon>form_dbDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

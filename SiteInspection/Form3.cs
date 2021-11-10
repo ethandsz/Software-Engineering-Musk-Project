@@ -7,11 +7,12 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using PdfSharp;
 using PdfSharp.Drawing;
+using PdfSharp.Drawing.Layout;
 using PdfSharp.Pdf;
-using PdfSharp.Pdf.IO;
+using System.Windows.Forms;
+using System.IO;
 
 namespace SiteInspection
 {
@@ -117,7 +118,6 @@ namespace SiteInspection
 
         private void Form3_Load(object sender, EventArgs e)
         {
-
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -397,6 +397,7 @@ namespace SiteInspection
             DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(data_query(num));
             dataGrd.DataSource = ds.Tables[0];
             //
+           
             textBox4.Text = populate_txtBox(0);
             textBox3.Text = populate_txtBox(1);
             textBox2.Text = populate_txtBox(2);
@@ -405,10 +406,16 @@ namespace SiteInspection
 
         private void add_btn(object sender, EventArgs e)
         {
-            string sqlQuery = "INSERT INTO form_data (form_data_type_id, form_id, interventions, comment, completed, action_taken)" +
-                " VALUES (@form_data_type_id, @form_id, @interventions, @comment, @completed, @action_taken)";
+             
+            byte[] picture;
+            picture = DBConnection.ConvertImageByte(pictureBox.Image);
+            string sqlQuery = "INSERT INTO form_data (form_data_type_id, form_id, interventions, comment, completed, action_taken, file_name, image)" +
+                " VALUES (@form_data_type_id, @form_id, @interventions, @comment, @completed, @action_taken, @file_name, @image)";
             DBConnection.getInstanceOfDBConnection().saveToDB2(sqlQuery, form_data_type_id, get_latest_form_id(), textBox4.Text, textBox3.Text, textBox2.Text,
-                textBox1.Text);
+                textBox1.Text, textBox5.Text, picture);
+            
+
+          
 
             populate_dgv(form_data_type_id);
             populate_currentDgv();
@@ -533,11 +540,24 @@ namespace SiteInspection
         private void button5_Click(object sender, EventArgs e)
         {
 
-            Form4 newForm = new Form4();
 
-            newForm.Show();
-            this.Hide();
+        }
 
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+
+            using (OpenFileDialog pic = new OpenFileDialog())
+            {
+                pic.Filter = "jpg files(*.jpg)|*.jpg| PNG files|*.png| All Files(*.*)|*.*";
+                if (pic.ShowDialog() == DialogResult.OK)
+                {
+                    pictureBox.Image = Image.FromFile(pic.FileName);
+                    textBox5.Text = pic.FileName;
+                    
+                    DBConnection.getInstanceOfDBConnection().LoadImage();
+                }
+
+            }
         }
     }
 }

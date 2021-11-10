@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -130,7 +132,7 @@ namespace SiteInspection
         }
 
         public void saveToDB2(string sqlQuery, string form_data_type_id, string form_id, string interventions, string comment,
-            string completed, string action_taken)
+            string completed, string action_taken, string file_name, byte[] image)
         {
             using (SqlConnection connToDB = new SqlConnection(connStr))
             {
@@ -149,6 +151,8 @@ namespace SiteInspection
                 sqlCommand.Parameters.Add(new SqlParameter("comment", comment));
                 sqlCommand.Parameters.Add(new SqlParameter("completed", completed));
                 sqlCommand.Parameters.Add(new SqlParameter("action_taken", action_taken));
+                sqlCommand.Parameters.Add(new SqlParameter("file_name", file_name));
+                sqlCommand.Parameters.Add(new SqlParameter("image", image));
 
                 //execute the command
                 try {
@@ -164,6 +168,41 @@ namespace SiteInspection
                 
 
                 connToDB.Close();
+            }
+        }
+        public DataTable LoadImage()
+        {
+            using (SqlConnection connToDB = new SqlConnection(connStr))
+            {
+                //open connection
+
+                connToDB.Open();
+                using (DataTable dataTable = new DataTable("form_data"))
+                {
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT file_name, image FROM form_data", connToDB);
+                    dataAdapter.Fill(dataTable);
+
+                    return dataTable;
+                }
+               
+            }
+           
+        }
+
+        public static byte[] ConvertImageByte(Image img)
+        {
+            using (MemoryStream memo = new MemoryStream())
+            {
+                img.Save(memo, System.Drawing.Imaging.ImageFormat.Png);
+                return memo.ToArray();
+            }
+        }
+
+        public Image ConvertByArrayToImage(byte[] pic)
+        {
+            using (MemoryStream memo = new MemoryStream(pic))
+            {
+                return Image.FromStream(memo);
             }
         }
     }

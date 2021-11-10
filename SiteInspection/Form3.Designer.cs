@@ -29,6 +29,7 @@ namespace SiteInspection
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.overalBtn = new System.Windows.Forms.Button();
             this.panelTotalInterventionsSubmenu = new System.Windows.Forms.Panel();
@@ -80,6 +81,7 @@ namespace SiteInspection
             this.button1 = new System.Windows.Forms.Button();
             this.workingStandardsBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dataGrd = new System.Windows.Forms.DataGridView();
@@ -95,8 +97,17 @@ namespace SiteInspection
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.form_dbDataSet = new SiteInspection.form_dbDataSet();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.filenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.formdataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.form_dbDataSet1 = new SiteInspection.form_dbDataSet1();
+            this.form_dataTableAdapter = new SiteInspection.form_dbDataSet1TableAdapters.form_dataTableAdapter();
             this.button5 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelSideMenu.SuspendLayout();
             this.panelTotalInterventionsSubmenu.SuspendLayout();
             this.panelMiscellaneousSubmenu.SuspendLayout();
@@ -107,9 +118,14 @@ namespace SiteInspection
             this.panelQualitySubmenu.SuspendLayout();
             this.panelWorkingStandardSubmenu.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.form_dbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.formdataBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.form_dbDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -147,7 +163,7 @@ namespace SiteInspection
             this.overalBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.overalBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.overalBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.overalBtn.Location = new System.Drawing.Point(0, 2508);
+            this.overalBtn.Location = new System.Drawing.Point(0, 2449);
             this.overalBtn.Name = "overalBtn";
             this.overalBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.overalBtn.Size = new System.Drawing.Size(233, 60);
@@ -169,7 +185,7 @@ namespace SiteInspection
             this.panelTotalInterventionsSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTotalInterventionsSubmenu.Location = new System.Drawing.Point(0, 2026);
             this.panelTotalInterventionsSubmenu.Name = "panelTotalInterventionsSubmenu";
-            this.panelTotalInterventionsSubmenu.Size = new System.Drawing.Size(233, 482);
+            this.panelTotalInterventionsSubmenu.Size = new System.Drawing.Size(233, 423);
             this.panelTotalInterventionsSubmenu.TabIndex = 16;
             // 
             // miscellaneousG
@@ -911,6 +927,15 @@ namespace SiteInspection
             this.panel2.Size = new System.Drawing.Size(233, 100);
             this.panel2.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::SiteInspection.Properties.Resources.WhatsApp_Image_2021_10_25_at_7_37_26_AM;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(250, 96);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.DarkGray;
@@ -928,7 +953,7 @@ namespace SiteInspection
             this.button3.BackColor = System.Drawing.Color.DarkGray;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
-            this.button3.Location = new System.Drawing.Point(427, 377);
+            this.button3.Location = new System.Drawing.Point(433, 563);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(188, 26);
             this.button3.TabIndex = 31;
@@ -1032,7 +1057,7 @@ namespace SiteInspection
             this.button4.BackColor = System.Drawing.Color.DarkGray;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
-            this.button4.Location = new System.Drawing.Point(427, 314);
+            this.button4.Location = new System.Drawing.Point(433, 519);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(188, 26);
             this.button4.TabIndex = 50;
@@ -1069,27 +1094,85 @@ namespace SiteInspection
             this.label2.TabIndex = 53;
             this.label2.Text = "Form_table output for debugging";
             // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(372, 280);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(315, 20);
+            this.textBox5.TabIndex = 54;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(259, 283);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 13);
+            this.label3.TabIndex = 55;
+            this.label3.Text = "File Name:";
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.Location = new System.Drawing.Point(372, 324);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(315, 156);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox.TabIndex = 56;
+            this.pictureBox.TabStop = false;
+            // 
+            // form_dbDataSet
+            // 
+            this.form_dbDataSet.DataSetName = "form_dbDataSet";
+            this.form_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.filenameDataGridViewTextBoxColumn,
+            this.imageDataGridViewImageColumn});
+            this.dataGridView2.DataSource = this.formdataBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(785, 32);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView2.TabIndex = 57;
+            // 
+            // filenameDataGridViewTextBoxColumn
+            // 
+            this.filenameDataGridViewTextBoxColumn.DataPropertyName = "file_name";
+            this.filenameDataGridViewTextBoxColumn.HeaderText = "file_name";
+            this.filenameDataGridViewTextBoxColumn.Name = "filenameDataGridViewTextBoxColumn";
+            // 
+            // imageDataGridViewImageColumn
+            // 
+            this.imageDataGridViewImageColumn.DataPropertyName = "image";
+            this.imageDataGridViewImageColumn.HeaderText = "image";
+            this.imageDataGridViewImageColumn.Name = "imageDataGridViewImageColumn";
+            // 
+            // formdataBindingSource
+            // 
+            this.formdataBindingSource.DataMember = "form_data";
+            this.formdataBindingSource.DataSource = this.form_dbDataSet1;
+            // 
+            // form_dbDataSet1
+            // 
+            this.form_dbDataSet1.DataSetName = "form_dbDataSet1";
+            this.form_dbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // form_dataTableAdapter
+            // 
+            this.form_dataTableAdapter.ClearBeforeFill = true;
+            // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.DarkGray;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
-            this.button5.Location = new System.Drawing.Point(427, 348);
+            this.button5.Location = new System.Drawing.Point(703, 279);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(188, 23);
-            this.button5.TabIndex = 54;
-            this.button5.Text = "Upload Picture";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::SiteInspection.Properties.Resources.WhatsApp_Image_2021_10_25_at_7_37_26_AM;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(250, 96);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 58;
+            this.button5.Text = "upload pic";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // Form3
             // 
@@ -1100,6 +1183,10 @@ namespace SiteInspection
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1037, 658);
             this.Controls.Add(this.button5);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.pictureBox);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
@@ -1130,9 +1217,14 @@ namespace SiteInspection
             this.panelQualitySubmenu.ResumeLayout(false);
             this.panelWorkingStandardSubmenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.form_dbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.formdataBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.form_dbDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1207,6 +1299,16 @@ namespace SiteInspection
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox;
+        private form_dbDataSet form_dbDataSet;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private form_dbDataSet1 form_dbDataSet1;
+        private System.Windows.Forms.BindingSource formdataBindingSource;
+        private form_dbDataSet1TableAdapters.form_dataTableAdapter form_dataTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn filenameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewImageColumn imageDataGridViewImageColumn;
         private System.Windows.Forms.Button button5;
     }
 }
