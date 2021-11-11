@@ -20,6 +20,8 @@ namespace SiteInspection
     {
 
         string form_data_type_id;
+
+        Form1 f1 = new Form1();
         public Form3()
         {
             InitializeComponent();
@@ -492,32 +494,175 @@ namespace SiteInspection
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //WORK IN PROGRESS
-            //Saving data from an inspection to a pdf
-            //After pressing the generate pdf button the program will attempt to open the newly created pdf file
-            //Current default file path: \ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug
+            //PDFSharp testing.
+            //Attempting to generate a pdf from initial data in database.
+            //Current default file path: \ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug.
 
-            //PdfDocument doc = new PdfDocument();
-            //doc.Info.Title = "Site Inspection";
+            //Initialising the PDFSharp classes and creating the document/pages.
+            PdfDocument doc = new PdfDocument();
+            doc.Info.Title = "Site Inspection";
+            PdfPage page = doc.AddPage();
+            XGraphics gfx = XGraphics.FromPdfPage(page);
+            XTextFormatter tf = new XTextFormatter(gfx);
 
-            //PdfPage page = doc.AddPage();
+            //Setting the various fonts.
+            XFont titleFont = new XFont("Verdana", 11, XFontStyle.Bold);
+            XFont headerFont = new XFont("Verdana", 9, XFontStyle.Bold);
+            XFont stdFont = new XFont("Verdana", 7, XFontStyle.Regular);
 
-            //XGraphics gfx = XGraphics.FromPdfPage(page);
+            //An example of retrieving the title of the inspection form from the form_name table in the database.
+            //This can be copied and used for other such retrievals.
+            string pdfTitle;
+            //int form_id_var = 1;
+            try
+            {
+                int form_id_var = Convert.ToInt32(get_latest_form_id());
 
-            //XFont font = new XFont("Verdana", 14, XFontStyle.Bold);
+                string query = String.Format("SELECT form_name FROM form_type WHERE form_type_id = {0}", form_id_var);
+                pdfTitle = DBConnection.getInstanceOfDBConnection().getScalar(query);
+                //Pulling heading titles from database
+                string site = form_headers("site_name", form_id_var);
+                string cmplt_by = form_headers("cmpltd_by", form_id_var);
+                string date = form_headers("date", form_id_var);
+                string work_area = form_headers("work_area", form_id_var);
+                string job_desc = form_headers("job_desc", form_id_var);
+                string supervisor = form_headers("supervisor", form_id_var);
+                string inspector = form_headers("inspector", form_id_var);
+                string type = form_headers("type", form_id_var);
+                //Draw the text for the title and headers.
+                //Instead of manually entering each title, the strings can be retrieved from the form table headings.
+                //Possibly turn this whole block into a for loop to reduce bloat.
+                //To have text wrap inside a box, use XTextFormatter. See the "Action Taken" entry below.
+                gfx.DrawString(pdfTitle, titleFont, XBrushes.Black, new XRect(0, 36, page.Width, page.Height), XStringFormats.TopCenter);
+                gfx.DrawString("Site: " + site, headerFont, XBrushes.Black, 36, 72);
+                gfx.DrawString("Completed By: " + cmplt_by, headerFont, XBrushes.Black, 252, 72);
+                gfx.DrawString("Date: " + date, headerFont, XBrushes.Black, 468, 72);
+                gfx.DrawString("Work Area: " + work_area, headerFont, XBrushes.Black, 36, 94);
+                gfx.DrawString("Job Description: " + job_desc, headerFont, XBrushes.Black, 252, 94);
+                gfx.DrawString("Supervisor: " + supervisor, headerFont, XBrushes.Black, 36, 115);
+                gfx.DrawString("Inspector: " + inspector, headerFont, XBrushes.Black, 252, 115);
+                gfx.DrawString("Type: " + type, headerFont, XBrushes.Black, 468, 115);
+                gfx.DrawString("Interventions", headerFont, XBrushes.Black, 230, 144);
+                gfx.DrawString("Comment", headerFont, XBrushes.Black, 302, 144);
+                gfx.DrawString("Completed", headerFont, XBrushes.Black, 434, 144);
+                tf.DrawString("Action Taken", headerFont, XBrushes.Black, new XRect(498, 130, 50, 50));
+                gfx.DrawString("Image", headerFont, XBrushes.Black, 543, 144);
 
-            //string pdfTitle;
-            //DataSet get_title = DBConnection.getInstanceOfDBConnection().getDataSet("SELECT form_name FROM form_type WHERE form_type_id = 1");
-            //pdfTitle = get_title.Tables[0].Rows[0]["form_name"].ToString();
+                //Example code for drawing text inside a box
+                //XRect rect = new XRect(100, 100, 100, 100);
+                //XPen xpen = new XPen(XColors.Black, 0.4);
+                //gfx.DrawRectangle(xpen, rect);
+                //XStringFormat format = new XStringFormat();
+                //format.LineAlignment = XLineAlignment.Near;
+                //format.Alignment = XStringAlignment.Near;
+                //XBrush brush = XBrushes.Purple;
+                //tf.DrawString("Here goes a load of text that should fit into the box blah blah blah blah", new XFont("Helvetica", 8), brush,
+                //    new XRect(rect.X + 5, rect.Y, rect.Width, 34), format);
 
-            //gfx.DrawString(pdfTitle, font, XBrushes.Black, new XRect(0, 0, page.Width, page.Height), XStringFormats.Center);
+                //Drawing some boxes at the top of the pdf to get coordinates and an idea of how it will look.
+                XPen xpen = new XPen(XColors.Black, 0.4);
+                gfx.DrawRectangle(xpen, new XRect(36, 158, 192, 18));
+                gfx.DrawRectangle(xpen, new XRect(228, 158, 72, 18));
+                gfx.DrawRectangle(xpen, new XRect(300, 158, 130, 18));
+                gfx.DrawRectangle(xpen, new XRect(430, 158, 60, 18));
+                gfx.DrawRectangle(xpen, new XRect(490, 158, 50, 18));
+                gfx.DrawRectangle(xpen, new XRect(540, 158, 40, 18));
 
-            //const string filename = "HelloWorld.pdf";
-            //doc.Save(filename);
+                //Get the number of entries for the selected form, this will be used in a for loop to populate the pdf.
+                query = String.Format("SELECT COUNT(*) FROM form_data_type");
+                int num_of_entries = Convert.ToInt32(DBConnection.getInstanceOfDBConnection().getScalar(query));
 
-            //Process.Start(filename);
+                //Loop for printing text from form_data_type and form_data to the pdf.
+                string text;
+                int xCoord = 40;
+                int yCoord = 170;
+                //Variables to track the section_id within the loop. Compares the current ID to the previous ID.
+                //Used to trigger the if statement to print out a section header.
+                int prevId = 0;
+                int currId = 1;
+                for (int i = 1; i < num_of_entries + 1; i++)
+                {
+                    //Prints a section header when triggered.
+                    if (prevId != currId)
+                    {
+                        query = String.Format("SELECT section_name FROM section WHERE section_id = {0}", currId);
+                        text = DBConnection.getInstanceOfDBConnection().getScalar(query);
+                        gfx.DrawString(text, headerFont, XBrushes.Black, xCoord, yCoord);
 
+                        yCoord += 20;
+                        prevId = currId;
+                    }
+
+                    query = String.Format("SELECT data_type_name FROM form_data_type WHERE form_data_type_id = {0}", i);
+                    text = DBConnection.getInstanceOfDBConnection().getScalar(query);
+                    gfx.DrawString(text, stdFont, XBrushes.Black, xCoord, yCoord);
+
+                    query = String.Format("SELECT interventions FROM form_data WHERE form_data_type_id = {0} AND form_id = {1}", i, form_id_var);
+                    text = DBConnection.getInstanceOfDBConnection().getScalar(query);
+                    if (text.Equals("")) { text = "0"; }
+                    gfx.DrawString(text, stdFont, XBrushes.Black, xCoord + 220, yCoord);
+
+                    query = String.Format("SELECT comment FROM form_data WHERE form_data_type_id = {0} AND form_id = {1}", i, form_id_var);
+                    text = DBConnection.getInstanceOfDBConnection().getScalar(query);
+                    gfx.DrawString(text, stdFont, XBrushes.Black, xCoord + 263, yCoord);
+
+                    query = String.Format("SELECT completed FROM form_data WHERE form_data_type_id = {0} AND form_id = {1}", i, form_id_var);
+                    text = DBConnection.getInstanceOfDBConnection().getScalar(query);
+                    gfx.DrawString(text, stdFont, XBrushes.Black, xCoord + 410, yCoord);
+
+                    query = String.Format("SELECT action_taken FROM form_data WHERE form_data_type_id = {0} AND form_id = {1}", i, form_id_var);
+                    text = DBConnection.getInstanceOfDBConnection().getScalar(query);
+                    gfx.DrawString(text, stdFont, XBrushes.Black, xCoord + 450, yCoord);
+
+                    //Check if an image is present, if it is, create a link to it.
+                    //I literally cannot figure out a way to create a link through the pdf document. 
+                    //It'll be easier to view images via the admin login screen, which incidentally is what is already implemented in Musk's current software.
+                    //query = String.Format("SELECT file_name FROM form_data WHERE form_data_type_id = {0} AND form_id = {1}", i, form_id_var);
+                    //imgCheck = DBConnection.getInstanceOfDBConnection().getScalar(query);
+                    //if (imgCheck.Length > 3)
+                    //{
+                    //    gfx.DrawString("view", stdFont, XBrushes.Black, xCoord + 510, yCoord);
+                    //}
+
+                    //Get the current section_id, eventually it will be different to the prevID and trigger the header printing statement.
+                    query = String.Format("SELECT section_id FROM form_data_type WHERE form_data_type_id = {0}", i);
+                    currId = Convert.ToInt32(DBConnection.getInstanceOfDBConnection().getScalar(query));
+
+                    yCoord += 20;
+                }
+
+                //Name of the pdf document.
+                //Could use a for loop to create the name or even retrieve the form_id from the form table.
+                string filename = "SiteInspection" + get_latest_form_id() + ".pdf";
+                doc.Save(filename);
+                MessageBox.Show("Inspection form saved as: " + filename);
+
+                //Opens a process to view the pdf, this is mainly here for debugging.
+                //Process.Start(filename);
+
+                this.Close();
+                f1.Show();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please select a form from the combo box");
+            }
         }
+        public string form_headers(string data, int form_id)
+        {
+            try
+            {
+                string name = String.Format("SELECT {0} FROM form WHERE form_id = {1}", data, form_id);
+                return name = DBConnection.getInstanceOfDBConnection().getScalar(name);
+            }
+            catch (System.NullReferenceException)
+            {
+                return "";
+            }
+            return "";
+        }
+    
 
         private void dataGrd_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

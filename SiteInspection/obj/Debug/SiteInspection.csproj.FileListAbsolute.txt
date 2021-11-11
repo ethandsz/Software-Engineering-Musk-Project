@@ -121,3 +121,10 @@ E:\10nov\SiteInspection\bin\Debug\PdfSharp.Charting.xml
 E:\10nov\SiteInspection\bin\Debug\de\PdfSharp.resources.dll
 E:\10nov\SiteInspection\bin\Debug\de\PdfSharp.Charting.resources.dll
 C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\obj\Debug\SiteInspection.csproj.CopyComplete
+C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug\Aspose.Page.dll
+C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug\Aspose.PDF.dll
+C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug\Aspose.Words.dll
+C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug\Aspose.Words.Pdf2Word.dll
+C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug\Aspose.Page.xml
+C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug\Aspose.PDF.xml
+C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug\Aspose.Words.xml

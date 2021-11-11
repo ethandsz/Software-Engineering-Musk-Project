@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -43,7 +44,7 @@ namespace SiteInspection
                     string frm_id = dgvRow.Cells[0].Value.ToString();
                     textBox1.Text = frm_id;
                     //Shows all data associated with a form[Still have to sort by section, didnt have time tonight]
-                    string sql_query = string.Format("SELECT interventions,comment,completed,action_taken FROM form_data WHERE form_id = {0}", frm_id);
+                    string sql_query = string.Format("SELECT interventions,comment,completed,action_taken,image FROM form_data WHERE form_id = {0}", frm_id);
                     DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(sql_query);
                     dgvViewData.DataSource = ds.Tables[0];
                 }
@@ -58,22 +59,54 @@ namespace SiteInspection
             switch (cmbBox_SortBy.Text)
             {
                 case "Date [Oldest-Newest]":
-                    DataSet ds_oldest_newest = DBConnection.getInstanceOfDBConnection().getDataSet("SELECT form_id AS 'Form #',site_name AS 'Site',cmpltd_by AS 'Completed By',date AS 'Date',work_area AS 'Work Area',job_desc AS 'Job Description',supervisor AS 'Supervisor',inspector AS 'inspector',type AS 'Type' FROM form f ORDER BY date ASC");
+                    DataSet ds_oldest_newest = DBConnection.getInstanceOfDBConnection().getDataSet("SELECT form_id AS 'Form #'," +
+                        "site_name AS 'Site',cmpltd_by AS 'Completed By',date AS 'Date',work_area AS 'Work Area',job_desc AS 'Job Description'," +
+                        "supervisor AS 'Supervisor',inspector AS 'inspector',type AS 'Type' FROM form f ORDER BY date ASC");
                     dgvViewData.DataSource = ds_oldest_newest.Tables[0];
                     break;
                 case "Date [Newest-Oldest]":
-                    DataSet ds_newest_oldest = DBConnection.getInstanceOfDBConnection().getDataSet("SELECT form_id AS 'Form #',site_name AS 'Site',cmpltd_by AS 'Completed By',date AS 'Date',work_area AS 'Work Area',job_desc AS 'Job Description',supervisor AS 'Supervisor',inspector AS 'inspector',type AS 'Type' FROM form f ORDER BY date DESC");
+                    DataSet ds_newest_oldest = DBConnection.getInstanceOfDBConnection().getDataSet("SELECT form_id AS 'Form #'," +
+                        "site_name AS 'Site',cmpltd_by AS 'Completed By',date AS 'Date',work_area AS 'Work Area',job_desc AS 'Job Description'," +
+                        "supervisor AS 'Supervisor',inspector AS 'inspector',type AS 'Type' FROM form f ORDER BY date DESC");
                     dgvViewData.DataSource = ds_newest_oldest.Tables[0];
                     break;
                 case "Site":
-                    DataSet ds_site = DBConnection.getInstanceOfDBConnection().getDataSet("SELECT form_id AS 'Form #',site_name AS 'Site',cmpltd_by AS 'Completed By',date AS 'Date',work_area AS 'Work Area',job_desc AS 'Job Description',supervisor AS 'Supervisor',inspector AS 'inspector',type AS 'Type' FROM form f ORDER BY site_name ASC");
+                    DataSet ds_site = DBConnection.getInstanceOfDBConnection().getDataSet("SELECT form_id AS 'Form #',site_name AS 'Site'," +
+                        "cmpltd_by AS 'Completed By',date AS 'Date',work_area AS 'Work Area',job_desc AS 'Job Description',supervisor AS 'Supervisor'," +
+                        "inspector AS 'inspector',type AS 'Type' FROM form f ORDER BY site_name ASC");
                     dgvViewData.DataSource = ds_site.Tables[0];
                     break;
                 case "Type":
-                    DataSet ds_type = DBConnection.getInstanceOfDBConnection().getDataSet("SELECT form_id AS 'Form #',site_name AS 'Site',cmpltd_by AS 'Completed By',date AS 'Date',work_area AS 'Work Area',job_desc AS 'Job Description',supervisor AS 'Supervisor',inspector AS 'inspector',type AS 'Type' FROM form f ORDER BY type ASC");
+                    DataSet ds_type = DBConnection.getInstanceOfDBConnection().getDataSet("SELECT form_id AS 'Form #',site_name AS 'Site'," +
+                        "cmpltd_by AS 'Completed By',date AS 'Date',work_area AS 'Work Area',job_desc AS 'Job Description'," +
+                        "supervisor AS 'Supervisor',inspector AS 'inspector',type AS 'Type' FROM form f ORDER BY type ASC");
                     dgvViewData.DataSource = ds_type.Tables[0];
                     break;
             }
+        }
+
+        private void dgvViewData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string filename = "SiteInspection" + textBox1.Text + ".pdf";
+                Process.Start(filename);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please select a form first.");
+            }
+            
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
