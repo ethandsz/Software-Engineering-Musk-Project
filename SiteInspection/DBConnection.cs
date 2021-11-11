@@ -191,19 +191,20 @@ namespace SiteInspection
 
         public static byte[] ConvertImageByte(Image img)
         {
-            try
+            
+            using (MemoryStream memo = new MemoryStream())
             {
-                using (MemoryStream memo = new MemoryStream())
+                try
                 {
                     img.Save(memo, System.Drawing.Imaging.ImageFormat.Png);
                     return memo.ToArray();
                 }
-            }
-
-            catch (Exception ex)
-            {
-                return null;
-            }
+                catch (Exception)
+                {
+                    return memo.ToArray();
+                }
+                    
+            }                       
             
         }
 

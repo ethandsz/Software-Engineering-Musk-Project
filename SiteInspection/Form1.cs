@@ -158,8 +158,9 @@ namespace SiteInspection
                 gfx.DrawString("Type: " + type, headerFont, XBrushes.Black, 468, 115);
                 gfx.DrawString("Interventions", headerFont, XBrushes.Black, 230, 144);
                 gfx.DrawString("Comment", headerFont, XBrushes.Black, 302, 144);
-                gfx.DrawString("Completed", headerFont, XBrushes.Black, 454, 144);
-                tf.DrawString("Action Taken", headerFont, XBrushes.Black, new XRect(518, 130, 50, 50));
+                gfx.DrawString("Completed", headerFont, XBrushes.Black, 434, 144);
+                tf.DrawString("Action Taken", headerFont, XBrushes.Black, new XRect(498, 130, 50, 50));
+                gfx.DrawString("Image", headerFont, XBrushes.Black, 543, 144);
 
                 //Example code for drawing text inside a box
                 //XRect rect = new XRect(100, 100, 100, 100);
@@ -176,9 +177,10 @@ namespace SiteInspection
                 XPen xpen = new XPen(XColors.Black, 0.4);
                 gfx.DrawRectangle(xpen, new XRect(36, 158, 192, 18));
                 gfx.DrawRectangle(xpen, new XRect(228, 158, 72, 18));
-                gfx.DrawRectangle(xpen, new XRect(300, 158, 150, 18));
-                gfx.DrawRectangle(xpen, new XRect(450, 158, 60, 18));
-                gfx.DrawRectangle(xpen, new XRect(510, 158, 75, 18));
+                gfx.DrawRectangle(xpen, new XRect(300, 158, 130, 18));
+                gfx.DrawRectangle(xpen, new XRect(430, 158, 60, 18));
+                gfx.DrawRectangle(xpen, new XRect(490, 158, 50, 18));
+                gfx.DrawRectangle(xpen, new XRect(540, 158, 40, 18));
 
                 //Get the number of entries for the selected form, this will be used in a for loop to populate the pdf.
                 query = String.Format("SELECT COUNT(*) FROM form_data_type");
@@ -192,6 +194,7 @@ namespace SiteInspection
                 //Used to trigger the if statement to print out a section header.
                 int prevId = 0;
                 int currId = 1;
+                string imgCheck;
                 for (int i = 1; i < num_of_entries + 1; i++)
                 {
                     //Prints a section header when triggered.
@@ -220,11 +223,19 @@ namespace SiteInspection
 
                     query = String.Format("SELECT completed FROM form_data WHERE form_data_type_id = {0} AND form_id = {1}", i, form_id_var);
                     text = DBConnection.getInstanceOfDBConnection().getScalar(query);
-                    gfx.DrawString(text, stdFont, XBrushes.Black, xCoord + 430, yCoord);
+                    gfx.DrawString(text, stdFont, XBrushes.Black, xCoord + 410, yCoord);
 
                     query = String.Format("SELECT action_taken FROM form_data WHERE form_data_type_id = {0} AND form_id = {1}", i, form_id_var);
                     text = DBConnection.getInstanceOfDBConnection().getScalar(query);
-                    gfx.DrawString(text, stdFont, XBrushes.Black, xCoord + 470, yCoord);
+                    gfx.DrawString(text, stdFont, XBrushes.Black, xCoord + 450, yCoord);
+
+                    //Check if an image is present, if it is, create a link to it
+                    query = String.Format("SELECT file_name FROM form_data WHERE form_data_type_id = {0} AND form_id = {1}", i, form_id_var);
+                    imgCheck = DBConnection.getInstanceOfDBConnection().getScalar(query);
+                    if (imgCheck.Length > 3)
+                    {
+                        gfx.DrawString("view", stdFont, XBrushes.Black, xCoord + 510, yCoord);
+                    }
 
                     //Get the current section_id, eventually it will be different to the prevID and trigger the header printing statement.
                     query = String.Format("SELECT section_id FROM form_data_type WHERE form_data_type_id = {0}", i);
