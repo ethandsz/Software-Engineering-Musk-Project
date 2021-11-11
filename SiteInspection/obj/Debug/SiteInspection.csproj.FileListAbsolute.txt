@@ -67,7 +67,6 @@ C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspect
 C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug\PdfSharp.Charting.xml
 C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug\de\PdfSharp.resources.dll
 C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug\de\PdfSharp.Charting.resources.dll
-C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\obj\Debug\SiteInspection.Form4.resources
 C:\Users\Sprite Cranberry\Source\Repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug\form_db.mdf
 C:\Users\Sprite Cranberry\Source\Repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug\form_db_log.ldf
 C:\Users\Sprite Cranberry\Source\Repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\bin\Debug\SiteInspection.exe.config
@@ -121,3 +120,4 @@ E:\10nov\SiteInspection\bin\Debug\PdfSharp.xml
 E:\10nov\SiteInspection\bin\Debug\PdfSharp.Charting.xml
 E:\10nov\SiteInspection\bin\Debug\de\PdfSharp.resources.dll
 E:\10nov\SiteInspection\bin\Debug\de\PdfSharp.Charting.resources.dll
+C:\Users\Tom\source\repos\ethandsz\Software-Engineering-Musk-Project\SiteInspection\obj\Debug\SiteInspection.csproj.CopyComplete
