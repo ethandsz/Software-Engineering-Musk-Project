@@ -375,101 +375,47 @@ namespace SiteInspection
             this.Close();
         }
 
-        //Methods
-        //
-        //Method for getting the most latest(user_created) form
-        public string get_latest_form_id()
+        private void dataGrd_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataSet get_id = DBConnection.getInstanceOfDBConnection().getDataSet("SELECT TOP 1 form_id FROM form ORDER BY form_id DESC");
-            int f1 = Convert.ToInt32(get_id.Tables[0].Rows[0]["form_id"]);
-            string sql_form_id = f1.ToString();
-            return sql_form_id;
-        }
-        
-        //Method for making a query coressponding to each button, change get_latest_form_id() to "1" to see how its supposed to work with a actual form
-        public string data_query(string num)
-        {
-            string query = string.Format("SELECT interventions,comment,completed,action_taken FROM form_data WHERE form_id = {0} AND form_data_type_id = {1}", get_latest_form_id(), num);
-            return query;
+
         }
 
-        //For efficiency/Less code 
-        public void populate_dgv(string num)
+        private void section_label(object sender, EventArgs e)
         {
-            DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(data_query(num));
-            dataGrd.DataSource = ds.Tables[0];
-            //
-           
-            textBox4.Text = populate_txtBox(0);
-            textBox3.Text = populate_txtBox(1);
-            textBox2.Text = populate_txtBox(2);
-            textBox1.Text = populate_txtBox(3);
+
         }
 
-        private void add_btn(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-             
-            byte[] picture;
-            picture = DBConnection.ConvertImageByte(pictureBox.Image);
-            string sqlQuery = "INSERT INTO form_data (form_data_type_id, form_id, interventions, comment, completed, action_taken, file_name, image)" +
-                " VALUES (@form_data_type_id, @form_id, @interventions, @comment, @completed, @action_taken, @file_name, @image)";
-            DBConnection.getInstanceOfDBConnection().saveToDB2(sqlQuery, form_data_type_id, get_latest_form_id(), textBox4.Text, textBox3.Text, textBox2.Text,
-                textBox1.Text, textBox5.Text, picture);
-            
 
-          
-
-            populate_dgv(form_data_type_id);
-            populate_currentDgv();
-
-            //clearTxtBox();
         }
 
-        //Each time a button is pressed this method is called
-        //Variables used in sqlQueries to call from the corresponding sections
-        //Populates the datagridview
-        //Clears textboxes
-        public void setVars(string num)
+        private void label8_Click(object sender, EventArgs e)
         {
-            form_data_type_id = num;
-            label1.Text = num;
-            populate_dgv(num);
-            pictureBox.Image = null;
-            textBox5.Text = "";
-            //clearTxtBox();
-            //string sqlQuery = string.Format("SELECT form_id,fd_t.form_data_type_id,interventions,comment,completed,action_taken,data_type_name FROM form_data fd RIGHT JOIN form_data_type fd_t ON(fd_t.form_data_type_id = fd.form_data_type_id) WHERE form_id = {0} ORDER BY fd_t.form_data_type_id",get_latest_form_id());
-            //DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(sqlQuery);
-            //dataGridView1.DataSource = ds.Tables[0];
-        }
-        public void populate_currentDgv()
-        {
-            string sqlQuery = string.Format("SELECT form_id,fd_t.form_data_type_id,interventions,comment,completed,action_taken,data_type_name FROM form_data fd RIGHT JOIN form_data_type fd_t ON(fd_t.form_data_type_id = fd.form_data_type_id) WHERE form_id = {0} ORDER BY fd_t.form_data_type_id", get_latest_form_id());
-            DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(sqlQuery);
-            dataGridView1.DataSource = ds.Tables[0];
+
         }
 
-        public void clearTxtBox()
+        private void button5_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "";
-            textBox2.Text = "";
-            textBox3.Text = "";
-            textBox4.Text = "";
+
+
         }
 
-        public string populate_txtBox(int column_num)
+        private void button5_Click_1(object sender, EventArgs e)
         {
-            string s = "";
-            //dataGrd.Rows[0].Cells[column_num].Value.ToString()
-            if(dataGrd.Rows[0].Cells[column_num].Value == null)
+
+            using (OpenFileDialog pic = new OpenFileDialog())
             {
-                s = "";
+                pic.Filter = "jpg files(*.jpg)|*.jpg| PNG files|*.png| All Files(*.*)|*.*";
+                if (pic.ShowDialog() == DialogResult.OK)
+                {
+                    pictureBox.Image = Image.FromFile(pic.FileName);
+                    textBox5.Text = pic.FileName;
+
+                    DBConnection.getInstanceOfDBConnection().LoadImage();
+                }
+
             }
-            else
-            {
-                s = dataGrd.Rows[0].Cells[column_num].Value.ToString();
-            }
-            //MessageBox.Show(s);
-            return s;
         }
 
         private void interv_txt(object sender, EventArgs e)
@@ -649,6 +595,106 @@ namespace SiteInspection
                 MessageBox.Show("Please select a form from the combo box");
             }
         }
+
+
+        private void add_btn(object sender, EventArgs e)
+        {
+
+            byte[] picture;
+            picture = DBConnection.ConvertImageByte(pictureBox.Image);
+            string sqlQuery = "INSERT INTO form_data (form_data_type_id, form_id, interventions, comment, completed, action_taken, file_name, image)" +
+                " VALUES (@form_data_type_id, @form_id, @interventions, @comment, @completed, @action_taken, @file_name, @image)";
+            DBConnection.getInstanceOfDBConnection().saveToDB2(sqlQuery, form_data_type_id, get_latest_form_id(), textBox4.Text, textBox3.Text, textBox2.Text,
+                textBox1.Text, textBox5.Text, picture);
+
+
+
+
+            populate_dgv(form_data_type_id);
+            populate_currentDgv();
+
+            //clearTxtBox();
+        }
+
+        //Methods
+        //
+        //Method for getting the most latest(user_created) form
+        public string get_latest_form_id()
+        {
+            DataSet get_id = DBConnection.getInstanceOfDBConnection().getDataSet("SELECT TOP 1 form_id FROM form ORDER BY form_id DESC");
+            int f1 = Convert.ToInt32(get_id.Tables[0].Rows[0]["form_id"]);
+            string sql_form_id = f1.ToString();
+            return sql_form_id;
+        }
+        
+        //Method for making a query coressponding to each button, change get_latest_form_id() to "1" to see how its supposed to work with a actual form
+        public string data_query(string num)
+        {
+            string query = string.Format("SELECT interventions,comment,completed,action_taken FROM form_data WHERE form_id = {0} AND form_data_type_id = {1}", get_latest_form_id(), num);
+            return query;
+        }
+
+        //For efficiency/Less code 
+        public void populate_dgv(string num)
+        {
+            DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(data_query(num));
+            dataGrd.DataSource = ds.Tables[0];
+            //
+           
+            textBox4.Text = populate_txtBox(0);
+            textBox3.Text = populate_txtBox(1);
+            textBox2.Text = populate_txtBox(2);
+            textBox1.Text = populate_txtBox(3);
+        }
+
+
+        //Each time a button is pressed this method is called
+        //Variables used in sqlQueries to call from the corresponding sections
+        //Populates the datagridview
+        //Clears textboxes
+        public void setVars(string num)
+        {
+            form_data_type_id = num;
+            label1.Text = num;
+            populate_dgv(num);
+            pictureBox.Image = null;
+            textBox5.Text = "";
+            //clearTxtBox();
+            //string sqlQuery = string.Format("SELECT form_id,fd_t.form_data_type_id,interventions,comment,completed,action_taken,data_type_name FROM form_data fd RIGHT JOIN form_data_type fd_t ON(fd_t.form_data_type_id = fd.form_data_type_id) WHERE form_id = {0} ORDER BY fd_t.form_data_type_id",get_latest_form_id());
+            //DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(sqlQuery);
+            //dataGridView1.DataSource = ds.Tables[0];
+        }
+        public void populate_currentDgv()
+        {
+            string sqlQuery = string.Format("SELECT form_id,fd_t.form_data_type_id,interventions,comment,completed,action_taken,data_type_name FROM form_data fd RIGHT JOIN form_data_type fd_t ON(fd_t.form_data_type_id = fd.form_data_type_id) WHERE form_id = {0} ORDER BY fd_t.form_data_type_id", get_latest_form_id());
+            DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(sqlQuery);
+            dataGridView1.DataSource = ds.Tables[0];
+        }
+
+        public void clearTxtBox()
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+        }
+
+        public string populate_txtBox(int column_num)
+        {
+            string s = "";
+            //dataGrd.Rows[0].Cells[column_num].Value.ToString()
+            if(dataGrd.Rows[0].Cells[column_num].Value == null)
+            {
+                s = "";
+            }
+            else
+            {
+                s = dataGrd.Rows[0].Cells[column_num].Value.ToString();
+            }
+            //MessageBox.Show(s);
+            return s;
+        }
+
         public string form_headers(string data, int form_id)
         {
             try
@@ -664,47 +710,5 @@ namespace SiteInspection
         }
     
 
-        private void dataGrd_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void section_label(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void button5_Click_1(object sender, EventArgs e)
-        {
-
-            using (OpenFileDialog pic = new OpenFileDialog())
-            {
-                pic.Filter = "jpg files(*.jpg)|*.jpg| PNG files|*.png| All Files(*.*)|*.*";
-                if (pic.ShowDialog() == DialogResult.OK)
-                {
-                    pictureBox.Image = Image.FromFile(pic.FileName);
-                    textBox5.Text = pic.FileName;
-                    
-                    DBConnection.getInstanceOfDBConnection().LoadImage();
-                }
-
-            }
-        }
     }
 }

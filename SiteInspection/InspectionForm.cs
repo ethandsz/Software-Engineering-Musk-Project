@@ -51,6 +51,80 @@ namespace SiteInspection
             this.Close();
         }
         //Method to clear textboxes after user has saved data
+       
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form1 form1 = new Form1();
+            form1.Show();
+        }
+
+        private void exit_btn(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Close();
+        }
+
+        private void txtCmpltd_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSupr_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtWrk_Area_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Save_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSite_TextChanged(object sender, EventArgs e)
+        {
+
+        }
         public void clear()
         {
             txtCmpltd.Text = "";
@@ -63,7 +137,7 @@ namespace SiteInspection
         }
         public static string convert_date(string date)
         {
-            string converted_date = date;  
+            string converted_date = date;
             //Statement for converting british time/date
             //Ex. 01 November 2021
             if (date.StartsWith("0") || date.StartsWith("1") || date.StartsWith("2") || date.StartsWith("3"))
@@ -205,78 +279,5 @@ namespace SiteInspection
             return converted_date;
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Form1 form1 = new Form1();
-            form1.Show();
-        }
-
-        private void exit_btn(object sender, EventArgs e)
-        {
-            Form1 form1 = new Form1();
-            form1.Show();
-            this.Close();
-        }
-
-        private void txtCmpltd_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSupr_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtWrk_Area_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_Save_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSite_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

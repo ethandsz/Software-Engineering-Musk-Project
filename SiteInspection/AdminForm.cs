@@ -54,6 +54,30 @@ namespace SiteInspection
                 showSortByData();
             }
         }
+
+        private void dgvViewData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string filename = "SiteInspection" + textBox1.Text + ".pdf";
+                Process.Start(filename);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please select a form first.");
+            }
+            
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
         public void showSortByData()
         {
             switch (cmbBox_SortBy.Text)
@@ -83,30 +107,6 @@ namespace SiteInspection
                     dgvViewData.DataSource = ds_type.Tables[0];
                     break;
             }
-        }
-
-        private void dgvViewData_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string filename = "SiteInspection" + textBox1.Text + ".pdf";
-                Process.Start(filename);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Please select a form first.");
-            }
-            
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
