@@ -302,7 +302,7 @@ namespace SiteInspection
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "InspectionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "InspectionForm";
+            this.Text = "Form Details";
             this.Load += new System.EventHandler(this.InspectionForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

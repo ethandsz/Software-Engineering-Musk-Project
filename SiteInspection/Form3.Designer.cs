@@ -100,14 +100,14 @@ namespace SiteInspection
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox = new System.Windows.Forms.PictureBox();
-            this.form_dbDataSet = new SiteInspection.form_dbDataSet();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.button5 = new System.Windows.Forms.Button();
             this.filenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.formdataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.form_dbDataSet1 = new SiteInspection.form_dbDataSet1();
+            this.form_dbDataSet = new SiteInspection.form_dbDataSet();
             this.form_dataTableAdapter = new SiteInspection.form_dbDataSet1TableAdapters.form_dataTableAdapter();
-            this.button5 = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelTotalInterventionsSubmenu.SuspendLayout();
             this.panelMiscellaneousSubmenu.SuspendLayout();
@@ -122,10 +122,10 @@ namespace SiteInspection
             ((System.ComponentModel.ISupportInitialize)(this.dataGrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.form_dbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.formdataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.form_dbDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.form_dbDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -977,7 +977,7 @@ namespace SiteInspection
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(259, 244);
+            this.label6.Location = new System.Drawing.Point(257, 246);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 13);
@@ -987,7 +987,7 @@ namespace SiteInspection
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(259, 201);
+            this.label7.Location = new System.Drawing.Point(258, 206);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 13);
@@ -1008,7 +1008,7 @@ namespace SiteInspection
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(259, 100);
+            this.label9.Location = new System.Drawing.Point(258, 103);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(71, 13);
@@ -1105,7 +1105,7 @@ namespace SiteInspection
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(259, 283);
+            this.label3.Location = new System.Drawing.Point(259, 284);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 13);
             this.label3.TabIndex = 55;
@@ -1120,11 +1120,6 @@ namespace SiteInspection
             this.pictureBox.TabIndex = 56;
             this.pictureBox.TabStop = false;
             // 
-            // form_dbDataSet
-            // 
-            this.form_dbDataSet.DataSetName = "form_dbDataSet";
-            this.form_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // dataGridView2
             // 
             this.dataGridView2.AutoGenerateColumns = false;
@@ -1137,6 +1132,16 @@ namespace SiteInspection
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(240, 150);
             this.dataGridView2.TabIndex = 57;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(703, 279);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 58;
+            this.button5.Text = "Browse Files";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // filenameDataGridViewTextBoxColumn
             // 
@@ -1160,19 +1165,14 @@ namespace SiteInspection
             this.form_dbDataSet1.DataSetName = "form_dbDataSet1";
             this.form_dbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // form_dbDataSet
+            // 
+            this.form_dbDataSet.DataSetName = "form_dbDataSet";
+            this.form_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // form_dataTableAdapter
             // 
             this.form_dataTableAdapter.ClearBeforeFill = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(703, 279);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 58;
-            this.button5.Text = "upload pic";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // Form3
             // 
@@ -1205,7 +1205,7 @@ namespace SiteInspection
             this.Controls.Add(this.panelSideMenu);
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Filling Form";
+            this.Text = "New Form";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.panelSideMenu.ResumeLayout(false);
             this.panelTotalInterventionsSubmenu.ResumeLayout(false);
@@ -1221,10 +1221,10 @@ namespace SiteInspection
             ((System.ComponentModel.ISupportInitialize)(this.dataGrd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.form_dbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.formdataBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.form_dbDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.form_dbDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

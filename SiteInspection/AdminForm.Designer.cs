@@ -47,8 +47,8 @@ namespace SiteInspection
             "Date [Newest-Oldest]",
             "Site",
             "Type"});
-            this.cmbBox_SortBy.Location = new System.Drawing.Point(6, 6);
-            this.cmbBox_SortBy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbBox_SortBy.Location = new System.Drawing.Point(5, 7);
+            this.cmbBox_SortBy.Margin = new System.Windows.Forms.Padding(2);
             this.cmbBox_SortBy.Name = "cmbBox_SortBy";
             this.cmbBox_SortBy.Size = new System.Drawing.Size(126, 21);
             this.cmbBox_SortBy.TabIndex = 0;
@@ -58,7 +58,7 @@ namespace SiteInspection
             // 
             this.dgvViewData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvViewData.Location = new System.Drawing.Point(6, 51);
-            this.dgvViewData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvViewData.Margin = new System.Windows.Forms.Padding(2);
             this.dgvViewData.Name = "dgvViewData";
             this.dgvViewData.RowHeadersWidth = 82;
             this.dgvViewData.RowTemplate.Height = 33;
@@ -70,7 +70,7 @@ namespace SiteInspection
             // btn_updateGrd
             // 
             this.btn_updateGrd.Location = new System.Drawing.Point(134, 6);
-            this.btn_updateGrd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_updateGrd.Margin = new System.Windows.Forms.Padding(2);
             this.btn_updateGrd.Name = "btn_updateGrd";
             this.btn_updateGrd.Size = new System.Drawing.Size(63, 22);
             this.btn_updateGrd.TabIndex = 2;
@@ -80,8 +80,8 @@ namespace SiteInspection
             // 
             // btn_back
             // 
-            this.btn_back.Location = new System.Drawing.Point(200, 6);
-            this.btn_back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_back.Location = new System.Drawing.Point(201, 6);
+            this.btn_back.Margin = new System.Windows.Forms.Padding(2);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(82, 22);
             this.btn_back.TabIndex = 3;
@@ -92,7 +92,7 @@ namespace SiteInspection
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(584, 12);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(59, 20);
             this.textBox1.TabIndex = 4;
@@ -101,7 +101,7 @@ namespace SiteInspection
             // slctd_form
             // 
             this.slctd_form.AutoSize = true;
-            this.slctd_form.Location = new System.Drawing.Point(506, 14);
+            this.slctd_form.Location = new System.Drawing.Point(505, 15);
             this.slctd_form.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.slctd_form.Name = "slctd_form";
             this.slctd_form.Size = new System.Drawing.Size(75, 13);
@@ -110,7 +110,7 @@ namespace SiteInspection
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(647, 9);
+            this.button1.Location = new System.Drawing.Point(647, 11);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 22);
@@ -133,9 +133,10 @@ namespace SiteInspection
             this.Controls.Add(this.dgvViewData);
             this.Controls.Add(this.cmbBox_SortBy);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdminForm";
-            this.Text = "AdminForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Form Search";
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
