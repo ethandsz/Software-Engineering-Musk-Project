@@ -599,13 +599,25 @@ namespace SiteInspection
 
         private void add_btn(object sender, EventArgs e)
         {
+            byte[] picture = { };
 
-            byte[] picture;
-            picture = DBConnection.ConvertImageByte(pictureBox.Image);
-            string sqlQuery = "INSERT INTO form_data (form_data_type_id, form_id, interventions, comment, completed, action_taken, file_name, image)" +
-                " VALUES (@form_data_type_id, @form_id, @interventions, @comment, @completed, @action_taken, @file_name, @image)";
-            DBConnection.getInstanceOfDBConnection().saveToDB2(sqlQuery, form_data_type_id, get_latest_form_id(), textBox4.Text, textBox3.Text, textBox2.Text,
-                textBox1.Text, textBox5.Text, picture);
+            if (!string.IsNullOrEmpty(value: textBox5.Text))
+            {
+               
+                picture = DBConnection.ConvertImageByte(pictureBox.Image);
+                string sqlQuery = "INSERT INTO form_data (form_data_type_id, form_id, interventions, comment, completed, action_taken, file_name, image)" +
+                    " VALUES (@form_data_type_id, @form_id, @interventions, @comment, @completed, @action_taken, @file_name, @image)";
+                DBConnection.getInstanceOfDBConnection().saveToDB2(sqlQuery, form_data_type_id, get_latest_form_id(), textBox4.Text, textBox3.Text, textBox2.Text,
+                    textBox1.Text, textBox5.Text, picture);
+                
+            }
+            else
+            {
+                string Query = "INSERT INTO form_data (form_data_type_id, form_id, interventions, comment, completed, action_taken, file_name, image)" +
+                  " VALUES (@form_data_type_id, @form_id, @interventions, @comment, @completed, @action_taken, @file_name, @image)";
+                DBConnection.getInstanceOfDBConnection().saveToDB2(Query, form_data_type_id, get_latest_form_id(), textBox4.Text, textBox3.Text, textBox2.Text,
+                    textBox1.Text, textBox5.Text, picture);
+            }
 
 
 
@@ -630,7 +642,7 @@ namespace SiteInspection
         //Method for making a query coressponding to each button, change get_latest_form_id() to "1" to see how its supposed to work with a actual form
         public string data_query(string num)
         {
-            string query = string.Format("SELECT interventions,comment,completed,action_taken FROM form_data WHERE form_id = {0} AND form_data_type_id = {1}", get_latest_form_id(), num);
+            string query = string.Format("SELECT interventions,comment,completed,action_taken, file_name, image  FROM form_data WHERE form_id = {0} AND form_data_type_id = {1}", get_latest_form_id(), num);
             return query;
         }
 
@@ -639,8 +651,9 @@ namespace SiteInspection
         {
             DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(data_query(num));
             dataGrd.DataSource = ds.Tables[0];
+            dataGridView2.DataSource = ds.Tables[0];
             //
-           
+
             textBox4.Text = populate_txtBox(0);
             textBox3.Text = populate_txtBox(1);
             textBox2.Text = populate_txtBox(2);
@@ -666,7 +679,7 @@ namespace SiteInspection
         }
         public void populate_currentDgv()
         {
-            string sqlQuery = string.Format("SELECT form_id,fd_t.form_data_type_id,interventions,comment,completed,action_taken,data_type_name FROM form_data fd RIGHT JOIN form_data_type fd_t ON(fd_t.form_data_type_id = fd.form_data_type_id) WHERE form_id = {0} ORDER BY fd_t.form_data_type_id", get_latest_form_id());
+            string sqlQuery = string.Format("SELECT form_id,fd_t.form_data_type_id,interventions,comment,completed,action_taken,file_name, image, data_type_name FROM form_data fd RIGHT JOIN form_data_type fd_t ON(fd_t.form_data_type_id = fd.form_data_type_id) WHERE form_id = {0} ORDER BY fd_t.form_data_type_id", get_latest_form_id());
             DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(sqlQuery);
             dataGridView1.DataSource = ds.Tables[0];
         }
