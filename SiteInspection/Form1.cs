@@ -24,6 +24,8 @@ namespace SiteInspection
         string form;
         //Form type variable, change it in the switch statement depending on which form is selected
         public static int form_type_id_var;
+
+
         public Form1()
         {
             InitializeComponent();
@@ -38,6 +40,9 @@ namespace SiteInspection
             //    cmbBox_pdf_form.Items.Add(i);
             //}
         }
+       
+
+
         //Admin Button on click method
         private void admin_login_btn(object sender, EventArgs e)
         {
@@ -97,6 +102,7 @@ namespace SiteInspection
         {
 
         }
+        
 
         private void button4_Click(object sender, EventArgs e)
         {

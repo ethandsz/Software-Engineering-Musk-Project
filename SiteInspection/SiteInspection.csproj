@@ -122,6 +122,7 @@
     <Compile Include="InspectionForm.Designer.cs">
       <DependentUpon>InspectionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="logbook.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AdminForm.resx">
