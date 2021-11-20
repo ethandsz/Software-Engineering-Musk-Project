@@ -14,11 +14,11 @@ namespace SiteInspection
         [STAThread]
         static void Main()
         {
-            logbook l1 = logbook._Instance;
-            l1.wrt("Started Program");
+            logbook._Instance.wrt("Program Started");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
         }
     }
 }

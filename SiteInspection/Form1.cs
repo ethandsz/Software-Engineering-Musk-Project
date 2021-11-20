@@ -38,7 +38,8 @@ namespace SiteInspection
             //for (int i = 1; i <= max; i++)
             //{
             //    cmbBox_pdf_form.Items.Add(i);
-            //}
+            //
+           
         }
        
 
@@ -46,7 +47,7 @@ namespace SiteInspection
         //Admin Button on click method
         private void admin_login_btn(object sender, EventArgs e)
         {
-           
+            logbook._Instance.wrt("Admin Page opened");
             Form2 form2 = new Form2();
             form2.Show();
             this.Hide();
@@ -56,12 +57,14 @@ namespace SiteInspection
         private void exit_btn(object sender, EventArgs e)
         {
             //Exits Environment/Quits Program
+            logbook._Instance.wrt("Programmed Closed");
+            logbook._Instance.Close();
             Environment.Exit(0);
         }
 
         private void btn_CreateForm_Click(object sender, EventArgs e)
         {
-
+            logbook._Instance.wrt("Create Form opened");
             switch (cmbBox_Form.Text)
             {
                 //The other cases are just examples, the combobox doesn't even have them as options
@@ -83,6 +86,7 @@ namespace SiteInspection
         //Combo Box Method
         private void cmbBox_Form_SelectedIndexChanged(object sender, EventArgs e)
         {
+            logbook._Instance.wrt("Form ComboBox used");
             //Sets form equal to selected combo box item
             form = cmbBox_Form.SelectedItem.ToString();
         }

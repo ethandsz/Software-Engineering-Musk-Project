@@ -20,6 +20,7 @@ namespace SiteInspection
         //Enter button click method
         private void button1_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt("Admin enter button clicked");
             //This is hardcoded at the moment, put it in the db for easy editing
             string adminPass = "opensesame";
 
@@ -42,6 +43,7 @@ namespace SiteInspection
         //Back button click method
         private void button2_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt("Admin back button clicked");
             //The user is taken back to the home page
             Form1 form1 = new Form1();
             form1.Show();

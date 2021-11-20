@@ -37,8 +37,9 @@ namespace SiteInspection
         }
         public void wrt(String msg)
         {
-
             write.WriteLine(msg);
+            
+            
         }
         public void Close()
         {
