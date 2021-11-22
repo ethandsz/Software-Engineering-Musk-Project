@@ -620,7 +620,7 @@ namespace SiteInspection
                     //IMAGE SAVING
                     query = String.Format("SELECT file_name from form_data WHERE form_id = {0} AND form_data_type_id = {1}", form_id_var, i);
                     text = (DBConnection.getInstanceOfDBConnection().getScalar(query)).ToString();
-                    MessageBox.Show(text);
+                    //MessageBox.Show(text);
                     //Check text
                     if (text.Length > 3)
                     {
