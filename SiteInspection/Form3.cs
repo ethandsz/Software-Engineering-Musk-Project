@@ -569,6 +569,7 @@ namespace SiteInspection
                 int currId = 1;
                 for (int i = 1; i < num_of_entries + 1; i++)
                 {
+                    
                     //Prints a section header when triggered.
                     if (prevId != currId)
                     {
@@ -616,6 +617,14 @@ namespace SiteInspection
                     currId = Convert.ToInt32(DBConnection.getInstanceOfDBConnection().getScalar(query));
 
                     yCoord += 20;
+                    
+                    Uri best = new Uri("file:///C:/Users/18482/Pictures/Saved%20Pictures/e-droneboys.jpg");
+                    var xrect = new XRect(240, 395, 300, 20);
+                    var rect = gfx.Transformer.WorldToDefaultPage(xrect);
+                    var pdfrect = new PdfRectangle(rect);
+                    page.AddWebLink(pdfrect, best.AbsoluteUri);
+                    gfx.DrawString("MYFILE", titleFont, XBrushes.Black, xrect, XStringFormats.TopLeft);
+
                 }
 
                 //Name of the pdf document.
