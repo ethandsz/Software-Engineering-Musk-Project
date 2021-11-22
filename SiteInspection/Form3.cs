@@ -624,9 +624,8 @@ namespace SiteInspection
                     //Check text
                     if (text.Length > 3)
                     {
-                        string filePath = "file:///" + text;
-                        Uri best = new Uri(filePath);
-                        var xrect = new XRect(xCoord + 470, yCoord, 30, 0);
+                        Uri best = new Uri(text);
+                        var xrect = new XRect(xCoord + 470, yCoord, 100, 100);
                         var rect = gfx.Transformer.WorldToDefaultPage(xrect);
                         var pdfrect = new PdfRectangle(rect);
                         page.AddWebLink(pdfrect, best.AbsoluteUri);
