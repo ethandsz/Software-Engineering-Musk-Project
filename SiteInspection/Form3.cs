@@ -617,13 +617,21 @@ namespace SiteInspection
                     currId = Convert.ToInt32(DBConnection.getInstanceOfDBConnection().getScalar(query));
 
                     yCoord += 20;
-                    
-                    Uri best = new Uri("file:///C:/Users/18482/Pictures/Saved%20Pictures/e-droneboys.jpg");
-                    var xrect = new XRect(240, 395, 300, 20);
-                    var rect = gfx.Transformer.WorldToDefaultPage(xrect);
-                    var pdfrect = new PdfRectangle(rect);
-                    page.AddWebLink(pdfrect, best.AbsoluteUri);
-                    gfx.DrawString("MYFILE", titleFont, XBrushes.Black, xrect, XStringFormats.TopLeft);
+                    //IMAGE SAVING
+                    query = String.Format("SELECT file_name from form_data WHERE form_id = {0} AND form_data_type_id = {1}", form_id_var, i);
+                    text = (DBConnection.getInstanceOfDBConnection().getScalar(query)).ToString();
+                    MessageBox.Show(text);
+                    //Check text
+                    if (text.Length > 3)
+                    {
+                        string filePath = "file:///" + text;
+                        Uri best = new Uri(filePath);
+                        var xrect = new XRect(xCoord + 470, yCoord, 30, 0);
+                        var rect = gfx.Transformer.WorldToDefaultPage(xrect);
+                        var pdfrect = new PdfRectangle(rect);
+                        page.AddWebLink(pdfrect, best.AbsoluteUri);
+                        gfx.DrawString("MYFILE", titleFont, XBrushes.Black, xrect, XStringFormats.TopLeft);
+                    }
 
                 }
 
@@ -642,7 +650,7 @@ namespace SiteInspection
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Please select a form from the combo box");
+                MessageBox.Show(ex.ToString());
             }
         }
 
@@ -772,7 +780,10 @@ namespace SiteInspection
             }
             return "";
         }
-    
 
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
