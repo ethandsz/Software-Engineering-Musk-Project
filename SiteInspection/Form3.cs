@@ -567,6 +567,8 @@ namespace SiteInspection
                 //Used to trigger the if statement to print out a section header.
                 int prevId = 0;
                 int currId = 1;
+                int image_num = 1;
+                string image_save;
                 for (int i = 1; i < num_of_entries + 1; i++)
                 {
                     
@@ -623,13 +625,15 @@ namespace SiteInspection
                     //MessageBox.Show(text);
                     //Check text
                     if (text.Length > 3)
-                    {
+                    { 
                         Uri best = new Uri(text);
-                        var xrect = new XRect(xCoord + 470, yCoord, 100, 100);
+                        var xrect = new XRect(xCoord + 505, yCoord, 100, 100);
                         var rect = gfx.Transformer.WorldToDefaultPage(xrect);
                         var pdfrect = new PdfRectangle(rect);
                         page.AddWebLink(pdfrect, best.AbsoluteUri);
-                        gfx.DrawString("MYFILE", titleFont, XBrushes.Black, xrect, XStringFormats.TopLeft);
+                        image_save = String.Format("Image_{0}", image_num);
+                        gfx.DrawString(image_save, stdFont, XBrushes.Blue, xrect, XStringFormats.TopLeft);
+                        image_num++;
                     }
 
                 }
