@@ -53,6 +53,7 @@ namespace SiteInspection
             this.cmbBox_SortBy.Size = new System.Drawing.Size(126, 21);
             this.cmbBox_SortBy.TabIndex = 0;
             this.cmbBox_SortBy.Text = "Sort By";
+            this.cmbBox_SortBy.SelectedIndexChanged += new System.EventHandler(this.cmbBox_SortBy_SelectedIndexChanged);
             // 
             // dgvViewData
             // 

@@ -142,48 +142,56 @@ namespace SiteInspection
         //
         private void workingStandardsBtn_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt("Working Standards Button used");
             showSubmenu(panelWorkingStandardSubmenu);
         }
 
         private void qualityBtn_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt("Quality Button used");
             showSubmenu(panelQualitySubmenu);
         }
 
         private void siteRulesBtn_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt("Site Rules button used");
             showSubmenu(panelSiteRulesSubmenu);
         }
 
         private void environmentalBtn_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt("Environmental button used");
             showSubmenu(panelEnvironmentalSubmenu);
         }
 
         private void protectionIndBtn_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt("Protection of Individuals button used");
             showSubmenu(panelProtectionIndSubmenu);
         }
 
         private void toolsBtn_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt("Tools Button used");
             showSubmenu(panelToolsSubmenu);
         }
 
         private void miscellaneousBtn_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt("Muscellaneous Button used");
             showSubmenu(panelMiscellaneousSubmenu);
         }
 
         private void totalInterventionsBtn_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt("Total Interventions Button used");
             showSubmenu(panelTotalInterventionsSubmenu);
         }
@@ -193,6 +201,7 @@ namespace SiteInspection
         //
         private void workingStandards1_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(workingStandards1.Text.ToString() + " Clicked");
             hideSubmenu();
             //Method to set various variables to the section number for later reference
@@ -201,6 +210,7 @@ namespace SiteInspection
 
         private void workingStandards2_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(workingStandards2.Text.ToString() + " Clicked");
             hideSubmenu();
             setVars("2");
@@ -208,6 +218,7 @@ namespace SiteInspection
 
         private void workingStandards3_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(workingStandards3.Text.ToString() + " Clicked");
             hideSubmenu();
             setVars("3");
@@ -215,6 +226,7 @@ namespace SiteInspection
 
         private void workingStandards4_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(workingStandards4.Text.ToString() + " Clicked");
             hideSubmenu();
             setVars("4");
@@ -222,6 +234,7 @@ namespace SiteInspection
 
         private void workingStandards5_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(workingStandards5.Text.ToString() + " Clicked");
             hideSubmenu();
             setVars("5");
@@ -229,6 +242,7 @@ namespace SiteInspection
 
         private void quality6_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(quality6.Text.ToString() + " Clicked");
             hideSubmenu();
             setVars("6");
@@ -236,6 +250,7 @@ namespace SiteInspection
 
         private void quality7_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(quality7.Text.ToString() + " Clicked");
             hideSubmenu();
             setVars("7");
@@ -243,6 +258,7 @@ namespace SiteInspection
 
         private void quality8_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(quality8.Text.ToString() + " Clicked");
             hideSubmenu();
             setVars("8");
@@ -250,6 +266,7 @@ namespace SiteInspection
 
         private void siteRules9_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(siteRules9.Text.ToString() + " Clicked");
             hideSubmenu();
             setVars("9");
@@ -257,6 +274,7 @@ namespace SiteInspection
 
         private void siteRules10_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(siteRules10.Text.ToString() + " Clicked");
             hideSubmenu();
             setVars("10");
@@ -264,6 +282,7 @@ namespace SiteInspection
 
         private void siteRules11_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(siteRules11.Text.ToString() + " Clicked");
             hideSubmenu();
             setVars("11");
@@ -271,6 +290,7 @@ namespace SiteInspection
 
         private void siteRules12_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(siteRules12.Text.ToString() + " Clicked");
             hideSubmenu();
             setVars("12");
@@ -278,6 +298,7 @@ namespace SiteInspection
 
         private void environmental13_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(environmental13.Text.ToString() + " Clicked");
             hideSubmenu();
             setVars("13");
@@ -285,6 +306,7 @@ namespace SiteInspection
 
         private void environmental14_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(environmental14.Text.ToString() + " Clicked");
             hideSubmenu();
             setVars("14");
@@ -292,6 +314,7 @@ namespace SiteInspection
 
         private void environmental15_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(environmental15.Text.ToString() + " Clicked");
             hideSubmenu();
             setVars("15");
@@ -299,6 +322,7 @@ namespace SiteInspection
 
         private void protectionInd16_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(protectionInd16.Text.ToString() + " Clicked");
             hideSubmenu();
             setVars("16");
@@ -306,6 +330,7 @@ namespace SiteInspection
 
         private void protectionInd17_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(protectionInd17.Text.ToString() + " Clicked");
             hideSubmenu();
             setVars("17");
@@ -313,6 +338,7 @@ namespace SiteInspection
 
         private void protectionInd18_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(protectionInd18.Text.ToString() + " Clicked");
             hideSubmenu();
             setVars("18");
@@ -320,6 +346,7 @@ namespace SiteInspection
 
         private void tools19_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(tools19.Text.ToString() + " Clicked");
             hideSubmenu();
             setVars("19");
@@ -327,6 +354,7 @@ namespace SiteInspection
 
         private void button3_Click_1(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(button3.Text.ToString() + " Clicked");
             hideSubmenu();
             setVars("20");
@@ -334,6 +362,7 @@ namespace SiteInspection
 
         private void button4_Click_1(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(button4.Text.ToString() + " Clicked");
             hideSubmenu();
             setVars("21");
@@ -341,6 +370,7 @@ namespace SiteInspection
 
         private void miscellaneous22_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(miscellaneous22.Text.ToString() + " Clicked");
             hideSubmenu();
             setVars("22");
@@ -348,6 +378,7 @@ namespace SiteInspection
 
         private void miscellaneous23_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(miscellaneous23.Text.ToString() + " Clicked");
             hideSubmenu();
             setVars("23");
@@ -355,6 +386,7 @@ namespace SiteInspection
 
         private void miscellaneous24_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(miscellaneous24.Text.ToString() + " Clicked");
             hideSubmenu();
             setVars("24");
@@ -362,42 +394,49 @@ namespace SiteInspection
 
         private void workingStandardsA_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(workingStandardsA.Text.ToString() + " Clicked");
             hideSubmenu();
         }
 
         private void qualityB_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(qualityB.Text.ToString() + " Clicked");
             hideSubmenu();
         }
 
         private void siteRulesC_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(siteRulesC.Text.ToString() + " Clicked");
             hideSubmenu();
         }
 
         private void environmentalD_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(environmentalD.Text.ToString() + " Clicked");
             hideSubmenu();
         }
 
         private void protectionIndE_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(protectionIndE.Text.ToString() + " Clicked");
             hideSubmenu();
         }
 
         private void toolsF_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(toolsF.Text.ToString() + " Clicked");
             hideSubmenu();
         }
 
         private void miscellaneousG_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt(miscellaneousG.Text.ToString() + " Clicked");
             hideSubmenu();
         }
@@ -409,6 +448,7 @@ namespace SiteInspection
 
         private void exit_btn(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt("Exited Form 3");
             InspectionForm form = new InspectionForm();
             form.Show();
@@ -443,6 +483,7 @@ namespace SiteInspection
 
         private void button5_Click_1(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt("Browse Files button Clicked");
             using (OpenFileDialog pic = new OpenFileDialog())
             {
@@ -480,6 +521,7 @@ namespace SiteInspection
 
         private void button3_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt("Form 3 Save as PDF button Clicked");
             //PDFSharp testing.
             //Attempting to generate a pdf from initial data in database.
@@ -660,6 +702,7 @@ namespace SiteInspection
 
         private void add_btn(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt("Form 3 Add button Clicked");
             byte[] picture = { };
 

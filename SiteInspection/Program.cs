@@ -14,7 +14,12 @@ namespace SiteInspection
         [STAThread]
         static void Main()
         {
+
+            //Records start of a new session on the logbook
+            //logbook._Instance.wrt("");
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt("Program Started");
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

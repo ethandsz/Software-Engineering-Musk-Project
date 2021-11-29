@@ -20,6 +20,7 @@ namespace SiteInspection
         //Enter button click method
         private void button1_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt("Admin enter button clicked");
             //This is hardcoded at the moment, put it in the db for easy editing
             string adminPass = "opensesame";
@@ -29,6 +30,9 @@ namespace SiteInspection
             //If the password is correct, the admin form is shown
             if(userPassInput == adminPass)
             {
+                logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
+                logbook._Instance.wrt("Admin login successful");
+
                 AdminForm adminform = new AdminForm();
                 adminform.Show();
                 this.Hide();
@@ -36,6 +40,9 @@ namespace SiteInspection
             //If the password is incorrect, a messagebox is shown and the user can try again
             else
             {
+                logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
+                logbook._Instance.wrt("Admin login failed- incorrect password");
+
                 MessageBox.Show("Incorrect password.");
             }
         }
@@ -43,6 +50,7 @@ namespace SiteInspection
         //Back button click method
         private void button2_Click(object sender, EventArgs e)
         {
+            logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt("Admin back button clicked");
             //The user is taken back to the home page
             Form1 form1 = new Form1();

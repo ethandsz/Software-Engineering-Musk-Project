@@ -108,5 +108,10 @@ namespace SiteInspection
                     break;
             }
         }
+
+        private void cmbBox_SortBy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
