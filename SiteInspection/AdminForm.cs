@@ -20,7 +20,7 @@ namespace SiteInspection
 
         private void btn_back_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
+            Home form1 = new Home();
             form1.Show();
             this.Close();
         }

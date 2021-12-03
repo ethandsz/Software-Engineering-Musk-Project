@@ -1,7 +1,7 @@
 ﻿
 namespace SiteInspection
 {
-    partial class Form3
+    partial class LastForm
     {
         /// <summary>
         /// Required designer variable.

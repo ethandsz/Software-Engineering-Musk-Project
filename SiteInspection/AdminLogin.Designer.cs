@@ -1,7 +1,7 @@
 ﻿
 namespace SiteInspection
 {
-    partial class Form2
+    partial class AdminLogin
     {
         /// <summary>
         /// Required designer variable.

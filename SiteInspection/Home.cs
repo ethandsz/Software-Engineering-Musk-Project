@@ -17,7 +17,7 @@ using PdfSharp.Pdf.IO;
 
 namespace SiteInspection
 {
-    public partial class Form1 : Form
+    public partial class Home : Form
     {
         
         //Selcted Form
@@ -26,7 +26,7 @@ namespace SiteInspection
         public static int form_type_id_var;
 
 
-        public Form1()
+        public Home()
         {
             InitializeComponent();
             cmbBox_Form.SelectedIndex = 0;
@@ -49,7 +49,7 @@ namespace SiteInspection
         {
             logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt("Admin Page opened");
-            Form2 form2 = new Form2();
+            AdminLogin form2 = new AdminLogin();
             form2.Show();
             this.Hide();
             

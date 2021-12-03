@@ -16,13 +16,13 @@ using System.IO;
 
 namespace SiteInspection
 {
-    public partial class Form3 : Form
+    public partial class LastForm : Form
     {
 
         string form_data_type_id;
 
-        Form1 f1 = new Form1();
-        public Form3()
+        Home f1 = new Home();
+        public LastForm()
         {
             InitializeComponent();
             //hide submenu

@@ -38,7 +38,7 @@ namespace SiteInspection
                     " @supervisor, @inspector, @type)";
 
             //This saves the form data to the database. There has to be a way of reducing the amount of parameters!
-            DBConnection.getInstanceOfDBConnection().saveToDB(sqlQuery, Form1.form_type_id_var, txtSite.Text, txtCmpltd.Text, convert_date(dateTimePicker1.Text), 
+            DBConnection.getInstanceOfDBConnection().saveToDB(sqlQuery, Home.form_type_id_var, txtSite.Text, txtCmpltd.Text, convert_date(dateTimePicker1.Text), 
                 txtWrk_Area.Text, txtDesc.Text, txtSupr.Text, txtInspc.Text, txtType.Text);
 
             //Display the database to the datagridview, this is just for debugging and making sure the database has been updated
@@ -46,7 +46,7 @@ namespace SiteInspection
             dataGridView1.DataSource = ds.Tables[0];
 
             clear();
-            Form3 form3 = new Form3();
+            LastForm form3 = new LastForm();
             form3.Show();
             this.Close();
         }
@@ -65,13 +65,13 @@ namespace SiteInspection
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form1 form1 = new Form1();
+            Home form1 = new Home();
             form1.Show();
         }
 
         private void exit_btn(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
+            Home form1 = new Home();
             form1.Show();
             this.Close();
         }

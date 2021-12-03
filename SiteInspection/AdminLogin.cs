@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SiteInspection
 {
-    public partial class Form2 : Form
+    public partial class AdminLogin : Form
     {
-        public Form2()
+        public AdminLogin()
         {
             InitializeComponent();
         }
@@ -53,7 +53,7 @@ namespace SiteInspection
             logbook._Instance.wrt(DateTime.Now.ToString("h:mm:ss tt"));
             logbook._Instance.wrt("Admin back button clicked");
             //The user is taken back to the home page
-            Form1 form1 = new Form1();
+            Home form1 = new Home();
             form1.Show();
             this.Hide();
         }
