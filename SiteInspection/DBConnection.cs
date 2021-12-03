@@ -208,12 +208,6 @@ namespace SiteInspection
             
         }
 
-        public Image ConvertByArrayToImage(byte[] pic)
-        {
-            using (MemoryStream memo = new MemoryStream(pic))
-            {
-                return Image.FromStream(memo);
-            }
-        }
+       
     }
 }

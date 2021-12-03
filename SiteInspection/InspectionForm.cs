@@ -91,16 +91,7 @@ namespace SiteInspection
 
         }
 
-        private void btn_Save_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void label2_Click(object sender, EventArgs e)
         {
 
