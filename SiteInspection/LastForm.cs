@@ -629,7 +629,7 @@ namespace SiteInspection
                     if (text.Length > 3)
                     { 
                         Uri best = new Uri(text);
-                        var xrect = new XRect(xCoord + 505, yCoord, 100, 100);
+                        var xrect = new XRect(xCoord + 505, yCoord - 30, 100, 100);
                         var rect = gfx.Transformer.WorldToDefaultPage(xrect);
                         var pdfrect = new PdfRectangle(rect);
                         page.AddWebLink(pdfrect, best.AbsoluteUri);
